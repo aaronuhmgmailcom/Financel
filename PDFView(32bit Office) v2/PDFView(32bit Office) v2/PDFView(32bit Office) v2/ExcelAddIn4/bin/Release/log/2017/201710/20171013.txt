@@ -1,0 +1,64 @@
+
+ 
+ record time:2017-10-13 09:22:01,905 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.Ribbon2 property: [(null)] - 
+ error desc:The underlying provider failed on Open.
+ 
+
+ 
+ record time:2017-10-13 09:22:44,392 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.Ribbon2 property: [(null)] - 
+ error desc:The underlying provider failed on Open.
+ 
+
+ 
+ record time:2017-10-13 09:24:51,506 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.Ribbon2 property: [(null)] - 
+ error desc:The underlying provider failed on Open.
+ 
+
+ 
+ record time:2017-10-13 09:25:16,019 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.Ribbon2 property: [(null)] - 
+ error desc:The underlying provider failed on Open.
+ 
+
+ 
+ record time:2017-10-13 09:27:23,141 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.Ribbon2 property: [(null)] - 
+ error desc:The underlying provider failed on Open.
+ 
+
+ 
+ record time:2017-10-13 09:27:38,910 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.Ribbon2 property: [(null)] - 
+ error desc:Could not find a part of the path 'C:\ProgramData\RSDataV2\RSDataTemplatesPeterPCPeter'.Folder RibbonMenu initialization error
+ 
+
+ 
+ record time:2017-10-13 09:28:27,434 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.Ribbon2 property: [(null)] - 
+ error desc:Could not find a part of the path 'C:\ProgramData\RSDataV2\RSDataTemplatesPeterPCPeter'.Folder RibbonMenu initialization error
+ 
+
+ 
+ record time:2017-10-13 09:29:01,837 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.Ribbon2 property: [(null)] - 
+ error desc:Could not find a part of the path 'C:\ProgramData\RSDataV2\RSDataTemplatesPeterPCPeter'.Folder RibbonMenu initialization error
+ 

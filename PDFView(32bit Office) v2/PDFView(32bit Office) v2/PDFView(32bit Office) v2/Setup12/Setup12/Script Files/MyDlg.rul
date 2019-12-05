@@ -1,0 +1,121 @@
+//#include "databasehelper.rul"
+#define DLG_USLT    "IDS_PRODUCTNAME_INSTALLSHIELD" //MyDlg是我们的对话框名字  
+#define COMBO_SERVERS        IS_SQLSERVER_SERVER        //服务器名下拦框
+
+#define EDIT_USER_NAME       IS_SQLSERVER_USERNAME       //用户名文本框
+#define EDIT_USER_PASSWORD   IS_SQLSERVER_PASSWORD       //密码文本框
+#define RES_PBUT_NEXT        IDS_NEXT          // Next的ID      
+
+
+prototype NUMBER UserSqlserverLogin(BYREF STRING, BYREF STRING, BYREF STRING);  //SQLSERVER服务器名，用户名, 密码
+prototype SqlEnableButton(INT, INT, BOOL);
+function NUMBER UserSqlserverLogin(szServerName, szUserName, szUserPassword)
+    HWND    hDlg; 
+    HWND    hwndItem;     
+    NUMBER nId, nResult; 
+    NUMBER nControl, nMessage;  
+    STRING szName, szUser, szPassword;  
+    LIST listServers; 
+    BOOL bDone;
+begin
+    //初始对话框函数
+     if (EzDefineDialog(DLG_USLT, ISUSER , "IDS_PRODUCTNAME_INSTALLSHIELD", 0 ) = DLG_ERR) then         
+     return ISERR_GEN_FAILURE;
+    endif;
+    
+    szName = "";   
+    bDone = FALSE;    
+
+    //循环
+    while (!bDone)
+        nId = WaitOnDialog( DLG_USLT ); //获得对话框的消息      
+        
+        switch (nId) 
+        case DLG_INIT: 
+            hDlg = CmdGetHwndDlg(DLG_USLT);                    
+            //populate servers list
+            listServers = SQLRTGetServers( TRUE ); 
+            if (szServerName = "") then            
+                CtrlSetList( DLG_USLT, COMBO_SERVERS, listServers ); 
+                if( szName = "" ) then
+                    ListGetFirstString( listServers, szName );                
+                endif; 
+            else
+                szName = szServerName;
+            endif;
+            ListDestroy( listServers );
+            CtrlSetText( DLG_USLT, COMBO_SERVERS, szName );
+            if (szName = "") then
+                SqlEnableButton(hDlg, RES_PBUT_NEXT, FALSE);    
+            endif;
+            
+            CtrlSetText( DLG_USLT, EDIT_USER_NAME, "sa" );
+                   
+        case DLG_ERR:        
+            nId   = ISERR_GEN_FAILURE;
+            SdError(nId, DLG_USLT);
+            bDone = TRUE;    
+            abort;
+            
+        case DLG_CLOSE:                      
+            SdCloseDlg(hDlg, nId, bDone);   
+            
+        //数据库名
+        case COMBO_SERVERS: //EDIT_SERVER_NAME: 
+            nMessage = CtrlGetSubCommand(DLG_USLT);
+            if(nMessage = CBN_EDITCHANGE) then
+                CtrlGetText(DLG_USLT, COMBO_SERVERS, szName);
+                if( szName = "" ) then
+                       SqlEnableButton(hDlg, RES_PBUT_NEXT, FALSE);
+                else 
+                       SqlEnableButton(hDlg, RES_PBUT_NEXT, TRUE);
+                endif;
+               //SQLLoginEnableButton(hDlg, RES_PBUT_NEXT, szName );
+           endif; 
+    
+        
+   
+        
+        case RES_PBUT_NEXT: 
+            CtrlGetText(DLG_USLT, COMBO_SERVERS, szName); 
+            CtrlGetText(DLG_USLT, EDIT_USER_NAME, szUser);
+            CtrlGetText(DLG_USLT, EDIT_USER_PASSWORD, szPassword);
+            if (ConnectDatabaseServer(szName,"SQL Server", szUser, szPassword) = TRUE) then
+                  szServerName = szName; 
+                  szUserName = szUser;
+                  szUserPassword = szPassword;
+                  nResult = NEXT;
+                  bDone = TRUE;        
+                  MessageBox("连接数据库失败1，确定数据库名称和密码正确1！", MB_OK);
+             else
+                 MessageBox("连接数据库失败，确定数据库名称和密码正确！", MB_OK);
+            endif;               
+            
+   
+                                            
+        endswitch;
+    endwhile; 
+    
+    //关闭对话框 
+    EndDialog (DLG_USLT);
+    //释放内存 
+    ReleaseDialog (DLG_USLT); 
+    
+    return nResult;
+end;  
+function  SqlEnableButton( hwndDlg, nControlID, enable)
+    HWND  hwndItem;
+begin
+    hwndItem = GetDlgItem( hwndDlg, nControlID );
+    if (!IsWindow( hwndItem)) then 
+        return FALSE; 
+    endif;
+    EnableWindow(hwndItem, enable);
+    //StrRemoveSpaces( svName );
+    
+    //if( svName = "" ) then
+    //  EnableWindow( hwndItem, FALSE);
+    //else
+    //  EnableWindow( hwndItem, TRUE);
+    //endif;
+end;

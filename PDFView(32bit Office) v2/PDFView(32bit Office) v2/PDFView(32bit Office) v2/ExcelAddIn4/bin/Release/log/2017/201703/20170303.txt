@@ -1,0 +1,22 @@
+
+ 
+ record time:2017-03-03 16:05:17,124 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.Ribbon2 property: [(null)] - 
+ error desc:System.Runtime.InteropServices.COMException (0x800A03EC): The file could not be accessed. Try one of the following:
+
+• Make sure the specified folder exists. 
+• Make sure the folder that contains the file is not read-only.
+• Make sure the file name does not contain any of the following characters:  <  >  ?  [  ]  :  | or  *
+• Make sure the file/path name doesn't contain more than 218 characters.
+
+Server stack trace: 
+
+
+Exception rethrown at [0]: 
+   at System.Runtime.Remoting.Proxies.RealProxy.HandleReturnMessage(IMessage reqMsg, IMessage retMsg)
+   at System.Runtime.Remoting.Proxies.RealProxy.PrivateInvoke(MessageData& msgData, Int32 type)
+   at Microsoft.Office.Interop.Excel._Workbook.SaveAs(Object Filename, Object FileFormat, Object Password, Object WriteResPassword, Object ReadOnlyRecommended, Object CreateBackup, XlSaveAsAccessMode AccessMode, Object ConflictResolution, Object AddToMru, Object TextCodepage, Object TextVisualLayout, Object Local)
+   at ExcelAddIn4.XMLPostFrm.SaveHistory() in C:\360\Version 2 (1)\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\ExcelAddIn4\XMLPostFrm.cs:line 433Save error
+ 

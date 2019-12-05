@@ -1,0 +1,8 @@
+
+ 
+ record time:2017-03-02 16:34:45,364 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.Ribbon2 property: [(null)] - 
+ error desc:Cannot run the macro ''C:\ProgramData\RSDataV2\RSDataTemplatesPeterPCPeter\invoice\Invoice Template2.xlsx'!1'. The macro may not be available in this workbook or all macros may be disabled.Exec Macro error
+ 

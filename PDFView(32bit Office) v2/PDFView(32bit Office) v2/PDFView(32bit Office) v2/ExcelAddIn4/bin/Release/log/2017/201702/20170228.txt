@@ -1,0 +1,64 @@
+
+ 
+ record time:2017-02-28 15:20:32,481 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.OutputContainer property: [(null)] - 
+ error desc:Consolidate cells can't exceed 4 cells per row ! - Data error in journal tab, output settings !
+ 
+
+ 
+ record time:2017-02-28 15:21:10,068 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.OutputContainer property: [(null)] - 
+ error desc:Update cells and consolidate cells should in different rows ! - Data error in journal tab, output settings !
+ 
+
+ 
+ record time:2017-02-28 15:21:14,071 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.OutputContainer property: [(null)] - 
+ error desc:Update cells and consolidate cells should in different rows ! - Data error in journal tab, output settings !
+ 
+
+ 
+ record time:2017-02-28 15:21:19,071 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.OutputContainer property: [(null)] - 
+ error desc:Update cells and consolidate cells should in different rows ! - Data error in journal tab, output settings !
+ 
+
+ 
+ record time:2017-02-28 15:21:26,570 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.OutputContainer property: [(null)] - 
+ error desc:Update cells and consolidate cells should in different rows ! - Data error in journal tab, output settings !
+ 
+
+ 
+ record time:2017-02-28 15:21:29,579 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.OutputContainer property: [(null)] - 
+ error desc:Update cells and consolidate cells should in different rows ! - Data error in journal tab, output settings !
+ 
+
+ 
+ record time:2017-02-28 15:21:32,031 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.OutputContainer property: [(null)] - 
+ error desc:Update cells and consolidate cells should in different rows ! - Data error in journal tab, output settings !
+ 
+
+ 
+ record time:2017-02-28 15:21:34,163 
+ Thread ID:[VSTA_Main] 
+ Log level:  ERROR 
+ error class:ExcelAddIn4.OutputContainer property: [(null)] - 
+ error desc:Update cells and consolidate cells should in different rows ! - Data error in journal tab, output settings !
+ 

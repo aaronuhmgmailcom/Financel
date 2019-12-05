@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+  <EntityContainerMapping StorageEntityContainer="RSDataV2ModelStoreContainer" CdmEntityContainer="RSFinanceToolsEntities">
+    <EntitySetMapping Name="rsGlobalFields">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsGlobalField">
+        <MappingFragment StoreEntitySet="rsGlobalFields">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="FieldGroup" ColumnName="FieldGroup" />
+          <ScalarProperty Name="SunField" ColumnName="SunField" />
+          <ScalarProperty Name="UserFriendlyName" ColumnName="UserFriendlyName" />
+          <ScalarProperty Name="Output" ColumnName="Output" />
+          <ScalarProperty Name="Input" ColumnName="Input" />
+          <ScalarProperty Name="XML_Query" ColumnName="XML_Query" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsGroupPermissions">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsGroupPermission">
+        <MappingFragment StoreEntitySet="rsGroupPermissions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+          <ScalarProperty Name="PermissionGroupName" ColumnName="PermissionGroupName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsGroups">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsGroup">
+        <MappingFragment StoreEntitySet="rsGroups">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+          <ScalarProperty Name="GroupDisable" ColumnName="GroupDisable" />
+          <ScalarProperty Name="Remark" ColumnName="Remark" />
+          <ScalarProperty Name="AddInTabName" ColumnName="AddInTabName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsPermissions">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsPermission">
+        <MappingFragment StoreEntitySet="rsPermissions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PermissionName" ColumnName="PermissionName" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+          <ScalarProperty Name="Per_Type" ColumnName="Per_Type" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="Folder" ColumnName="Folder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsSystemProcesses">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsSystemProcess">
+        <MappingFragment StoreEntitySet="rsSystemProcesses">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ProcessName" ColumnName="ProcessName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplateActions">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateAction">
+        <MappingFragment StoreEntitySet="rsTemplateActions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="ButtonName" ColumnName="ButtonName" />
+          <ScalarProperty Name="ButtonText" ColumnName="ButtonText" />
+          <ScalarProperty Name="ButtonIcon" ColumnName="ButtonIcon" />
+          <ScalarProperty Name="ButtonGroup" ColumnName="ButtonGroup" />
+          <ScalarProperty Name="ButtonSize" ColumnName="ButtonSize" />
+          <ScalarProperty Name="ButtonOrder" ColumnName="ButtonOrder" />
+          <ScalarProperty Name="GroupOrder" ColumnName="GroupOrder" />
+          <ScalarProperty Name="StopOnError" ColumnName="StopOnError" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="MacroName" ColumnName="MacroName" />
+          <ScalarProperty Name="ProcessMacroOrder" ColumnName="ProcessMacroOrder" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="ShowMsg" ColumnName="ShowMsg" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplateCreateXMLTextProfiles">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateCreateXMLTextProfile">
+        <MappingFragment StoreEntitySet="rsTemplateCreateXMLTextProfile">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Field" ColumnName="Field" />
+          <ScalarProperty Name="FriendlyName" ColumnName="FriendlyName" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+          <ScalarProperty Name="SunComponentName" ColumnName="SunComponentName" />
+          <ScalarProperty Name="SunMethod" ColumnName="SunMethod" />
+          <ScalarProperty Name="Mandatory" ColumnName="Mandatory" />
+          <ScalarProperty Name="Separator" ColumnName="Separator" />
+          <ScalarProperty Name="TextLength" ColumnName="TextLength" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+          <ScalarProperty Name="RemoveCharacters" ColumnName="RemoveCharacters" />
+          <ScalarProperty Name="TextFileName" ColumnName="TextFileName" />
+          <ScalarProperty Name="Parent" ColumnName="Parent" />
+          <ScalarProperty Name="trimText" ColumnName="trimText" />
+          <ScalarProperty Name="Section" ColumnName="Section" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplateGenDescFields">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateGenDescField">
+        <MappingFragment StoreEntitySet="rsTemplateGenDescFields">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="FieldGroup" ColumnName="FieldGroup" />
+          <ScalarProperty Name="SunField" ColumnName="SunField" />
+          <ScalarProperty Name="UserFriendlyName" ColumnName="UserFriendlyName" />
+          <ScalarProperty Name="Output" ColumnName="Output" />
+          <ScalarProperty Name="Input" ColumnName="Input" />
+          <ScalarProperty Name="XML_Query" ColumnName="XML_Query" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="version" ColumnName="version" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplateHelps">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateHelp">
+        <MappingFragment StoreEntitySet="rsTemplateHelp">
+          <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="helpFileData" ColumnName="helpFileData" />
+          <ScalarProperty Name="helpFileType" ColumnName="helpFileType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplates">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplate">
+        <MappingFragment StoreEntitySet="rsTemplates">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TemplateData" ColumnName="TemplateData" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="OriginTemplatePath" ColumnName="OriginTemplatePath" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplateSettings">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateSetting">
+        <MappingFragment StoreEntitySet="rsTemplateSetting">
+          <ScalarProperty Name="PDFName" ColumnName="PDFName" />
+          <ScalarProperty Name="PDFFolder" ColumnName="PDFFolder" />
+          <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+          <ScalarProperty Name="CriteriaName1" ColumnName="CriteriaName1" />
+          <ScalarProperty Name="CellReference1" ColumnName="CellReference1" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="OpenTransUponSave" ColumnName="OpenTransUponSave" />
+          <ScalarProperty Name="CriteriaName2" ColumnName="CriteriaName2" />
+          <ScalarProperty Name="CellReference2" ColumnName="CellReference2" />
+          <ScalarProperty Name="CriteriaName3" ColumnName="CriteriaName3" />
+          <ScalarProperty Name="CellReference3" ColumnName="CellReference3" />
+          <ScalarProperty Name="CriteriaName4" ColumnName="CriteriaName4" />
+          <ScalarProperty Name="CellReference4" ColumnName="CellReference4" />
+          <ScalarProperty Name="CriteriaName5" ColumnName="CriteriaName5" />
+          <ScalarProperty Name="CellReference5" ColumnName="CellReference5" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="SequencePrefix" ColumnName="SequencePrefix" />
+          <ScalarProperty Name="PopulateCell" ColumnName="PopulateCell" />
+          <ScalarProperty Name="UseSequenceNumbering" ColumnName="UseSequenceNumbering" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplateTransactions">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateTransaction">
+        <MappingFragment StoreEntitySet="rsTemplateTransactions">
+          <ScalarProperty Name="GUID" ColumnName="GUID" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="Criteria1" ColumnName="Criteria1" />
+          <ScalarProperty Name="Criteria2" ColumnName="Criteria2" />
+          <ScalarProperty Name="Criteria3" ColumnName="Criteria3" />
+          <ScalarProperty Name="Criteria4" ColumnName="Criteria4" />
+          <ScalarProperty Name="Criteria5" ColumnName="Criteria5" />
+          <ScalarProperty Name="Value1" ColumnName="Value1" />
+          <ScalarProperty Name="Value2" ColumnName="Value2" />
+          <ScalarProperty Name="Value3" ColumnName="Value3" />
+          <ScalarProperty Name="Value4" ColumnName="Value4" />
+          <ScalarProperty Name="Value5" ColumnName="Value5" />
+          <ScalarProperty Name="Data" ColumnName="Data" />
+          <ScalarProperty Name="DataType" ColumnName="DataType" />
+          <ScalarProperty Name="PDFData" ColumnName="PDFData" />
+          <ScalarProperty Name="XMLData" ColumnName="XMLData" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="maxNum" ColumnName="maxNum" />
+          <ScalarProperty Name="TransactionName" ColumnName="TransactionName" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+          <ScalarProperty Name="SunJournalNumber" ColumnName="SunJournalNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplateVisibles">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateVisible">
+        <MappingFragment StoreEntitySet="rsTemplateVisible">
+          <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="OutputPaneVisiable" ColumnName="OutputPaneVisiable" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplateXMLTextFileDGVs">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateXMLTextFileDGV">
+        <MappingFragment StoreEntitySet="rsTemplateXMLTextFileDGV">
+          <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+          <ScalarProperty Name="Column1" ColumnName="Column1" />
+          <ScalarProperty Name="Column2" ColumnName="Column2" />
+          <ScalarProperty Name="Column3" ColumnName="Column3" />
+          <ScalarProperty Name="Column4" ColumnName="Column4" />
+          <ScalarProperty Name="Column5" ColumnName="Column5" />
+          <ScalarProperty Name="Column6" ColumnName="Column6" />
+          <ScalarProperty Name="Column7" ColumnName="Column7" />
+          <ScalarProperty Name="Column8" ColumnName="Column8" />
+          <ScalarProperty Name="Column9" ColumnName="Column9" />
+          <ScalarProperty Name="Column10" ColumnName="Column10" />
+          <ScalarProperty Name="Column11" ColumnName="Column11" />
+          <ScalarProperty Name="Column12" ColumnName="Column12" />
+          <ScalarProperty Name="Column13" ColumnName="Column13" />
+          <ScalarProperty Name="Column14" ColumnName="Column14" />
+          <ScalarProperty Name="Column15" ColumnName="Column15" />
+          <ScalarProperty Name="Column16" ColumnName="Column16" />
+          <ScalarProperty Name="Column17" ColumnName="Column17" />
+          <ScalarProperty Name="Column18" ColumnName="Column18" />
+          <ScalarProperty Name="Column19" ColumnName="Column19" />
+          <ScalarProperty Name="Column20" ColumnName="Column20" />
+          <ScalarProperty Name="Column21" ColumnName="Column21" />
+          <ScalarProperty Name="Column22" ColumnName="Column22" />
+          <ScalarProperty Name="Column23" ColumnName="Column23" />
+          <ScalarProperty Name="Column24" ColumnName="Column24" />
+          <ScalarProperty Name="Column25" ColumnName="Column25" />
+          <ScalarProperty Name="Column26" ColumnName="Column26" />
+          <ScalarProperty Name="Column27" ColumnName="Column27" />
+          <ScalarProperty Name="Column28" ColumnName="Column28" />
+          <ScalarProperty Name="Column29" ColumnName="Column29" />
+          <ScalarProperty Name="Column30" ColumnName="Column30" />
+          <ScalarProperty Name="Column31" ColumnName="Column31" />
+          <ScalarProperty Name="Column32" ColumnName="Column32" />
+          <ScalarProperty Name="Column33" ColumnName="Column33" />
+          <ScalarProperty Name="Column34" ColumnName="Column34" />
+          <ScalarProperty Name="Column35" ColumnName="Column35" />
+          <ScalarProperty Name="Column36" ColumnName="Column36" />
+          <ScalarProperty Name="Column37" ColumnName="Column37" />
+          <ScalarProperty Name="Column38" ColumnName="Column38" />
+          <ScalarProperty Name="Column39" ColumnName="Column39" />
+          <ScalarProperty Name="Column40" ColumnName="Column40" />
+          <ScalarProperty Name="Column41" ColumnName="Column41" />
+          <ScalarProperty Name="Column42" ColumnName="Column42" />
+          <ScalarProperty Name="Column43" ColumnName="Column43" />
+          <ScalarProperty Name="Column44" ColumnName="Column44" />
+          <ScalarProperty Name="Column45" ColumnName="Column45" />
+          <ScalarProperty Name="Column46" ColumnName="Column46" />
+          <ScalarProperty Name="Column47" ColumnName="Column47" />
+          <ScalarProperty Name="Column48" ColumnName="Column48" />
+          <ScalarProperty Name="Column49" ColumnName="Column49" />
+          <ScalarProperty Name="Column50" ColumnName="Column50" />
+          <ScalarProperty Name="HeaderTextes" ColumnName="HeaderTextes" />
+          <ScalarProperty Name="StartinginCell" ColumnName="StartinginCell" />
+          <ScalarProperty Name="LineIndicator" ColumnName="LineIndicator" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="IncludeHeaderRow" ColumnName="IncludeHeaderRow" />
+          <ScalarProperty Name="SavePath" ColumnName="SavePath" />
+          <ScalarProperty Name="SaveName" ColumnName="SaveName" />
+          <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+          <ScalarProperty Name="SunComponent" ColumnName="SunComponent" />
+          <ScalarProperty Name="SunMethod" ColumnName="SunMethod" />
+          <ScalarProperty Name="HeaderValue" ColumnName="HeaderValue" />
+          <ScalarProperty Name="ProcessName" ColumnName="ProcessName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplateXMLTEXTFiles">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateXMLTEXTFile">
+        <MappingFragment StoreEntitySet="rsTemplateXMLTEXTFiles">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FileContent" ColumnName="FileContent" />
+          <ScalarProperty Name="RelatedName" ColumnName="RelatedName" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="XMLTemplate" ColumnName="XMLTemplate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsUpgrades">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsUpgrade">
+        <MappingFragment StoreEntitySet="rsUpgrade">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="RootPath" ColumnName="RootPath" />
+          <ScalarProperty Name="V1IP" ColumnName="V1IP" />
+          <ScalarProperty Name="V1UserID" ColumnName="V1UserID" />
+          <ScalarProperty Name="V1Password" ColumnName="V1Password" />
+          <ScalarProperty Name="V2IP" ColumnName="V2IP" />
+          <ScalarProperty Name="V2UserID" ColumnName="V2UserID" />
+          <ScalarProperty Name="V2Password" ColumnName="V2Password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsUserGroups">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsUserGroup">
+        <MappingFragment StoreEntitySet="rsUserGroup">
+          <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsUsers">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsUser">
+        <MappingFragment StoreEntitySet="rsUsers">
+          <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+          <ScalarProperty Name="FormUserID" ColumnName="FormUserID" />
+          <ScalarProperty Name="FormUserPassword" ColumnName="FormUserPassword" />
+          <ScalarProperty Name="WindowsUserID" ColumnName="WindowsUserID" />
+          <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+          <ScalarProperty Name="LoginType" ColumnName="LoginType" />
+          <ScalarProperty Name="SUNUserIP" ColumnName="SUNUserIP" />
+          <ScalarProperty Name="SUNUserID" ColumnName="SUNUserID" />
+          <ScalarProperty Name="SUNUserPass" ColumnName="SUNUserPass" />
+          <ScalarProperty Name="AddInTabName" ColumnName="AddInTabName" />
+          <ScalarProperty Name="TemplateUpdateFlag" ColumnName="TemplateUpdateFlag" />
+          <ScalarProperty Name="FileIds" ColumnName="FileIds" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsUsersTemplatesVisibles">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsUsersTemplatesVisible">
+        <MappingFragment StoreEntitySet="rsUsersTemplatesVisible">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_GroupActions">
+      <EntityTypeMapping TypeName="RSDataV2Model.View_GroupActions">
+        <MappingFragment StoreEntitySet="View_GroupActions">
+          <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+          <ScalarProperty Name="Per_Type" ColumnName="Per_Type" />
+          <ScalarProperty Name="ButtonName" ColumnName="ButtonName" />
+          <ScalarProperty Name="ButtonText" ColumnName="ButtonText" />
+          <ScalarProperty Name="ButtonIcon" ColumnName="ButtonIcon" />
+          <ScalarProperty Name="ButtonGroup" ColumnName="ButtonGroup" />
+          <ScalarProperty Name="ButtonSize" ColumnName="ButtonSize" />
+          <ScalarProperty Name="ButtonOrder" ColumnName="ButtonOrder" />
+          <ScalarProperty Name="GroupOrder" ColumnName="GroupOrder" />
+          <ScalarProperty Name="StopOnError" ColumnName="StopOnError" />
+          <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+          <ScalarProperty Name="MacroName" ColumnName="MacroName" />
+          <ScalarProperty Name="ProcessMacroOrder" ColumnName="ProcessMacroOrder" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_GroupPermissions">
+      <EntityTypeMapping TypeName="RSDataV2Model.View_GroupPermissions">
+        <MappingFragment StoreEntitySet="View_GroupPermissions">
+          <ScalarProperty Name="Folder" ColumnName="Folder" />
+          <ScalarProperty Name="PermissionName" ColumnName="PermissionName" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+          <ScalarProperty Name="Per_Type" ColumnName="Per_Type" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+          <ScalarProperty Name="PermissionGroupName" ColumnName="PermissionGroupName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="View_TemplatesPermissions">
+      <EntityTypeMapping TypeName="RSDataV2Model.View_TemplatesPermissions">
+        <MappingFragment StoreEntitySet="View_TemplatesPermissions">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="PermissionName" ColumnName="PermissionName" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+          <ScalarProperty Name="Per_Type" ColumnName="Per_Type" />
+          <ScalarProperty Name="remark" ColumnName="remark" />
+          <ScalarProperty Name="TemplateData" ColumnName="TemplateData" />
+          <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+          <ScalarProperty Name="OriginTemplatePath" ColumnName="OriginTemplatePath" />
+          <ScalarProperty Name="FileType" ColumnName="FileType" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="PerType" ColumnName="PerType" />
+          <ScalarProperty Name="Folder" ColumnName="Folder" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplateContainers">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateContainer">
+        <MappingFragment StoreEntitySet="rsTemplateContainer">
+          <ScalarProperty Name="SQLString" ColumnName="SQLString" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserID" ColumnName="UserID" />
+          <ScalarProperty Name="ConnectionString" ColumnName="ConnectionString" />
+          <ScalarProperty Name="IsDataBaseQuery" ColumnName="IsDataBaseQuery" />
+          <ScalarProperty Name="IsWebBrowser" ColumnName="IsWebBrowser" />
+          <ScalarProperty Name="FromDB" ColumnName="FromDB" />
+          <ScalarProperty Name="column" ColumnName="column" />
+          <ScalarProperty Name="ft_relatefilepath" ColumnName="ft_relatefilepath" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsGlobalDocumentViews">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsGlobalDocumentView">
+        <MappingFragment StoreEntitySet="rsGlobalDocumentViews">
+          <ScalarProperty Name="populateCell" ColumnName="populateCell" />
+          <ScalarProperty Name="pdfSQLString" ColumnName="pdfSQLString" />
+          <ScalarProperty Name="pdfPassword" ColumnName="pdfPassword" />
+          <ScalarProperty Name="pdfUserID" ColumnName="pdfUserID" />
+          <ScalarProperty Name="pdfConnectionString" ColumnName="pdfConnectionString" />
+          <ScalarProperty Name="pdfIsDataBaseQuery" ColumnName="pdfIsDataBaseQuery" />
+          <ScalarProperty Name="pdfIsWebBrowser" ColumnName="pdfIsWebBrowser" />
+          <ScalarProperty Name="pdfRelatedFilePath" ColumnName="pdfRelatedFilePath" />
+          <ScalarProperty Name="macro01" ColumnName="macro01" />
+          <ScalarProperty Name="filetype" ColumnName="filetype" />
+          <ScalarProperty Name="file" ColumnName="file" />
+          <ScalarProperty Name="useRefAsName" ColumnName="useRefAsName" />
+          <ScalarProperty Name="folder" ColumnName="folder" />
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="type" ColumnName="type" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="rsTemplateJournals">
+      <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateJournal">
+        <MappingFragment StoreEntitySet="rsTemplateJournal">
+          <ScalarProperty Name="PostProvisional" ColumnName="PostProvisional" />
+          <ScalarProperty Name="AllowPostSuspAcco" ColumnName="AllowPostSuspAcco" />
+          <ScalarProperty Name="AllowBalTrans" ColumnName="AllowBalTrans" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ConsolidateBy4" ColumnName="ConsolidateBy4" />
+          <ScalarProperty Name="ConsolidateBy3" ColumnName="ConsolidateBy3" />
+          <ScalarProperty Name="ConsolidateBy2" ColumnName="ConsolidateBy2" />
+          <ScalarProperty Name="ConsolidateBy1" ColumnName="ConsolidateBy1" />
+          <ScalarProperty Name="UpdateFields" ColumnName="UpdateFields" />
+          <ScalarProperty Name="InputFields" ColumnName="InputFields" />
+          <ScalarProperty Name="JournalLineNumber" ColumnName="JournalLineNumber" />
+          <ScalarProperty Name="JournalNumber" ColumnName="JournalNumber" />
+          <ScalarProperty Name="SaveReference" ColumnName="SaveReference" />
+          <ScalarProperty Name="Reference" ColumnName="Reference" />
+          <ScalarProperty Name="PopWithJNNumber" ColumnName="PopWithJNNumber" />
+          <ScalarProperty Name="BalanceBy" ColumnName="BalanceBy" />
+          <ScalarProperty Name="StartinginCell" ColumnName="StartinginCell" />
+          <ScalarProperty Name="LineIndicator" ColumnName="LineIndicator" />
+          <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+          <ScalarProperty Name="C4thAmount" ColumnName="4thAmount" />
+          <ScalarProperty Name="C2ndBase" ColumnName="2ndBase" />
+          <ScalarProperty Name="BaseAmount" ColumnName="BaseAmount" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="TransAmount" ColumnName="TransAmount" />
+          <ScalarProperty Name="GenDesc25" ColumnName="GenDesc25" />
+          <ScalarProperty Name="GenDesc24" ColumnName="GenDesc24" />
+          <ScalarProperty Name="GenDesc23" ColumnName="GenDesc23" />
+          <ScalarProperty Name="GenDesc22" ColumnName="GenDesc22" />
+          <ScalarProperty Name="GenDesc21" ColumnName="GenDesc21" />
+          <ScalarProperty Name="GenDesc20" ColumnName="GenDesc20" />
+          <ScalarProperty Name="GenDesc19" ColumnName="GenDesc19" />
+          <ScalarProperty Name="GenDesc18" ColumnName="GenDesc18" />
+          <ScalarProperty Name="GenDesc17" ColumnName="GenDesc17" />
+          <ScalarProperty Name="GenDesc16" ColumnName="GenDesc16" />
+          <ScalarProperty Name="GenDesc15" ColumnName="GenDesc15" />
+          <ScalarProperty Name="GenDesc14" ColumnName="GenDesc14" />
+          <ScalarProperty Name="GenDesc13" ColumnName="GenDesc13" />
+          <ScalarProperty Name="GenDesc12" ColumnName="GenDesc12" />
+          <ScalarProperty Name="GenDesc11" ColumnName="GenDesc11" />
+          <ScalarProperty Name="GenDesc10" ColumnName="GenDesc10" />
+          <ScalarProperty Name="GenDesc9" ColumnName="GenDesc9" />
+          <ScalarProperty Name="GenDesc8" ColumnName="GenDesc8" />
+          <ScalarProperty Name="GenDesc7" ColumnName="GenDesc7" />
+          <ScalarProperty Name="GenDesc6" ColumnName="GenDesc6" />
+          <ScalarProperty Name="GenDesc5" ColumnName="GenDesc5" />
+          <ScalarProperty Name="GenDesc4" ColumnName="GenDesc4" />
+          <ScalarProperty Name="GenDesc3" ColumnName="GenDesc3" />
+          <ScalarProperty Name="GenDesc2" ColumnName="GenDesc2" />
+          <ScalarProperty Name="GenDesc1" ColumnName="GenDesc1" />
+          <ScalarProperty Name="LA10" ColumnName="LA10" />
+          <ScalarProperty Name="LA9" ColumnName="LA9" />
+          <ScalarProperty Name="LA8" ColumnName="LA8" />
+          <ScalarProperty Name="LA7" ColumnName="LA7" />
+          <ScalarProperty Name="LA6" ColumnName="LA6" />
+          <ScalarProperty Name="LA5" ColumnName="LA5" />
+          <ScalarProperty Name="LA4" ColumnName="LA4" />
+          <ScalarProperty Name="LA3" ColumnName="LA3" />
+          <ScalarProperty Name="LA2" ColumnName="LA2" />
+          <ScalarProperty Name="LA1" ColumnName="LA1" />
+          <ScalarProperty Name="AlloctnMarker" ColumnName="AlloctnMarker" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="TransRef" ColumnName="TransRef" />
+          <ScalarProperty Name="JrnlSource" ColumnName="JrnlSource" />
+          <ScalarProperty Name="JrnlType" ColumnName="JrnlType" />
+          <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+          <ScalarProperty Name="TransDate" ColumnName="TransDate" />
+          <ScalarProperty Name="Period" ColumnName="Period" />
+          <ScalarProperty Name="ft_Account" ColumnName="ft_Account" />
+          <ScalarProperty Name="Ledger" ColumnName="Ledger" />
+          <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

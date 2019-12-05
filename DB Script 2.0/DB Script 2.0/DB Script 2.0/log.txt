@@ -1,0 +1,21 @@
+Msg 3701, Level 11, State 1, Server RS-TEST, Line 19
+Cannot drop the database 'RSDataV2', because it does not exist or you do not have permission.
+Changed database context to 'RSDataV2'.
+
+(0 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)
+
+(1 rows affected)

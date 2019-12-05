@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<SSC>
+  <ErrorContext>
+    <CompatibilityMode>0</CompatibilityMode>
+    <ErrorOutput>1</ErrorOutput>
+    <ErrorThreshold>1</ErrorThreshold>
+  </ErrorContext>
+  <User>
+    <Name>SSC</Name>
+  </User>
+  <SunSystemsContext>
+    <BusinessUnit>RSY</BusinessUnit>
+    <BudgetCode>A</BudgetCode>
+  </SunSystemsContext>
+  <Payload>
+    <AllocationMarkers Reference="1" status="fail">
+      <AccountCode>40001</AccountCode>
+      <JournalLineNumber>1</JournalLineNumber>
+      <JournalNumber>4</JournalNumber>
+      <Ledger>40001</Ledger>
+      <TransactionDateRange/>
+      <AccountRange>
+        <AccountCodeFrom>40001</AccountCodeFrom>
+        <AccountCodeTo>40001</AccountCodeTo>
+      </AccountRange>
+      <Actions>
+        <AllocationMarker>21</AllocationMarker>
+      </Actions>
+      <Messages>
+        <Message>
+          <Exception>.</Exception>
+          <UserText>.</UserText>
+          <Application>
+            <Component>.</Component>
+            <DataItem>.</DataItem>
+            <Driver>.</Driver>
+            <Item>.</Item>
+            <LastMethod>.</LastMethod>
+            <Message>.</Message>
+            <MessageNumber>.</MessageNumber>
+            <Method>.</Method>
+            <Type>.</Type>
+            <Value>.</Value>
+            <Version>.</Version>
+          </Application>
+        </Message>
+        <Message Reference="1" Level="error">
+          <UserText>Allocation Marker value is invalid.</UserText>
+          <Application>
+            <Component>AllocationMarkerUpdate</Component>
+            <Method>AmendMarker</Method>
+            <Version>27</Version>
+          </Application>
+        </Message>
+      </Messages>
+    </AllocationMarkers>
+  </Payload>
+</SSC>

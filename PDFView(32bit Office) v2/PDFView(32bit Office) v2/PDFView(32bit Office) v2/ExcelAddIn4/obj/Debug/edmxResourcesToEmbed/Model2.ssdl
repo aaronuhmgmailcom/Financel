@@ -1,0 +1,1073 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RSDataV2Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="RSDataV2ModelStoreContainer">
+    <EntitySet Name="rsGlobalDocumentViews" EntityType="RSDataV2Model.Store.rsGlobalDocumentViews" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsGlobalFields" EntityType="RSDataV2Model.Store.rsGlobalFields" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsGroupPermissions" EntityType="RSDataV2Model.Store.rsGroupPermissions" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsGroups" EntityType="RSDataV2Model.Store.rsGroups" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsPermissions" EntityType="RSDataV2Model.Store.rsPermissions" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsSystemProcesses" EntityType="RSDataV2Model.Store.rsSystemProcesses" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplateActions" EntityType="RSDataV2Model.Store.rsTemplateActions" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplateContainer" EntityType="RSDataV2Model.Store.rsTemplateContainer" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplateCreateXMLTextProfile" EntityType="RSDataV2Model.Store.rsTemplateCreateXMLTextProfile" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplateGenDescFields" EntityType="RSDataV2Model.Store.rsTemplateGenDescFields" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplateHelp" EntityType="RSDataV2Model.Store.rsTemplateHelp" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplateJournal" EntityType="RSDataV2Model.Store.rsTemplateJournal" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplates" EntityType="RSDataV2Model.Store.rsTemplates" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplateSetting" EntityType="RSDataV2Model.Store.rsTemplateSetting" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplateTransactions" EntityType="RSDataV2Model.Store.rsTemplateTransactions" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplateVisible" EntityType="RSDataV2Model.Store.rsTemplateVisible" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplateXMLTextFileDGV" EntityType="RSDataV2Model.Store.rsTemplateXMLTextFileDGV" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsTemplateXMLTEXTFiles" EntityType="RSDataV2Model.Store.rsTemplateXMLTEXTFiles" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsUpgrade" EntityType="RSDataV2Model.Store.rsUpgrade" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsUserGroup" EntityType="RSDataV2Model.Store.rsUserGroup" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="rsUsers" EntityType="RSDataV2Model.Store.rsUsers" store:Type="Tables" store:Schema="dbo" store:Name="rsUsers" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>SELECT 
+      [rsUsers].[ft_id] AS [ft_id], 
+      [rsUsers].[FormUserID] AS [FormUserID], 
+      [rsUsers].[FormUserPassword] AS [FormUserPassword], 
+      [rsUsers].[WindowsUserID] AS [WindowsUserID], 
+      [rsUsers].[MachineName] AS [MachineName], 
+      [rsUsers].[LoginType] AS [LoginType], 
+      [rsUsers].[SUNUserIP] AS [SUNUserIP], 
+      [rsUsers].[SUNUserID] AS [SUNUserID], 
+      [rsUsers].[SUNUserPass] AS [SUNUserPass], 
+      [rsUsers].[AddInTabName] AS [AddInTabName], 
+      [rsUsers].[TemplateUpdateFlag] AS [TemplateUpdateFlag], 
+      [rsUsers].[FileIds] AS [FileIds]
+      FROM [dbo].[rsUsers] AS [rsUsers]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="rsUsersTemplatesVisible" EntityType="RSDataV2Model.Store.rsUsersTemplatesVisible" store:Type="Tables" Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+    <EntitySet Name="View_GroupActions" EntityType="RSDataV2Model.Store.View_GroupActions" store:Type="Views" store:Schema="dbo" store:Name="View_GroupActions" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>SELECT 
+      [View_GroupActions].[PermissionID] AS [PermissionID], 
+      [View_GroupActions].[GroupID] AS [GroupID], 
+      [View_GroupActions].[TemplateID] AS [TemplateID], 
+      [View_GroupActions].[ActionID] AS [ActionID], 
+      [View_GroupActions].[Per_Type] AS [Per_Type], 
+      [View_GroupActions].[ButtonName] AS [ButtonName], 
+      [View_GroupActions].[ButtonText] AS [ButtonText], 
+      [View_GroupActions].[ButtonIcon] AS [ButtonIcon], 
+      [View_GroupActions].[ButtonGroup] AS [ButtonGroup], 
+      [View_GroupActions].[ButtonSize] AS [ButtonSize], 
+      [View_GroupActions].[ButtonOrder] AS [ButtonOrder], 
+      [View_GroupActions].[GroupOrder] AS [GroupOrder], 
+      [View_GroupActions].[StopOnError] AS [StopOnError], 
+      [View_GroupActions].[ProcessID] AS [ProcessID], 
+      [View_GroupActions].[MacroName] AS [MacroName], 
+      [View_GroupActions].[ProcessMacroOrder] AS [ProcessMacroOrder], 
+      [View_GroupActions].[Type] AS [Type], 
+      [View_GroupActions].[Reference] AS [Reference], 
+      [View_GroupActions].[ID] AS [ID]
+      FROM [dbo].[View_GroupActions] AS [View_GroupActions]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_GroupPermissions" EntityType="RSDataV2Model.Store.View_GroupPermissions" store:Type="Views" store:Schema="dbo" store:Name="View_GroupPermissions" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>SELECT 
+      [View_GroupPermissions].[PermissionName] AS [PermissionName], 
+      [View_GroupPermissions].[TemplateID] AS [TemplateID], 
+      [View_GroupPermissions].[ActionID] AS [ActionID], 
+      [View_GroupPermissions].[Per_Type] AS [Per_Type], 
+      [View_GroupPermissions].[remark] AS [remark], 
+      [View_GroupPermissions].[ID] AS [ID], 
+      [View_GroupPermissions].[GroupID] AS [GroupID], 
+      [View_GroupPermissions].[PermissionID] AS [PermissionID], 
+      [View_GroupPermissions].[PermissionGroupName] AS [PermissionGroupName], 
+      [View_GroupPermissions].[Folder] AS [Folder]
+      FROM [dbo].[View_GroupPermissions] AS [View_GroupPermissions]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="View_TemplatesPermissions" EntityType="RSDataV2Model.Store.View_TemplatesPermissions" store:Type="Views" store:Schema="dbo" store:Name="View_TemplatesPermissions" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+      <DefiningQuery>SELECT 
+      [View_TemplatesPermissions].[ID] AS [ID], 
+      [View_TemplatesPermissions].[PermissionName] AS [PermissionName], 
+      [View_TemplatesPermissions].[TemplateID] AS [TemplateID], 
+      [View_TemplatesPermissions].[ActionID] AS [ActionID], 
+      [View_TemplatesPermissions].[Per_Type] AS [Per_Type], 
+      [View_TemplatesPermissions].[remark] AS [remark], 
+      [View_TemplatesPermissions].[TemplateData] AS [TemplateData], 
+      [View_TemplatesPermissions].[TemplateName] AS [TemplateName], 
+      [View_TemplatesPermissions].[OriginTemplatePath] AS [OriginTemplatePath], 
+      [View_TemplatesPermissions].[FileType] AS [FileType], 
+      [View_TemplatesPermissions].[Description] AS [Description], 
+      [View_TemplatesPermissions].[PerType] AS [PerType], 
+      [View_TemplatesPermissions].[Folder] AS [Folder]
+      FROM [dbo].[View_TemplatesPermissions] AS [View_TemplatesPermissions]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+  <EntityType Name="rsGlobalDocumentViews">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="type" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="prefix" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="folder" Type="nvarchar(max)" />
+    <Property Name="useRefAsName" Type="bit" Nullable="false" />
+    <Property Name="file" Type="nvarchar" MaxLength="50" />
+    <Property Name="filetype" Type="varchar" MaxLength="4" />
+    <Property Name="macro01" Type="nvarchar" MaxLength="50" />
+    <Property Name="pdfRelatedFilePath" Type="nvarchar(max)" />
+    <Property Name="pdfIsWebBrowser" Type="bit" />
+    <Property Name="pdfIsDataBaseQuery" Type="bit" />
+    <Property Name="pdfConnectionString" Type="nvarchar(max)" />
+    <Property Name="pdfUserID" Type="nvarchar(max)" />
+    <Property Name="pdfPassword" Type="nvarchar(max)" />
+    <Property Name="pdfSQLString" Type="nvarchar(max)" />
+    <Property Name="populateCell" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="rsGlobalFields">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FieldGroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="SunField" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFriendlyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Output" Type="nvarchar" MaxLength="50" />
+    <Property Name="Input" Type="nvarchar" MaxLength="50" />
+    <Property Name="XML_Query" Type="nvarchar(max)" />
+    <Property Name="version" Type="int" />
+  </EntityType>
+  <EntityType Name="rsGroupPermissions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupID" Type="nvarchar" MaxLength="150" />
+    <Property Name="PermissionID" Type="nvarchar" MaxLength="150" />
+    <Property Name="PermissionGroupName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="rsGroups">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="GroupName" Type="nvarchar" MaxLength="150" />
+    <Property Name="GroupDisable" Type="bit" />
+    <Property Name="Remark" Type="nvarchar" />
+    <Property Name="AddInTabName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="rsPermissions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="PermissionName" Type="nvarchar" MaxLength="150" />
+    <Property Name="TemplateID" Type="nvarchar" MaxLength="150" />
+    <Property Name="ActionID" Type="nvarchar" MaxLength="150" />
+    <Property Name="Per_Type" Type="int" />
+    <Property Name="remark" Type="nvarchar" MaxLength="3000" />
+    <Property Name="Folder" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="rsSystemProcesses">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ProcessName" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="rsTemplateActions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="ButtonName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ButtonText" Type="nvarchar" MaxLength="50" />
+    <Property Name="ButtonIcon" Type="nvarchar" MaxLength="150" />
+    <Property Name="ButtonGroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="ButtonSize" Type="nvarchar" MaxLength="50" />
+    <Property Name="ButtonOrder" Type="int" />
+    <Property Name="GroupOrder" Type="int" />
+    <Property Name="StopOnError" Type="bit" />
+    <Property Name="TemplateID" Type="nvarchar(max)" />
+    <Property Name="ProcessID" Type="nvarchar(max)" />
+    <Property Name="MacroName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProcessMacroOrder" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Reference" Type="nchar" MaxLength="10" />
+    <Property Name="ShowMsg" Type="bit" />
+  </EntityType>
+  <EntityType Name="rsTemplateContainer">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TemplateID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ft_relatefilepath" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="column" Type="nvarchar" MaxLength="5" />
+    <Property Name="FromDB" Type="bit" />
+    <Property Name="IsWebBrowser" Type="bit" />
+    <Property Name="IsDataBaseQuery" Type="bit" />
+    <Property Name="ConnectionString" Type="nvarchar(max)" />
+    <Property Name="UserID" Type="nvarchar(max)" />
+    <Property Name="Password" Type="nvarchar(max)" />
+    <Property Name="SQLString" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="rsTemplateCreateXMLTextProfile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Field" Type="nvarchar" MaxLength="50" />
+    <Property Name="FriendlyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Visible" Type="bit" />
+    <Property Name="DefaultValue" Type="nvarchar(max)" />
+    <Property Name="SunComponentName" Type="nvarchar(max)" />
+    <Property Name="SunMethod" Type="nvarchar(max)" />
+    <Property Name="Mandatory" Type="bit" />
+    <Property Name="Separator" Type="nvarchar(max)" />
+    <Property Name="TextLength" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prefix" Type="nvarchar" MaxLength="50" />
+    <Property Name="Suffix" Type="nvarchar" MaxLength="50" />
+    <Property Name="RemoveCharacters" Type="nvarchar(max)" />
+    <Property Name="TextFileName" Type="nvarchar(max)" />
+    <Property Name="Parent" Type="nvarchar(max)" />
+    <Property Name="trimText" Type="nvarchar" MaxLength="50" />
+    <Property Name="Section" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="rsTemplateGenDescFields">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FieldGroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="SunField" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserFriendlyName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Output" Type="nvarchar" MaxLength="50" />
+    <Property Name="Input" Type="nvarchar" MaxLength="50" />
+    <Property Name="XML_Query" Type="nvarchar(max)" />
+    <Property Name="TemplateID" Type="nvarchar(max)" />
+    <Property Name="version" Type="int" />
+  </EntityType>
+  <EntityType Name="rsTemplateHelp">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateID" Type="nvarchar(max)" />
+    <Property Name="helpFileData" Type="varbinary(max)" />
+    <Property Name="helpFileType" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="rsTemplateJournal">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Ledger" Type="nvarchar" MaxLength="50" />
+    <Property Name="ft_Account" Type="nvarchar" MaxLength="50" />
+    <Property Name="Period" Type="nvarchar" MaxLength="50" />
+    <Property Name="TransDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="DueDate" Type="nvarchar" MaxLength="50" />
+    <Property Name="JrnlType" Type="nvarchar" MaxLength="50" />
+    <Property Name="JrnlSource" Type="nvarchar" MaxLength="50" />
+    <Property Name="TransRef" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar" MaxLength="50" />
+    <Property Name="AlloctnMarker" Type="nvarchar" MaxLength="50" />
+    <Property Name="LA1" Type="nvarchar" MaxLength="50" />
+    <Property Name="LA2" Type="nvarchar" MaxLength="50" />
+    <Property Name="LA3" Type="nvarchar" MaxLength="50" />
+    <Property Name="LA4" Type="nvarchar" MaxLength="50" />
+    <Property Name="LA5" Type="nvarchar" MaxLength="50" />
+    <Property Name="LA6" Type="nvarchar" MaxLength="50" />
+    <Property Name="LA7" Type="nvarchar" MaxLength="50" />
+    <Property Name="LA8" Type="nvarchar" MaxLength="50" />
+    <Property Name="LA9" Type="nvarchar" MaxLength="50" />
+    <Property Name="LA10" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc1" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc2" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc3" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc4" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc5" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc6" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc7" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc8" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc9" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc10" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc11" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc12" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc13" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc14" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc15" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc16" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc17" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc18" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc19" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc20" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc21" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc22" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc23" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc24" Type="nvarchar" MaxLength="50" />
+    <Property Name="GenDesc25" Type="nvarchar" MaxLength="50" />
+    <Property Name="TransAmount" Type="nvarchar" MaxLength="50" />
+    <Property Name="Currency" Type="nvarchar" MaxLength="50" />
+    <Property Name="BaseAmount" Type="nvarchar" MaxLength="50" />
+    <Property Name="2ndBase" Type="nvarchar" MaxLength="50" />
+    <Property Name="4thAmount" Type="nvarchar" MaxLength="50" />
+    <Property Name="TemplateID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LineIndicator" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="StartinginCell" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="BalanceBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="PopWithJNNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reference" Type="nchar" MaxLength="10" />
+    <Property Name="SaveReference" Type="nvarchar" MaxLength="50" />
+    <Property Name="JournalNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="JournalLineNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="InputFields" Type="nvarchar(max)" />
+    <Property Name="UpdateFields" Type="nvarchar(max)" />
+    <Property Name="ConsolidateBy1" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConsolidateBy2" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConsolidateBy3" Type="nvarchar" MaxLength="50" />
+    <Property Name="ConsolidateBy4" Type="nvarchar" MaxLength="50" />
+    <Property Name="Type" Type="nchar" MaxLength="10" />
+    <Property Name="AllowBalTrans" Type="nvarchar" MaxLength="50" />
+    <Property Name="AllowPostSuspAcco" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="rsTemplates">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateData" Type="varbinary(max)" />
+    <Property Name="TemplateName" Type="nvarchar(max)" />
+    <Property Name="OriginTemplatePath" Type="nvarchar(max)" />
+    <Property Name="FileType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="rsTemplateSetting">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CriteriaName1" Type="nvarchar" MaxLength="50" />
+    <Property Name="CellReference1" Type="nvarchar" MaxLength="50" />
+    <Property Name="TemplateID" Type="nvarchar" MaxLength="500" />
+    <Property Name="OpenTransUponSave" Type="bit" />
+    <Property Name="CriteriaName2" Type="nvarchar" MaxLength="50" />
+    <Property Name="CellReference2" Type="nvarchar" MaxLength="50" />
+    <Property Name="CriteriaName3" Type="nvarchar" MaxLength="50" />
+    <Property Name="CellReference3" Type="nvarchar" MaxLength="50" />
+    <Property Name="CriteriaName4" Type="nvarchar" MaxLength="50" />
+    <Property Name="CellReference4" Type="nvarchar" MaxLength="50" />
+    <Property Name="CriteriaName5" Type="nvarchar" MaxLength="50" />
+    <Property Name="CellReference5" Type="nvarchar" MaxLength="50" />
+    <Property Name="Reference" Type="nvarchar" MaxLength="50" />
+    <Property Name="SequencePrefix" Type="nvarchar" MaxLength="50" />
+    <Property Name="PopulateCell" Type="nvarchar" MaxLength="50" />
+    <Property Name="UseSequenceNumbering" Type="bit" />
+    <Property Name="PDFFolder" Type="nvarchar(max)" />
+    <Property Name="PDFName" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="rsTemplateTransactions">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TemplateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Criteria1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Criteria2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Criteria3" Type="nvarchar" MaxLength="50" />
+    <Property Name="Criteria4" Type="nvarchar" MaxLength="50" />
+    <Property Name="Criteria5" Type="nvarchar" MaxLength="50" />
+    <Property Name="Value1" Type="nvarchar" MaxLength="50" />
+    <Property Name="Value2" Type="nvarchar" MaxLength="50" />
+    <Property Name="Value3" Type="nvarchar" MaxLength="50" />
+    <Property Name="Value4" Type="nvarchar" MaxLength="50" />
+    <Property Name="Value5" Type="nvarchar" MaxLength="50" />
+    <Property Name="Data" Type="varbinary(max)" />
+    <Property Name="DataType" Type="nvarchar" MaxLength="50" />
+    <Property Name="PDFData" Type="varbinary(max)" />
+    <Property Name="XMLData" Type="varchar(max)" />
+    <Property Name="TemplateID" Type="nvarchar" MaxLength="150" />
+    <Property Name="maxNum" Type="int" />
+    <Property Name="TransactionName" Type="nvarchar" MaxLength="50" />
+    <Property Name="Prefix" Type="nvarchar" MaxLength="50" />
+    <Property Name="SunJournalNumber" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="rsTemplateVisible">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="TemplateID" Type="nvarchar" MaxLength="500" />
+    <Property Name="OutputPaneVisiable" Type="nvarchar" MaxLength="5" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="rsTemplateXMLTextFileDGV">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Column1" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column2" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column3" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column4" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column5" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column6" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column7" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column8" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column9" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column10" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column11" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column12" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column13" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column14" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column15" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column16" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column17" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column18" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column19" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column20" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column21" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column22" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column23" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column24" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column25" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column26" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column27" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column28" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column29" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column30" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column31" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column32" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column33" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column34" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column35" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column36" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column37" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column38" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column39" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column40" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column41" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column42" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column43" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column44" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column45" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column46" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column47" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column48" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column49" Type="nvarchar" MaxLength="150" />
+    <Property Name="Column50" Type="nvarchar" MaxLength="150" />
+    <Property Name="HeaderTextes" Type="nvarchar(max)" />
+    <Property Name="StartinginCell" Type="nvarchar" MaxLength="50" />
+    <Property Name="LineIndicator" Type="nvarchar" MaxLength="50" />
+    <Property Name="TemplateID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IncludeHeaderRow" Type="bit" />
+    <Property Name="SavePath" Type="nvarchar(max)" />
+    <Property Name="SaveName" Type="nvarchar" MaxLength="150" />
+    <Property Name="ReferenceNumber" Type="nchar" MaxLength="10" />
+    <Property Name="SunComponent" Type="nvarchar(max)" />
+    <Property Name="SunMethod" Type="nvarchar(max)" />
+    <Property Name="HeaderValue" Type="nvarchar(max)" />
+    <Property Name="ProcessName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="rsTemplateXMLTEXTFiles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="FileContent" Type="nvarchar(max)" />
+    <Property Name="RelatedName" Type="nvarchar(max)" />
+    <Property Name="FileType" Type="int" />
+    <Property Name="XMLTemplate" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="rsUpgrade">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="RootPath" Type="nvarchar(max)" />
+    <Property Name="V1IP" Type="nvarchar(max)" />
+    <Property Name="V1UserID" Type="nvarchar(max)" />
+    <Property Name="V1Password" Type="nvarchar(max)" />
+    <Property Name="V2IP" Type="nvarchar(max)" />
+    <Property Name="V2UserID" Type="nvarchar(max)" />
+    <Property Name="V2Password" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="rsUserGroup">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="150" />
+    <Property Name="GroupID" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RSDataV2.dbo.rsUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="rsUsers">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="FormUserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="FormUserPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="WindowsUserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="50" />
+    <Property Name="LoginType" Type="int" />
+    <Property Name="SUNUserIP" Type="nvarchar" MaxLength="50" />
+    <Property Name="SUNUserID" Type="nvarchar" MaxLength="50" />
+    <Property Name="SUNUserPass" Type="nvarchar" MaxLength="50" />
+    <Property Name="AddInTabName" Type="nvarchar(max)" />
+    <Property Name="TemplateUpdateFlag" Type="bit" />
+    <Property Name="FileIds" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="rsUsersTemplatesVisible">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="TemplateID" Type="nvarchar(max)" />
+    <Property Name="UserID" Type="nvarchar(max)" />
+    <Property Name="Visible" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RSDataV2.dbo.View_GroupActions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_GroupActions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PermissionID" Type="nvarchar" MaxLength="150" />
+    <Property Name="GroupID" Type="nvarchar" MaxLength="150" />
+    <Property Name="TemplateID" Type="nvarchar" MaxLength="150" />
+    <Property Name="ActionID" Type="nvarchar" MaxLength="150" />
+    <Property Name="Per_Type" Type="int" />
+    <Property Name="ButtonName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ButtonText" Type="nvarchar" MaxLength="50" />
+    <Property Name="ButtonIcon" Type="nvarchar" MaxLength="150" />
+    <Property Name="ButtonGroup" Type="nvarchar" MaxLength="50" />
+    <Property Name="ButtonSize" Type="nvarchar" MaxLength="50" />
+    <Property Name="ButtonOrder" Type="int" />
+    <Property Name="GroupOrder" Type="int" />
+    <Property Name="StopOnError" Type="bit" />
+    <Property Name="ProcessID" Type="nvarchar(max)" />
+    <Property Name="MacroName" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProcessMacroOrder" Type="int" />
+    <Property Name="Type" Type="int" />
+    <Property Name="Reference" Type="nchar" MaxLength="10" />
+    <Property Name="ID" Type="int" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RSDataV2.dbo.View_GroupPermissions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_GroupPermissions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PermissionName" Type="nvarchar" MaxLength="150" />
+    <Property Name="TemplateID" Type="nvarchar" MaxLength="150" />
+    <Property Name="ActionID" Type="nvarchar" MaxLength="150" />
+    <Property Name="Per_Type" Type="int" />
+    <Property Name="remark" Type="nvarchar" MaxLength="3000" />
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="GroupID" Type="nvarchar" MaxLength="150" />
+    <Property Name="PermissionID" Type="nvarchar" MaxLength="150" />
+    <Property Name="PermissionGroupName" Type="nvarchar(max)" />
+    <Property Name="Folder" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <!--Errors Found During Generation:
+      warning 6002: The table/view 'RSDataV2.dbo.View_TemplatesPermissions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+  <EntityType Name="View_TemplatesPermissions">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="PerType" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="PermissionName" Type="nvarchar" MaxLength="150" />
+    <Property Name="TemplateID" Type="nvarchar" MaxLength="150" />
+    <Property Name="ActionID" Type="nvarchar" MaxLength="150" />
+    <Property Name="Per_Type" Type="int" />
+    <Property Name="remark" Type="nvarchar" MaxLength="3000" />
+    <Property Name="TemplateData" Type="image" />
+    <Property Name="TemplateName" Type="nvarchar(max)" />
+    <Property Name="OriginTemplatePath" Type="nvarchar(max)" />
+    <Property Name="FileType" Type="nvarchar" MaxLength="50" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="PerType" Type="varchar" Nullable="false" MaxLength="10" />
+    <Property Name="Folder" Type="nvarchar" MaxLength="500" />
+  </EntityType>
+  <Function Name="rsGlobalDocumentViews_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="rsGlobalDocumentViews_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="type" Type="nvarchar" Mode="In" />
+    <Parameter Name="prefix" Type="nchar" Mode="In" />
+    <Parameter Name="folder" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="useRefAsName" Type="bit" Mode="In" />
+    <Parameter Name="file" Type="nvarchar" Mode="In" />
+    <Parameter Name="filetype" Type="varchar" Mode="In" />
+    <Parameter Name="macro01" Type="nvarchar" Mode="In" />
+    <Parameter Name="pdfRelatedFilePath" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pdfIsWebBrowser" Type="bit" Mode="In" />
+    <Parameter Name="pdfIsDataBaseQuery" Type="bit" Mode="In" />
+    <Parameter Name="pdfConnectionString" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pdfUserID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pdfPassword" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="pdfSQLString" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="populateCell" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsGlobalFields_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="rsGlobalFields_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FieldGroup" Type="nvarchar" Mode="In" />
+    <Parameter Name="SunField" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserFriendlyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Output" Type="nvarchar" Mode="In" />
+    <Parameter Name="Input" Type="nvarchar" Mode="In" />
+    <Parameter Name="XML_Query" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+  </Function>
+  <Function Name="rsGroupPermissions_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="rsGroupPermissions_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupID" Type="nvarchar" Mode="In" />
+    <Parameter Name="PermissionID" Type="nvarchar" Mode="In" />
+    <Parameter Name="PermissionGroupName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsGroups_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="rsGroups_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupName" Type="nvarchar" Mode="In" />
+    <Parameter Name="GroupDisable" Type="bit" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="AddInTabName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsGroups_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="GroupName" Type="nvarchar" Mode="In" />
+    <Parameter Name="GroupDisable" Type="bit" Mode="In" />
+    <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="AddInTabName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsPermissions_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="templateid" Type="nvarchar" Mode="In" />
+    <Parameter Name="actionID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsPermissions_DelByTmpID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="templateid" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsPermissions_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PermissionName" Type="nvarchar" Mode="In" />
+    <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+    <Parameter Name="ActionID" Type="nvarchar" Mode="In" />
+    <Parameter Name="Per_Type" Type="int" Mode="In" />
+    <Parameter Name="remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="Folder" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsPermissions_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="int" Mode="In" />
+    <Parameter Name="PermissionName" Type="nvarchar" Mode="In" />
+    <Parameter Name="remark" Type="nvarchar" Mode="In" />
+    <Parameter Name="Folder" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsSystemProcesses_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ProcessName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateActions_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="templateid" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="buttonName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateActions_DelByTmpID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="templateid" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateActions_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Name" Type="nvarchar" Mode="In" />
+    <Parameter Name="Text" Type="nvarchar" Mode="In" />
+    <Parameter Name="ButtonIcon" Type="nvarchar" Mode="In" />
+    <Parameter Name="ButtonGroup" Type="nvarchar" Mode="In" />
+    <Parameter Name="ButtonSize" Type="nvarchar" Mode="In" />
+    <Parameter Name="ButtonOrder" Type="int" Mode="In" />
+    <Parameter Name="GroupOrder" Type="int" Mode="In" />
+    <Parameter Name="StopOnError" Type="bit" Mode="In" />
+    <Parameter Name="templateID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ProcessID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="MacroName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ProcessMacroOrder" Type="int" Mode="In" />
+    <Parameter Name="Type" Type="int" Mode="In" />
+    <Parameter Name="Reference" Type="nchar" Mode="In" />
+    <Parameter Name="ShowMsg" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateActions_UpdActionOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ButtonOrder" Type="int" Mode="In" />
+    <Parameter Name="templateid" Type="nvarchar" Mode="In" />
+    <Parameter Name="buttonName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ButtonGroup" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateActions_UpdGroupName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ButtonGroup" Type="nvarchar" Mode="In" />
+    <Parameter Name="GroupOrder" Type="int" Mode="In" />
+    <Parameter Name="OldButtonGroup" Type="nvarchar" Mode="In" />
+    <Parameter Name="buttonName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateActions_UpdGroupOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="ButtonGroup" Type="nvarchar" Mode="In" />
+    <Parameter Name="GroupOrder" Type="int" Mode="In" />
+    <Parameter Name="OldButtonGroup" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateCreateXMLTextProfile_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="textfilename" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateCreateXMLTextProfile_DelXML" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SunComponentName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SunMethod" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateCreateXMLTextProfile_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Field" Type="nvarchar" Mode="In" />
+    <Parameter Name="FriendlyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Visible" Type="bit" Mode="In" />
+    <Parameter Name="DefaultValue" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SunComponentName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SunMethod" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Mandatory" Type="bit" Mode="In" />
+    <Parameter Name="Separator" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="TextLength" Type="nvarchar" Mode="In" />
+    <Parameter Name="Prefix" Type="nvarchar" Mode="In" />
+    <Parameter Name="Suffix" Type="nvarchar" Mode="In" />
+    <Parameter Name="RemoveCharacters" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="TextFileName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Parent" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="trimText" Type="nvarchar" Mode="In" />
+    <Parameter Name="Section" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateGenDescFields_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateGenDescFields_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FieldGroup" Type="nvarchar" Mode="In" />
+    <Parameter Name="SunField" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserFriendlyName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Output" Type="nvarchar" Mode="In" />
+    <Parameter Name="Input" Type="nvarchar" Mode="In" />
+    <Parameter Name="XML_Query" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateHelp_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateHelp_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="helpFileData" Type="image" Mode="In" />
+    <Parameter Name="helpFileType" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateJournal_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Type" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateJournal_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Ledger" Type="nvarchar" Mode="In" />
+    <Parameter Name="ft_Account" Type="nvarchar" Mode="In" />
+    <Parameter Name="Period" Type="nvarchar" Mode="In" />
+    <Parameter Name="TransDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="DueDate" Type="nvarchar" Mode="In" />
+    <Parameter Name="JrnlType" Type="nvarchar" Mode="In" />
+    <Parameter Name="JrnlSource" Type="nvarchar" Mode="In" />
+    <Parameter Name="TransRef" Type="nvarchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar" Mode="In" />
+    <Parameter Name="AlloctnMarker" Type="nvarchar" Mode="In" />
+    <Parameter Name="LA1" Type="nvarchar" Mode="In" />
+    <Parameter Name="LA2" Type="nvarchar" Mode="In" />
+    <Parameter Name="LA3" Type="nvarchar" Mode="In" />
+    <Parameter Name="LA4" Type="nvarchar" Mode="In" />
+    <Parameter Name="LA5" Type="nvarchar" Mode="In" />
+    <Parameter Name="LA6" Type="nvarchar" Mode="In" />
+    <Parameter Name="LA7" Type="nvarchar" Mode="In" />
+    <Parameter Name="LA8" Type="nvarchar" Mode="In" />
+    <Parameter Name="LA9" Type="nvarchar" Mode="In" />
+    <Parameter Name="LA10" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc1" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc2" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc3" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc4" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc5" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc6" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc7" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc8" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc9" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc10" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc11" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc12" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc13" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc14" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc15" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc16" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc17" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc18" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc19" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc20" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc21" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc22" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc23" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc24" Type="nvarchar" Mode="In" />
+    <Parameter Name="GenDesc25" Type="nvarchar" Mode="In" />
+    <Parameter Name="TransAmount" Type="nvarchar" Mode="In" />
+    <Parameter Name="Currency" Type="nvarchar" Mode="In" />
+    <Parameter Name="BaseAmount" Type="nvarchar" Mode="In" />
+    <Parameter Name="p2ndBase" Type="nvarchar" Mode="In" />
+    <Parameter Name="p4thAmount" Type="nvarchar" Mode="In" />
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="LineIndicator" Type="nvarchar" Mode="In" />
+    <Parameter Name="StartinginCell" Type="nvarchar" Mode="In" />
+    <Parameter Name="BalanceBy" Type="nvarchar" Mode="In" />
+    <Parameter Name="PopWithJNNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="Reference" Type="nchar" Mode="In" />
+    <Parameter Name="SaveReference" Type="nvarchar" Mode="In" />
+    <Parameter Name="JournalNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="JournalLineNumber" Type="nvarchar" Mode="In" />
+    <Parameter Name="InputFields" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UpdateFields" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ConsolidateBy1" Type="nvarchar" Mode="In" />
+    <Parameter Name="ConsolidateBy2" Type="nvarchar" Mode="In" />
+    <Parameter Name="ConsolidateBy3" Type="nvarchar" Mode="In" />
+    <Parameter Name="ConsolidateBy4" Type="nvarchar" Mode="In" />
+    <Parameter Name="Type" Type="nchar" Mode="In" />
+    <Parameter Name="AllowBalTrans" Type="nvarchar" Mode="In" />
+    <Parameter Name="AllowPostSuspAcco" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplates_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsTemplates_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateData" Type="image" Mode="In" />
+    <Parameter Name="TemplateName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="OriginTemplatePath" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FileType" Type="nvarchar" Mode="In" />
+    <Parameter Name="Description" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsTemplates_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateData" Type="image" Mode="In" />
+    <Parameter Name="FileType" Type="nvarchar" Mode="In" />
+    <Parameter Name="templateID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateSetting_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateSetting_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="CriteriaName1" Type="nvarchar" Mode="In" />
+    <Parameter Name="CellReference1" Type="nvarchar" Mode="In" />
+    <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+    <Parameter Name="OpenTransUponSave" Type="bit" Mode="In" />
+    <Parameter Name="CriteriaName2" Type="nvarchar" Mode="In" />
+    <Parameter Name="CellReference2" Type="nvarchar" Mode="In" />
+    <Parameter Name="CriteriaName3" Type="nvarchar" Mode="In" />
+    <Parameter Name="CellReference3" Type="nvarchar" Mode="In" />
+    <Parameter Name="CriteriaName4" Type="nvarchar" Mode="In" />
+    <Parameter Name="CellReference4" Type="nvarchar" Mode="In" />
+    <Parameter Name="CriteriaName5" Type="nvarchar" Mode="In" />
+    <Parameter Name="CellReference5" Type="nvarchar" Mode="In" />
+    <Parameter Name="Reference" Type="nvarchar" Mode="In" />
+    <Parameter Name="UseSequenceNumbering" Type="bit" Mode="In" />
+    <Parameter Name="SequencePrefix" Type="nvarchar" Mode="In" />
+    <Parameter Name="PopulateCell" Type="nvarchar" Mode="In" />
+    <Parameter Name="PDFFolder" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="PDFName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateTransactions_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+    <Parameter Name="TransactionName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateTransactions_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Criteria1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Criteria2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Criteria3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Criteria4" Type="nvarchar" Mode="In" />
+    <Parameter Name="Criteria5" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value4" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value5" Type="nvarchar" Mode="In" />
+    <Parameter Name="Data" Type="image" Mode="In" />
+    <Parameter Name="DataType" Type="nvarchar" Mode="In" />
+    <Parameter Name="PDFData" Type="image" Mode="In" />
+    <Parameter Name="XMLData" Type="varchar(max)" Mode="In" />
+    <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+    <Parameter Name="maxNum" Type="int" Mode="In" />
+    <Parameter Name="TransactionName" Type="nvarchar" Mode="In" />
+    <Parameter Name="Prefix" Type="nvarchar" Mode="In" />
+    <Parameter Name="SunJournalNumber" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateTransactions_UpdateCriterias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Criteria1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Criteria2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Criteria3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Criteria4" Type="nvarchar" Mode="In" />
+    <Parameter Name="Criteria5" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value4" Type="nvarchar" Mode="In" />
+    <Parameter Name="Value5" Type="nvarchar" Mode="In" />
+    <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateTransactions_UpdatePDF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="PDFData" Type="image" Mode="In" />
+    <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+    <Parameter Name="maxNum" Type="int" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateVisible_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateVisible_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+    <Parameter Name="OutputPaneVisiable" Type="nvarchar" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateXMLTextFileDGV_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ProcessName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateXMLTextFileDGV_DelByComName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SunComponent" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SunMethod" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateXMLTextFileDGV_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="Column1" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column2" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column3" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column4" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column5" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column6" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column7" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column8" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column9" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column10" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column11" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column12" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column13" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column14" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column15" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column16" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column17" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column18" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column19" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column20" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column21" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column22" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column23" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column24" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column25" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column26" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column27" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column28" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column29" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column30" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column31" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column32" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column33" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column34" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column35" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column36" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column37" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column38" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column39" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column40" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column41" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column42" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column43" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column44" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column45" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column46" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column47" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column48" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column49" Type="nvarchar" Mode="In" />
+    <Parameter Name="Column50" Type="nvarchar" Mode="In" />
+    <Parameter Name="HeaderTextes" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="StartinginCell" Type="nvarchar" Mode="In" />
+    <Parameter Name="LineIndicator" Type="nvarchar" Mode="In" />
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="IncludeHeaderRow" Type="bit" Mode="In" />
+    <Parameter Name="SavePath" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SaveName" Type="nvarchar" Mode="In" />
+    <Parameter Name="ReferenceNumber" Type="nchar" Mode="In" />
+    <Parameter Name="SunComponent" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="SunMethod" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="HeaderValue" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="ProcessName" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateXMLTEXTFiles_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RelatedName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FileType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="rsTemplateXMLTEXTFiles_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FileContent" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="RelatedName" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="XMLTemplate" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="FileType" Type="int" Mode="In" />
+  </Function>
+  <Function Name="rsUpgrade_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="RootPath" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="V1IP" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="V1UserID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="V1Password" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="V2IP" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="V2UserID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="V2Password" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsUserGroup_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="GroupID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="rsUserGroup_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="GroupID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsUsers_AddInTabName_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="AddInTabName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsUsers_DelByWindowsUserID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WindowsUserID" Type="varchar" Mode="In" />
+  </Function>
+  <Function Name="rsUsers_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="WindowsUserID" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="rsUsers_TemplateUpdateFlag_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateUpdateFlag" Type="bit" Mode="In" />
+    <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="rsUsers_TemplateUpdateFlag_UpdAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateUpdateFlag" Type="bit" Mode="In" />
+  </Function>
+  <Function Name="rsUsers_UserInfo_FileIdsUpd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="FileIds" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsUsers_UserInfo_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="FormUserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="FormUserPassword" Type="nvarchar" Mode="In" />
+    <Parameter Name="WindowsUserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="MachineName" Type="nvarchar" Mode="In" />
+    <Parameter Name="LoginType" Type="int" Mode="In" />
+    <Parameter Name="SUNUserIP" Type="nvarchar" Mode="In" />
+    <Parameter Name="SUNUserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="SUNUserPass" Type="nvarchar" Mode="In" />
+    <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+    <Parameter Name="AddInTabName" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsUsers_UserSunInfo_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SUNUserIP" Type="nvarchar" Mode="In" />
+    <Parameter Name="SUNUserID" Type="nvarchar" Mode="In" />
+    <Parameter Name="SUNUserPass" Type="nvarchar" Mode="In" />
+    <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+  </Function>
+  <Function Name="rsUsersTemplatesVisible_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="UserID" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsUsersTemplatesVisible_DelByTmpID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+  </Function>
+  <Function Name="rsUsersTemplatesVisible_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Visible" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="rsUsersTemplatesVisible_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="UserID" Type="nvarchar(max)" Mode="In" />
+    <Parameter Name="Visible" Type="nchar" Mode="In" />
+  </Function>
+</Schema>

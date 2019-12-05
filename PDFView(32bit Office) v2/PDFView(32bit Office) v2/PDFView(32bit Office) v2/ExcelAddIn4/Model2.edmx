@@ -1,0 +1,2154 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RSDataV2Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityContainer Name="RSDataV2ModelStoreContainer">
+          <EntitySet Name="rsGlobalDocumentViews" EntityType="RSDataV2Model.Store.rsGlobalDocumentViews" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsGlobalFields" EntityType="RSDataV2Model.Store.rsGlobalFields" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsGroupPermissions" EntityType="RSDataV2Model.Store.rsGroupPermissions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsGroups" EntityType="RSDataV2Model.Store.rsGroups" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsPermissions" EntityType="RSDataV2Model.Store.rsPermissions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsSystemProcesses" EntityType="RSDataV2Model.Store.rsSystemProcesses" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplateActions" EntityType="RSDataV2Model.Store.rsTemplateActions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplateContainer" EntityType="RSDataV2Model.Store.rsTemplateContainer" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplateCreateXMLTextProfile" EntityType="RSDataV2Model.Store.rsTemplateCreateXMLTextProfile" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplateGenDescFields" EntityType="RSDataV2Model.Store.rsTemplateGenDescFields" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplateHelp" EntityType="RSDataV2Model.Store.rsTemplateHelp" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplateJournal" EntityType="RSDataV2Model.Store.rsTemplateJournal" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplates" EntityType="RSDataV2Model.Store.rsTemplates" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplateSetting" EntityType="RSDataV2Model.Store.rsTemplateSetting" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplateTransactions" EntityType="RSDataV2Model.Store.rsTemplateTransactions" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplateVisible" EntityType="RSDataV2Model.Store.rsTemplateVisible" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplateXMLTextFileDGV" EntityType="RSDataV2Model.Store.rsTemplateXMLTextFileDGV" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsTemplateXMLTEXTFiles" EntityType="RSDataV2Model.Store.rsTemplateXMLTEXTFiles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsUpgrade" EntityType="RSDataV2Model.Store.rsUpgrade" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsUserGroup" EntityType="RSDataV2Model.Store.rsUserGroup" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="rsUsers" EntityType="RSDataV2Model.Store.rsUsers" store:Type="Tables" store:Schema="dbo" store:Name="rsUsers">
+            <DefiningQuery>SELECT 
+      [rsUsers].[ft_id] AS [ft_id], 
+      [rsUsers].[FormUserID] AS [FormUserID], 
+      [rsUsers].[FormUserPassword] AS [FormUserPassword], 
+      [rsUsers].[WindowsUserID] AS [WindowsUserID], 
+      [rsUsers].[MachineName] AS [MachineName], 
+      [rsUsers].[LoginType] AS [LoginType], 
+      [rsUsers].[SUNUserIP] AS [SUNUserIP], 
+      [rsUsers].[SUNUserID] AS [SUNUserID], 
+      [rsUsers].[SUNUserPass] AS [SUNUserPass], 
+      [rsUsers].[AddInTabName] AS [AddInTabName], 
+      [rsUsers].[TemplateUpdateFlag] AS [TemplateUpdateFlag], 
+      [rsUsers].[FileIds] AS [FileIds]
+      FROM [dbo].[rsUsers] AS [rsUsers]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="rsUsersTemplatesVisible" EntityType="RSDataV2Model.Store.rsUsersTemplatesVisible" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="View_GroupActions" EntityType="RSDataV2Model.Store.View_GroupActions" store:Type="Views" store:Schema="dbo" store:Name="View_GroupActions">
+            <DefiningQuery>SELECT 
+      [View_GroupActions].[PermissionID] AS [PermissionID], 
+      [View_GroupActions].[GroupID] AS [GroupID], 
+      [View_GroupActions].[TemplateID] AS [TemplateID], 
+      [View_GroupActions].[ActionID] AS [ActionID], 
+      [View_GroupActions].[Per_Type] AS [Per_Type], 
+      [View_GroupActions].[ButtonName] AS [ButtonName], 
+      [View_GroupActions].[ButtonText] AS [ButtonText], 
+      [View_GroupActions].[ButtonIcon] AS [ButtonIcon], 
+      [View_GroupActions].[ButtonGroup] AS [ButtonGroup], 
+      [View_GroupActions].[ButtonSize] AS [ButtonSize], 
+      [View_GroupActions].[ButtonOrder] AS [ButtonOrder], 
+      [View_GroupActions].[GroupOrder] AS [GroupOrder], 
+      [View_GroupActions].[StopOnError] AS [StopOnError], 
+      [View_GroupActions].[ProcessID] AS [ProcessID], 
+      [View_GroupActions].[MacroName] AS [MacroName], 
+      [View_GroupActions].[ProcessMacroOrder] AS [ProcessMacroOrder], 
+      [View_GroupActions].[Reference] AS [Reference], 
+      [View_GroupActions].[ID] AS [ID], 
+      [View_GroupActions].[Type] AS [Type]
+      FROM [dbo].[View_GroupActions] AS [View_GroupActions]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_GroupPermissions" EntityType="RSDataV2Model.Store.View_GroupPermissions" store:Type="Views" store:Schema="dbo" store:Name="View_GroupPermissions">
+            <DefiningQuery>SELECT 
+      [View_GroupPermissions].[PermissionName] AS [PermissionName], 
+      [View_GroupPermissions].[TemplateID] AS [TemplateID], 
+      [View_GroupPermissions].[ActionID] AS [ActionID], 
+      [View_GroupPermissions].[Per_Type] AS [Per_Type], 
+      [View_GroupPermissions].[remark] AS [remark], 
+      [View_GroupPermissions].[ID] AS [ID], 
+      [View_GroupPermissions].[GroupID] AS [GroupID], 
+      [View_GroupPermissions].[PermissionID] AS [PermissionID], 
+      [View_GroupPermissions].[PermissionGroupName] AS [PermissionGroupName], 
+      [View_GroupPermissions].[Folder] AS [Folder]
+      FROM [dbo].[View_GroupPermissions] AS [View_GroupPermissions]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_TemplatesPermissions" EntityType="RSDataV2Model.Store.View_TemplatesPermissions" store:Type="Views" store:Schema="dbo" store:Name="View_TemplatesPermissions">
+            <DefiningQuery>SELECT 
+      [View_TemplatesPermissions].[ID] AS [ID], 
+      [View_TemplatesPermissions].[PermissionName] AS [PermissionName], 
+      [View_TemplatesPermissions].[TemplateID] AS [TemplateID], 
+      [View_TemplatesPermissions].[Per_Type] AS [Per_Type], 
+      [View_TemplatesPermissions].[remark] AS [remark], 
+      [View_TemplatesPermissions].[TemplateData] AS [TemplateData], 
+      [View_TemplatesPermissions].[TemplateName] AS [TemplateName], 
+      [View_TemplatesPermissions].[OriginTemplatePath] AS [OriginTemplatePath], 
+      [View_TemplatesPermissions].[FileType] AS [FileType], 
+      [View_TemplatesPermissions].[Description] AS [Description], 
+      [View_TemplatesPermissions].[PerType] AS [PerType], 
+      [View_TemplatesPermissions].[Folder] AS [Folder], 
+      [View_TemplatesPermissions].[ActionID] AS [ActionID]
+      FROM [dbo].[View_TemplatesPermissions] AS [View_TemplatesPermissions]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="rsGlobalDocumentViews">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="type" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="prefix" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="folder" Type="nvarchar(max)" />
+          <Property Name="useRefAsName" Type="bit" Nullable="false" />
+          <Property Name="file" Type="nvarchar" MaxLength="50" />
+          <Property Name="filetype" Type="varchar" MaxLength="4" />
+          <Property Name="macro01" Type="nvarchar" MaxLength="50" />
+          <Property Name="pdfRelatedFilePath" Type="nvarchar(max)" />
+          <Property Name="pdfIsWebBrowser" Type="bit" />
+          <Property Name="pdfIsDataBaseQuery" Type="bit" />
+          <Property Name="pdfConnectionString" Type="nvarchar(max)" />
+          <Property Name="pdfUserID" Type="nvarchar(max)" />
+          <Property Name="pdfPassword" Type="nvarchar(max)" />
+          <Property Name="pdfSQLString" Type="nvarchar(max)" />
+          <Property Name="populateCell" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="rsGlobalFields">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FieldGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="SunField" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFriendlyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Output" Type="nvarchar" MaxLength="50" />
+          <Property Name="Input" Type="nvarchar" MaxLength="50" />
+          <Property Name="XML_Query" Type="nvarchar(max)" />
+          <Property Name="version" Type="int" />
+        </EntityType>
+        <EntityType Name="rsGroupPermissions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GroupID" Type="nvarchar" MaxLength="150" />
+          <Property Name="PermissionID" Type="nvarchar" MaxLength="150" />
+          <Property Name="PermissionGroupName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="rsGroups">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="GroupName" Type="nvarchar" MaxLength="150" />
+          <Property Name="GroupDisable" Type="bit" />
+          <Property Name="Remark" Type="nvarchar" />
+          <Property Name="AddInTabName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="rsPermissions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PermissionName" Type="nvarchar" MaxLength="150" />
+          <Property Name="TemplateID" Type="nvarchar" MaxLength="150" />
+          <Property Name="ActionID" Type="nvarchar" MaxLength="150" />
+          <Property Name="Per_Type" Type="int" />
+          <Property Name="remark" Type="nvarchar" MaxLength="3000" />
+          <Property Name="Folder" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <EntityType Name="rsSystemProcesses">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ProcessName" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="rsTemplateActions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ButtonName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ButtonText" Type="nvarchar" MaxLength="50" />
+          <Property Name="ButtonIcon" Type="nvarchar" MaxLength="150" />
+          <Property Name="ButtonGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="ButtonSize" Type="nvarchar" MaxLength="50" />
+          <Property Name="ButtonOrder" Type="int" />
+          <Property Name="GroupOrder" Type="int" />
+          <Property Name="StopOnError" Type="bit" />
+          <Property Name="TemplateID" Type="nvarchar(max)" />
+          <Property Name="ProcessID" Type="nvarchar(max)" />
+          <Property Name="MacroName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProcessMacroOrder" Type="int" />
+          <Property Name="Type" Type="int" />
+          <Property Name="Reference" Type="nchar" MaxLength="10" />
+          <Property Name="ShowMsg" Type="bit" />
+        </EntityType>
+        <EntityType Name="rsTemplateContainer">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TemplateID" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ft_relatefilepath" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="column" Type="nvarchar" MaxLength="5" />
+          <Property Name="FromDB" Type="bit" />
+          <Property Name="IsWebBrowser" Type="bit" />
+          <Property Name="IsDataBaseQuery" Type="bit" />
+          <Property Name="ConnectionString" Type="nvarchar(max)" />
+          <Property Name="UserID" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+          <Property Name="SQLString" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="rsTemplateCreateXMLTextProfile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Field" Type="nvarchar" MaxLength="50" />
+          <Property Name="FriendlyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Visible" Type="bit" />
+          <Property Name="DefaultValue" Type="nvarchar(max)" />
+          <Property Name="SunComponentName" Type="nvarchar(max)" />
+          <Property Name="SunMethod" Type="nvarchar(max)" />
+          <Property Name="Mandatory" Type="bit" />
+          <Property Name="Separator" Type="nvarchar(max)" />
+          <Property Name="TextLength" Type="nvarchar" MaxLength="50" />
+          <Property Name="Prefix" Type="nvarchar" MaxLength="50" />
+          <Property Name="Suffix" Type="nvarchar" MaxLength="50" />
+          <Property Name="RemoveCharacters" Type="nvarchar(max)" />
+          <Property Name="TextFileName" Type="nvarchar(max)" />
+          <Property Name="Parent" Type="nvarchar(max)" />
+          <Property Name="trimText" Type="nvarchar" MaxLength="50" />
+          <Property Name="Section" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="rsTemplateGenDescFields">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FieldGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="SunField" Type="nvarchar" MaxLength="50" />
+          <Property Name="UserFriendlyName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Output" Type="nvarchar" MaxLength="50" />
+          <Property Name="Input" Type="nvarchar" MaxLength="50" />
+          <Property Name="XML_Query" Type="nvarchar(max)" />
+          <Property Name="TemplateID" Type="nvarchar(max)" />
+          <Property Name="version" Type="int" />
+        </EntityType>
+        <EntityType Name="rsTemplateHelp">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TemplateID" Type="nvarchar(max)" />
+          <Property Name="helpFileData" Type="varbinary(max)" />
+          <Property Name="helpFileType" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="rsTemplateJournal">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Ledger" Type="nvarchar" MaxLength="50" />
+          <Property Name="ft_Account" Type="nvarchar" MaxLength="50" />
+          <Property Name="Period" Type="nvarchar" MaxLength="50" />
+          <Property Name="TransDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="DueDate" Type="nvarchar" MaxLength="50" />
+          <Property Name="JrnlType" Type="nvarchar" MaxLength="50" />
+          <Property Name="JrnlSource" Type="nvarchar" MaxLength="50" />
+          <Property Name="TransRef" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar" MaxLength="50" />
+          <Property Name="AlloctnMarker" Type="nvarchar" MaxLength="50" />
+          <Property Name="LA1" Type="nvarchar" MaxLength="50" />
+          <Property Name="LA2" Type="nvarchar" MaxLength="50" />
+          <Property Name="LA3" Type="nvarchar" MaxLength="50" />
+          <Property Name="LA4" Type="nvarchar" MaxLength="50" />
+          <Property Name="LA5" Type="nvarchar" MaxLength="50" />
+          <Property Name="LA6" Type="nvarchar" MaxLength="50" />
+          <Property Name="LA7" Type="nvarchar" MaxLength="50" />
+          <Property Name="LA8" Type="nvarchar" MaxLength="50" />
+          <Property Name="LA9" Type="nvarchar" MaxLength="50" />
+          <Property Name="LA10" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc1" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc2" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc3" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc4" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc5" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc6" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc7" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc8" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc9" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc10" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc11" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc12" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc13" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc14" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc15" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc16" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc17" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc18" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc19" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc20" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc21" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc22" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc23" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc24" Type="nvarchar" MaxLength="50" />
+          <Property Name="GenDesc25" Type="nvarchar" MaxLength="50" />
+          <Property Name="TransAmount" Type="nvarchar" MaxLength="50" />
+          <Property Name="Currency" Type="nvarchar" MaxLength="50" />
+          <Property Name="BaseAmount" Type="nvarchar" MaxLength="50" />
+          <Property Name="2ndBase" Type="nvarchar" MaxLength="50" />
+          <Property Name="4thAmount" Type="nvarchar" MaxLength="50" />
+          <Property Name="TemplateID" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="LineIndicator" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="StartinginCell" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="BalanceBy" Type="nvarchar" MaxLength="50" />
+          <Property Name="PopWithJNNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reference" Type="nchar" MaxLength="10" />
+          <Property Name="SaveReference" Type="nvarchar" MaxLength="50" />
+          <Property Name="JournalNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="JournalLineNumber" Type="nvarchar" MaxLength="50" />
+          <Property Name="InputFields" Type="nvarchar(max)" />
+          <Property Name="UpdateFields" Type="nvarchar(max)" />
+          <Property Name="ConsolidateBy1" Type="nvarchar" MaxLength="50" />
+          <Property Name="ConsolidateBy2" Type="nvarchar" MaxLength="50" />
+          <Property Name="ConsolidateBy3" Type="nvarchar" MaxLength="50" />
+          <Property Name="ConsolidateBy4" Type="nvarchar" MaxLength="50" />
+          <Property Name="Type" Type="nchar" MaxLength="10" />
+          <Property Name="AllowBalTrans" Type="nvarchar" MaxLength="50" />
+          <Property Name="AllowPostSuspAcco" Type="nvarchar" MaxLength="50" />
+          <Property Name="PostProvisional" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="rsTemplates">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TemplateData" Type="varbinary(max)" />
+          <Property Name="TemplateName" Type="nvarchar(max)" />
+          <Property Name="OriginTemplatePath" Type="nvarchar(max)" />
+          <Property Name="FileType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="rsTemplateSetting">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CriteriaName1" Type="nvarchar" MaxLength="50" />
+          <Property Name="CellReference1" Type="nvarchar" MaxLength="50" />
+          <Property Name="TemplateID" Type="nvarchar" MaxLength="500" />
+          <Property Name="OpenTransUponSave" Type="bit" />
+          <Property Name="CriteriaName2" Type="nvarchar" MaxLength="50" />
+          <Property Name="CellReference2" Type="nvarchar" MaxLength="50" />
+          <Property Name="CriteriaName3" Type="nvarchar" MaxLength="50" />
+          <Property Name="CellReference3" Type="nvarchar" MaxLength="50" />
+          <Property Name="CriteriaName4" Type="nvarchar" MaxLength="50" />
+          <Property Name="CellReference4" Type="nvarchar" MaxLength="50" />
+          <Property Name="CriteriaName5" Type="nvarchar" MaxLength="50" />
+          <Property Name="CellReference5" Type="nvarchar" MaxLength="50" />
+          <Property Name="Reference" Type="nvarchar" MaxLength="50" />
+          <Property Name="SequencePrefix" Type="nvarchar" MaxLength="50" />
+          <Property Name="PopulateCell" Type="nvarchar" MaxLength="50" />
+          <Property Name="UseSequenceNumbering" Type="bit" />
+          <Property Name="PDFFolder" Type="nvarchar(max)" />
+          <Property Name="PDFName" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="rsTemplateTransactions">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TemplateName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Criteria1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Criteria2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Criteria3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Criteria4" Type="nvarchar" MaxLength="50" />
+          <Property Name="Criteria5" Type="nvarchar" MaxLength="50" />
+          <Property Name="Value1" Type="nvarchar" MaxLength="50" />
+          <Property Name="Value2" Type="nvarchar" MaxLength="50" />
+          <Property Name="Value3" Type="nvarchar" MaxLength="50" />
+          <Property Name="Value4" Type="nvarchar" MaxLength="50" />
+          <Property Name="Value5" Type="nvarchar" MaxLength="50" />
+          <Property Name="Data" Type="varbinary(max)" />
+          <Property Name="DataType" Type="nvarchar" MaxLength="50" />
+          <Property Name="PDFData" Type="varbinary(max)" />
+          <Property Name="XMLData" Type="varchar(max)" />
+          <Property Name="TemplateID" Type="nvarchar" MaxLength="150" />
+          <Property Name="maxNum" Type="int" />
+          <Property Name="TransactionName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Prefix" Type="nvarchar" MaxLength="50" />
+          <Property Name="SunJournalNumber" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="rsTemplateVisible">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="TemplateID" Type="nvarchar" MaxLength="500" />
+          <Property Name="OutputPaneVisiable" Type="nvarchar" MaxLength="5" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="rsTemplateXMLTextFileDGV">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Column1" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column2" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column3" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column4" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column5" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column6" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column7" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column8" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column9" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column10" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column11" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column12" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column13" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column14" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column15" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column16" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column17" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column18" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column19" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column20" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column21" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column22" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column23" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column24" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column25" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column26" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column27" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column28" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column29" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column30" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column31" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column32" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column33" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column34" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column35" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column36" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column37" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column38" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column39" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column40" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column41" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column42" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column43" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column44" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column45" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column46" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column47" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column48" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column49" Type="nvarchar" MaxLength="150" />
+          <Property Name="Column50" Type="nvarchar" MaxLength="150" />
+          <Property Name="HeaderTextes" Type="nvarchar(max)" />
+          <Property Name="StartinginCell" Type="nvarchar" MaxLength="50" />
+          <Property Name="LineIndicator" Type="nvarchar" MaxLength="50" />
+          <Property Name="TemplateID" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="IncludeHeaderRow" Type="bit" />
+          <Property Name="SavePath" Type="nvarchar(max)" />
+          <Property Name="SaveName" Type="nvarchar" MaxLength="150" />
+          <Property Name="ReferenceNumber" Type="nchar" MaxLength="10" />
+          <Property Name="SunComponent" Type="nvarchar(max)" />
+          <Property Name="SunMethod" Type="nvarchar(max)" />
+          <Property Name="HeaderValue" Type="nvarchar(max)" />
+          <Property Name="ProcessName" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="rsTemplateXMLTEXTFiles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FileContent" Type="nvarchar(max)" />
+          <Property Name="RelatedName" Type="nvarchar(max)" />
+          <Property Name="FileType" Type="int" />
+          <Property Name="XMLTemplate" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="rsUpgrade">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="RootPath" Type="nvarchar(max)" />
+          <Property Name="V1IP" Type="nvarchar(max)" />
+          <Property Name="V1UserID" Type="nvarchar(max)" />
+          <Property Name="V1Password" Type="nvarchar(max)" />
+          <Property Name="V2IP" Type="nvarchar(max)" />
+          <Property Name="V2UserID" Type="nvarchar(max)" />
+          <Property Name="V2Password" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="rsUserGroup">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="UserID" Type="nvarchar" MaxLength="150" />
+          <Property Name="GroupID" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RSDataV2.dbo.rsUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="rsUsers">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="FormUserID" Type="nvarchar" MaxLength="50" />
+          <Property Name="FormUserPassword" Type="nvarchar" MaxLength="50" />
+          <Property Name="WindowsUserID" Type="nvarchar" MaxLength="50" />
+          <Property Name="MachineName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LoginType" Type="int" />
+          <Property Name="SUNUserIP" Type="nvarchar" MaxLength="50" />
+          <Property Name="SUNUserID" Type="nvarchar" MaxLength="50" />
+          <Property Name="SUNUserPass" Type="nvarchar" MaxLength="50" />
+          <Property Name="AddInTabName" Type="nvarchar(max)" />
+          <Property Name="TemplateUpdateFlag" Type="bit" />
+          <Property Name="FileIds" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="rsUsersTemplatesVisible">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="TemplateID" Type="nvarchar(max)" />
+          <Property Name="UserID" Type="nvarchar(max)" />
+          <Property Name="Visible" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RSDataV2.dbo.View_GroupActions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_GroupActions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="PermissionID" Type="nvarchar" MaxLength="150" />
+          <Property Name="GroupID" Type="nvarchar" MaxLength="150" />
+          <Property Name="TemplateID" Type="nvarchar" MaxLength="150" />
+          <Property Name="ActionID" Type="nvarchar" MaxLength="150" />
+          <Property Name="Per_Type" Type="int" />
+          <Property Name="ButtonName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ButtonText" Type="nvarchar" MaxLength="50" />
+          <Property Name="ButtonIcon" Type="nvarchar" MaxLength="150" />
+          <Property Name="ButtonGroup" Type="nvarchar" MaxLength="50" />
+          <Property Name="ButtonSize" Type="nvarchar" MaxLength="50" />
+          <Property Name="ButtonOrder" Type="int" />
+          <Property Name="GroupOrder" Type="int" />
+          <Property Name="StopOnError" Type="bit" />
+          <Property Name="ProcessID" Type="nvarchar(max)" />
+          <Property Name="MacroName" Type="nvarchar" MaxLength="50" />
+          <Property Name="ProcessMacroOrder" Type="int" />
+          <Property Name="Reference" Type="nchar" MaxLength="10" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Type" Type="int" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RSDataV2.dbo.View_GroupPermissions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_GroupPermissions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="PermissionName" Type="nvarchar" MaxLength="150" />
+          <Property Name="TemplateID" Type="nvarchar" MaxLength="150" />
+          <Property Name="ActionID" Type="nvarchar" MaxLength="150" />
+          <Property Name="Per_Type" Type="int" />
+          <Property Name="remark" Type="nvarchar" MaxLength="3000" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="GroupID" Type="nvarchar" MaxLength="150" />
+          <Property Name="PermissionID" Type="nvarchar" MaxLength="150" />
+          <Property Name="PermissionGroupName" Type="nvarchar(max)" />
+          <Property Name="Folder" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'RSDataV2.dbo.View_TemplatesPermissions' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="View_TemplatesPermissions">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="PerType" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="PermissionName" Type="nvarchar" MaxLength="150" />
+          <Property Name="TemplateID" Type="nvarchar" MaxLength="150" />
+          <Property Name="Per_Type" Type="int" />
+          <Property Name="remark" Type="nvarchar" MaxLength="3000" />
+          <Property Name="TemplateData" Type="varbinary(max)" />
+          <Property Name="TemplateName" Type="nvarchar(max)" />
+          <Property Name="OriginTemplatePath" Type="nvarchar(max)" />
+          <Property Name="FileType" Type="nvarchar" MaxLength="50" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="PerType" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Folder" Type="nvarchar" MaxLength="500" />
+          <Property Name="ActionID" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <Function Name="rsGlobalDocumentViews_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="rsGlobalDocumentViews_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="type" Type="nvarchar" Mode="In" />
+          <Parameter Name="prefix" Type="nchar" Mode="In" />
+          <Parameter Name="folder" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="useRefAsName" Type="bit" Mode="In" />
+          <Parameter Name="file" Type="nvarchar" Mode="In" />
+          <Parameter Name="filetype" Type="varchar" Mode="In" />
+          <Parameter Name="macro01" Type="nvarchar" Mode="In" />
+          <Parameter Name="pdfRelatedFilePath" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="pdfIsWebBrowser" Type="bit" Mode="In" />
+          <Parameter Name="pdfIsDataBaseQuery" Type="bit" Mode="In" />
+          <Parameter Name="pdfConnectionString" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="pdfUserID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="pdfPassword" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="pdfSQLString" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="populateCell" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsGlobalFields_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="rsGlobalFields_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FieldGroup" Type="nvarchar" Mode="In" />
+          <Parameter Name="SunField" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserFriendlyName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Output" Type="nvarchar" Mode="In" />
+          <Parameter Name="Input" Type="nvarchar" Mode="In" />
+          <Parameter Name="XML_Query" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+        </Function>
+        <Function Name="rsGroupPermissions_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GroupID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="rsGroupPermissions_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GroupID" Type="nvarchar" Mode="In" />
+          <Parameter Name="PermissionID" Type="nvarchar" Mode="In" />
+          <Parameter Name="PermissionGroupName" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsGroups_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+        </Function>
+        <Function Name="rsGroups_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GroupName" Type="nvarchar" Mode="In" />
+          <Parameter Name="GroupDisable" Type="bit" Mode="In" />
+          <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+          <Parameter Name="AddInTabName" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsGroups_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="GroupName" Type="nvarchar" Mode="In" />
+          <Parameter Name="GroupDisable" Type="bit" Mode="In" />
+          <Parameter Name="Remark" Type="nvarchar" Mode="In" />
+          <Parameter Name="AddInTabName" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsPermissions_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="templateid" Type="nvarchar" Mode="In" />
+          <Parameter Name="actionID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsPermissions_DelByTmpID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="templateid" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsPermissions_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PermissionName" Type="nvarchar" Mode="In" />
+          <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+          <Parameter Name="ActionID" Type="nvarchar" Mode="In" />
+          <Parameter Name="Per_Type" Type="int" Mode="In" />
+          <Parameter Name="remark" Type="nvarchar" Mode="In" />
+          <Parameter Name="Folder" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsPermissions_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="int" Mode="In" />
+          <Parameter Name="PermissionName" Type="nvarchar" Mode="In" />
+          <Parameter Name="remark" Type="nvarchar" Mode="In" />
+          <Parameter Name="Folder" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsSystemProcesses_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ProcessName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateActions_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="templateid" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="buttonName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateActions_DelByTmpID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="templateid" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateActions_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Name" Type="nvarchar" Mode="In" />
+          <Parameter Name="Text" Type="nvarchar" Mode="In" />
+          <Parameter Name="ButtonIcon" Type="nvarchar" Mode="In" />
+          <Parameter Name="ButtonGroup" Type="nvarchar" Mode="In" />
+          <Parameter Name="ButtonSize" Type="nvarchar" Mode="In" />
+          <Parameter Name="ButtonOrder" Type="int" Mode="In" />
+          <Parameter Name="GroupOrder" Type="int" Mode="In" />
+          <Parameter Name="StopOnError" Type="bit" Mode="In" />
+          <Parameter Name="templateID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ProcessID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="MacroName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ProcessMacroOrder" Type="int" Mode="In" />
+          <Parameter Name="Type" Type="int" Mode="In" />
+          <Parameter Name="Reference" Type="nchar" Mode="In" />
+          <Parameter Name="ShowMsg" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateActions_UpdActionOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ButtonOrder" Type="int" Mode="In" />
+          <Parameter Name="templateid" Type="nvarchar" Mode="In" />
+          <Parameter Name="buttonName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ButtonGroup" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateActions_UpdGroupName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ButtonGroup" Type="nvarchar" Mode="In" />
+          <Parameter Name="GroupOrder" Type="int" Mode="In" />
+          <Parameter Name="OldButtonGroup" Type="nvarchar" Mode="In" />
+          <Parameter Name="buttonName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateActions_UpdGroupOrder" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ButtonGroup" Type="nvarchar" Mode="In" />
+          <Parameter Name="GroupOrder" Type="int" Mode="In" />
+          <Parameter Name="OldButtonGroup" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateCreateXMLTextProfile_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="textfilename" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateCreateXMLTextProfile_DelXML" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SunComponentName" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="SunMethod" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateCreateXMLTextProfile_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Field" Type="nvarchar" Mode="In" />
+          <Parameter Name="FriendlyName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Visible" Type="bit" Mode="In" />
+          <Parameter Name="DefaultValue" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="SunComponentName" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="SunMethod" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Mandatory" Type="bit" Mode="In" />
+          <Parameter Name="Separator" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="TextLength" Type="nvarchar" Mode="In" />
+          <Parameter Name="Prefix" Type="nvarchar" Mode="In" />
+          <Parameter Name="Suffix" Type="nvarchar" Mode="In" />
+          <Parameter Name="RemoveCharacters" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="TextFileName" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Parent" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="trimText" Type="nvarchar" Mode="In" />
+          <Parameter Name="Section" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateGenDescFields_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateGenDescFields_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FieldGroup" Type="nvarchar" Mode="In" />
+          <Parameter Name="SunField" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserFriendlyName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Output" Type="nvarchar" Mode="In" />
+          <Parameter Name="Input" Type="nvarchar" Mode="In" />
+          <Parameter Name="XML_Query" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="version" Type="int" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateHelp_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateHelp_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="helpFileData" Type="image" Mode="In" />
+          <Parameter Name="helpFileType" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateJournal_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Type" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateJournal_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Ledger" Type="nvarchar" Mode="In" />
+          <Parameter Name="ft_Account" Type="nvarchar" Mode="In" />
+          <Parameter Name="Period" Type="nvarchar" Mode="In" />
+          <Parameter Name="TransDate" Type="nvarchar" Mode="In" />
+          <Parameter Name="DueDate" Type="nvarchar" Mode="In" />
+          <Parameter Name="JrnlType" Type="nvarchar" Mode="In" />
+          <Parameter Name="JrnlSource" Type="nvarchar" Mode="In" />
+          <Parameter Name="TransRef" Type="nvarchar" Mode="In" />
+          <Parameter Name="Description" Type="nvarchar" Mode="In" />
+          <Parameter Name="AlloctnMarker" Type="nvarchar" Mode="In" />
+          <Parameter Name="LA1" Type="nvarchar" Mode="In" />
+          <Parameter Name="LA2" Type="nvarchar" Mode="In" />
+          <Parameter Name="LA3" Type="nvarchar" Mode="In" />
+          <Parameter Name="LA4" Type="nvarchar" Mode="In" />
+          <Parameter Name="LA5" Type="nvarchar" Mode="In" />
+          <Parameter Name="LA6" Type="nvarchar" Mode="In" />
+          <Parameter Name="LA7" Type="nvarchar" Mode="In" />
+          <Parameter Name="LA8" Type="nvarchar" Mode="In" />
+          <Parameter Name="LA9" Type="nvarchar" Mode="In" />
+          <Parameter Name="LA10" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc1" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc2" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc3" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc4" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc5" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc6" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc7" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc8" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc9" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc10" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc11" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc12" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc13" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc14" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc15" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc16" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc17" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc18" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc19" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc20" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc21" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc22" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc23" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc24" Type="nvarchar" Mode="In" />
+          <Parameter Name="GenDesc25" Type="nvarchar" Mode="In" />
+          <Parameter Name="TransAmount" Type="nvarchar" Mode="In" />
+          <Parameter Name="Currency" Type="nvarchar" Mode="In" />
+          <Parameter Name="BaseAmount" Type="nvarchar" Mode="In" />
+          <Parameter Name="p2ndBase" Type="nvarchar" Mode="In" />
+          <Parameter Name="p4thAmount" Type="nvarchar" Mode="In" />
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="LineIndicator" Type="nvarchar" Mode="In" />
+          <Parameter Name="StartinginCell" Type="nvarchar" Mode="In" />
+          <Parameter Name="BalanceBy" Type="nvarchar" Mode="In" />
+          <Parameter Name="PopWithJNNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="Reference" Type="nchar" Mode="In" />
+          <Parameter Name="SaveReference" Type="nvarchar" Mode="In" />
+          <Parameter Name="JournalNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="JournalLineNumber" Type="nvarchar" Mode="In" />
+          <Parameter Name="InputFields" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="UpdateFields" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ConsolidateBy1" Type="nvarchar" Mode="In" />
+          <Parameter Name="ConsolidateBy2" Type="nvarchar" Mode="In" />
+          <Parameter Name="ConsolidateBy3" Type="nvarchar" Mode="In" />
+          <Parameter Name="ConsolidateBy4" Type="nvarchar" Mode="In" />
+          <Parameter Name="Type" Type="nchar" Mode="In" />
+          <Parameter Name="AllowBalTrans" Type="nvarchar" Mode="In" />
+          <Parameter Name="AllowPostSuspAcco" Type="nvarchar" Mode="In" />
+          <Parameter Name="PostProvisional" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplates_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsTemplates_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateData" Type="image" Mode="In" />
+          <Parameter Name="TemplateName" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="OriginTemplatePath" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="FileType" Type="nvarchar" Mode="In" />
+          <Parameter Name="Description" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsTemplates_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateData" Type="image" Mode="In" />
+          <Parameter Name="FileType" Type="nvarchar" Mode="In" />
+          <Parameter Name="templateID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateSetting_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateSetting_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="CriteriaName1" Type="nvarchar" Mode="In" />
+          <Parameter Name="CellReference1" Type="nvarchar" Mode="In" />
+          <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+          <Parameter Name="OpenTransUponSave" Type="bit" Mode="In" />
+          <Parameter Name="CriteriaName2" Type="nvarchar" Mode="In" />
+          <Parameter Name="CellReference2" Type="nvarchar" Mode="In" />
+          <Parameter Name="CriteriaName3" Type="nvarchar" Mode="In" />
+          <Parameter Name="CellReference3" Type="nvarchar" Mode="In" />
+          <Parameter Name="CriteriaName4" Type="nvarchar" Mode="In" />
+          <Parameter Name="CellReference4" Type="nvarchar" Mode="In" />
+          <Parameter Name="CriteriaName5" Type="nvarchar" Mode="In" />
+          <Parameter Name="CellReference5" Type="nvarchar" Mode="In" />
+          <Parameter Name="Reference" Type="nvarchar" Mode="In" />
+          <Parameter Name="UseSequenceNumbering" Type="bit" Mode="In" />
+          <Parameter Name="SequencePrefix" Type="nvarchar" Mode="In" />
+          <Parameter Name="PopulateCell" Type="nvarchar" Mode="In" />
+          <Parameter Name="PDFFolder" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="PDFName" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateTransactions_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+          <Parameter Name="TransactionName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateTransactions_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Criteria1" Type="nvarchar" Mode="In" />
+          <Parameter Name="Criteria2" Type="nvarchar" Mode="In" />
+          <Parameter Name="Criteria3" Type="nvarchar" Mode="In" />
+          <Parameter Name="Criteria4" Type="nvarchar" Mode="In" />
+          <Parameter Name="Criteria5" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value1" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value2" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value3" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value4" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value5" Type="nvarchar" Mode="In" />
+          <Parameter Name="Data" Type="image" Mode="In" />
+          <Parameter Name="DataType" Type="nvarchar" Mode="In" />
+          <Parameter Name="PDFData" Type="image" Mode="In" />
+          <Parameter Name="XMLData" Type="varchar(max)" Mode="In" />
+          <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+          <Parameter Name="maxNum" Type="int" Mode="In" />
+          <Parameter Name="TransactionName" Type="nvarchar" Mode="In" />
+          <Parameter Name="Prefix" Type="nvarchar" Mode="In" />
+          <Parameter Name="SunJournalNumber" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateTransactions_UpdateCriterias" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Criteria1" Type="nvarchar" Mode="In" />
+          <Parameter Name="Criteria2" Type="nvarchar" Mode="In" />
+          <Parameter Name="Criteria3" Type="nvarchar" Mode="In" />
+          <Parameter Name="Criteria4" Type="nvarchar" Mode="In" />
+          <Parameter Name="Criteria5" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value1" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value2" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value3" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value4" Type="nvarchar" Mode="In" />
+          <Parameter Name="Value5" Type="nvarchar" Mode="In" />
+          <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateTransactions_UpdatePDF" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PDFData" Type="image" Mode="In" />
+          <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+          <Parameter Name="maxNum" Type="int" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateVisible_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateVisible_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar" Mode="In" />
+          <Parameter Name="OutputPaneVisiable" Type="nvarchar" Mode="In" />
+          <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateXMLTextFileDGV_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ProcessName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateXMLTextFileDGV_DelByComName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="SunComponent" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="SunMethod" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateXMLTextFileDGV_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Column1" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column2" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column3" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column4" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column5" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column6" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column7" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column8" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column9" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column10" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column11" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column12" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column13" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column14" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column15" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column16" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column17" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column18" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column19" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column20" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column21" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column22" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column23" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column24" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column25" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column26" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column27" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column28" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column29" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column30" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column31" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column32" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column33" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column34" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column35" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column36" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column37" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column38" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column39" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column40" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column41" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column42" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column43" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column44" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column45" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column46" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column47" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column48" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column49" Type="nvarchar" Mode="In" />
+          <Parameter Name="Column50" Type="nvarchar" Mode="In" />
+          <Parameter Name="HeaderTextes" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="StartinginCell" Type="nvarchar" Mode="In" />
+          <Parameter Name="LineIndicator" Type="nvarchar" Mode="In" />
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="IncludeHeaderRow" Type="bit" Mode="In" />
+          <Parameter Name="SavePath" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="SaveName" Type="nvarchar" Mode="In" />
+          <Parameter Name="ReferenceNumber" Type="nchar" Mode="In" />
+          <Parameter Name="SunComponent" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="SunMethod" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="HeaderValue" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="ProcessName" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateXMLTEXTFiles_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RelatedName" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="FileType" Type="int" Mode="In" />
+        </Function>
+        <Function Name="rsTemplateXMLTEXTFiles_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FileContent" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="RelatedName" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="XMLTemplate" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="FileType" Type="int" Mode="In" />
+        </Function>
+        <Function Name="rsUpgrade_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="RootPath" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="V1IP" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="V1UserID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="V1Password" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="V2IP" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="V2UserID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="V2Password" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsUserGroup_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="GroupID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="rsUserGroup_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="nvarchar" Mode="In" />
+          <Parameter Name="GroupID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsUsers_AddInTabName_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="AddInTabName" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsUsers_DelByWindowsUserID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="WindowsUserID" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="rsUsers_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="WindowsUserID" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="rsUsers_TemplateUpdateFlag_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateUpdateFlag" Type="bit" Mode="In" />
+          <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="rsUsers_TemplateUpdateFlag_UpdAll" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateUpdateFlag" Type="bit" Mode="In" />
+        </Function>
+        <Function Name="rsUsers_UserInfo_FileIdsUpd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="FileIds" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsUsers_UserInfo_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="FormUserID" Type="nvarchar" Mode="In" />
+          <Parameter Name="FormUserPassword" Type="nvarchar" Mode="In" />
+          <Parameter Name="WindowsUserID" Type="nvarchar" Mode="In" />
+          <Parameter Name="MachineName" Type="nvarchar" Mode="In" />
+          <Parameter Name="LoginType" Type="int" Mode="In" />
+          <Parameter Name="SUNUserIP" Type="nvarchar" Mode="In" />
+          <Parameter Name="SUNUserID" Type="nvarchar" Mode="In" />
+          <Parameter Name="SUNUserPass" Type="nvarchar" Mode="In" />
+          <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+          <Parameter Name="AddInTabName" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsUsers_UserSunInfo_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="SUNUserIP" Type="nvarchar" Mode="In" />
+          <Parameter Name="SUNUserID" Type="nvarchar" Mode="In" />
+          <Parameter Name="SUNUserPass" Type="nvarchar" Mode="In" />
+          <Parameter Name="id" Type="uniqueidentifier" Mode="In" />
+        </Function>
+        <Function Name="rsUsersTemplatesVisible_Del" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="UserID" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsUsersTemplatesVisible_DelByTmpID" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="rsUsersTemplatesVisible_Ins" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="UserID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Visible" Type="nchar" Mode="In" />
+        </Function>
+        <Function Name="rsUsersTemplatesVisible_Upd" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="TemplateID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="UserID" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Visible" Type="nchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RSDataV2Model" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+        <EntityContainer Name="RSFinanceToolsEntities">
+          <EntitySet Name="rsGlobalFields" EntityType="RSDataV2Model.rsGlobalField" />
+          <EntitySet Name="rsGroupPermissions" EntityType="RSDataV2Model.rsGroupPermission" />
+          <EntitySet Name="rsGroups" EntityType="RSDataV2Model.rsGroup" />
+          <EntitySet Name="rsPermissions" EntityType="RSDataV2Model.rsPermission" />
+          <EntitySet Name="rsSystemProcesses" EntityType="RSDataV2Model.rsSystemProcess" />
+          <EntitySet Name="rsTemplateActions" EntityType="RSDataV2Model.rsTemplateAction" />
+          <EntitySet Name="rsTemplateCreateXMLTextProfiles" EntityType="RSDataV2Model.rsTemplateCreateXMLTextProfile" />
+          <EntitySet Name="rsTemplateGenDescFields" EntityType="RSDataV2Model.rsTemplateGenDescField" />
+          <EntitySet Name="rsTemplateHelps" EntityType="RSDataV2Model.rsTemplateHelp" />
+          <EntitySet Name="rsTemplates" EntityType="RSDataV2Model.rsTemplate" />
+          <EntitySet Name="rsTemplateSettings" EntityType="RSDataV2Model.rsTemplateSetting" />
+          <EntitySet Name="rsTemplateTransactions" EntityType="RSDataV2Model.rsTemplateTransaction" />
+          <EntitySet Name="rsTemplateVisibles" EntityType="RSDataV2Model.rsTemplateVisible" />
+          <EntitySet Name="rsTemplateXMLTextFileDGVs" EntityType="RSDataV2Model.rsTemplateXMLTextFileDGV" />
+          <EntitySet Name="rsTemplateXMLTEXTFiles" EntityType="RSDataV2Model.rsTemplateXMLTEXTFile" />
+          <EntitySet Name="rsUpgrades" EntityType="RSDataV2Model.rsUpgrade" />
+          <EntitySet Name="rsUserGroups" EntityType="RSDataV2Model.rsUserGroup" />
+          <EntitySet Name="rsUsers" EntityType="RSDataV2Model.rsUser" />
+          <EntitySet Name="rsUsersTemplatesVisibles" EntityType="RSDataV2Model.rsUsersTemplatesVisible" />
+          <EntitySet Name="View_GroupActions" EntityType="RSDataV2Model.View_GroupActions" />
+          <EntitySet Name="View_GroupPermissions" EntityType="RSDataV2Model.View_GroupPermissions" />
+          <EntitySet Name="View_TemplatesPermissions" EntityType="RSDataV2Model.View_TemplatesPermissions" />
+          <EntitySet Name="rsTemplateContainers" EntityType="RSDataV2Model.rsTemplateContainer" />
+          <EntitySet Name="rsGlobalDocumentViews" EntityType="RSDataV2Model.rsGlobalDocumentView" />
+          <EntitySet Name="rsTemplateJournals" EntityType="RSDataV2Model.rsTemplateJournal" />
+        </EntityContainer>
+        <EntityType Name="rsGlobalField">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Guid" Nullable="false" />
+          <Property Name="FieldGroup" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SunField" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UserFriendlyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Output" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Input" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="XML_Query" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="version" Type="Int32" />
+        </EntityType>
+        <EntityType Name="rsGroupPermission">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="GroupID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="PermissionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="PermissionGroupName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsGroup">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="GroupName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="GroupDisable" Type="Boolean" />
+          <Property Name="Remark" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+          <Property Name="AddInTabName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsPermission">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="PermissionName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="TemplateID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ActionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Per_Type" Type="Int32" />
+          <Property Name="remark" Type="String" MaxLength="3000" Unicode="true" FixedLength="false" />
+          <Property Name="Folder" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsSystemProcess">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ProcessName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsTemplateAction">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="ButtonName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ButtonText" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ButtonIcon" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ButtonGroup" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ButtonSize" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ButtonOrder" Type="Int32" />
+          <Property Name="GroupOrder" Type="Int32" />
+          <Property Name="StopOnError" Type="Boolean" />
+          <Property Name="TemplateID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ProcessID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="MacroName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProcessMacroOrder" Type="Int32" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Reference" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="ShowMsg" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="rsTemplateCreateXMLTextProfile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Field" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FriendlyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Visible" Type="Boolean" />
+          <Property Name="DefaultValue" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="SunComponentName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="SunMethod" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Mandatory" Type="Boolean" />
+          <Property Name="Separator" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TextLength" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Prefix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Suffix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="RemoveCharacters" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TextFileName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Parent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="trimText" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Section" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsTemplateGenDescField">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Guid" Nullable="false" />
+          <Property Name="FieldGroup" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SunField" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UserFriendlyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Output" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Input" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="XML_Query" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TemplateID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="version" Type="Int32" />
+        </EntityType>
+        <EntityType Name="rsTemplateHelp">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="TemplateID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="helpFileData" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="helpFileType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsTemplate">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="TemplateData" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="TemplateName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="OriginTemplatePath" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="FileType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsTemplateSetting">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="CriteriaName1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CellReference1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TemplateID" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="OpenTransUponSave" Type="Boolean" />
+          <Property Name="CriteriaName2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CellReference2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CriteriaName3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CellReference3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CriteriaName4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CellReference4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CriteriaName5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="CellReference5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Reference" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SequencePrefix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PopulateCell" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="UseSequenceNumbering" Type="Boolean" />
+          <Property Type="String" Name="PDFFolder" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PDFName" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="rsTemplateTransaction">
+          <Key>
+            <PropertyRef Name="GUID" />
+          </Key>
+          <Property Name="GUID" Type="Guid" Nullable="false" />
+          <Property Name="TemplateName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Criteria1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Criteria2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Criteria3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Criteria4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Criteria5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Value1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Value2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Value3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Value4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Value5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="DataType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="PDFData" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="XMLData" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+          <Property Name="TemplateID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="maxNum" Type="Int32" />
+          <Property Name="TransactionName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Prefix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SunJournalNumber" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsTemplateVisible">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="Guid" Nullable="false" />
+          <Property Name="TemplateID" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+          <Property Name="OutputPaneVisiable" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+          <Property Name="UserID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsTemplateXMLTextFileDGV">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="Column1" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column2" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column3" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column4" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column5" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column6" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column7" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column8" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column9" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column10" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column11" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column12" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column13" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column14" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column15" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column16" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column17" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column18" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column19" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column20" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column21" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column22" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column23" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column24" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column25" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column26" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column27" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column28" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column29" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column30" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column31" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column32" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column33" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column34" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column35" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column36" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column37" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column38" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column39" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column40" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column41" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column42" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column43" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column44" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column45" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column46" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column47" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column48" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column49" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Column50" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="HeaderTextes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="StartinginCell" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LineIndicator" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="TemplateID" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="IncludeHeaderRow" Type="Boolean" />
+          <Property Name="SavePath" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="SaveName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ReferenceNumber" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="SunComponent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="SunMethod" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="HeaderValue" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ProcessName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsTemplateXMLTEXTFile">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="FileContent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="RelatedName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="FileType" Type="Int32" />
+          <Property Name="XMLTemplate" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsUpgrade">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="RootPath" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="V1IP" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="V1UserID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="V1Password" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="V2IP" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="V2UserID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="V2Password" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsUserGroup">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="UserID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="GroupID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsUser">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="Guid" Nullable="false" />
+          <Property Name="FormUserID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="FormUserPassword" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="WindowsUserID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="MachineName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="LoginType" Type="Int32" />
+          <Property Name="SUNUserIP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SUNUserID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="SUNUserPass" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="AddInTabName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="TemplateUpdateFlag" Type="Boolean" />
+          <Property Name="FileIds" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsUsersTemplatesVisible">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Name="TemplateID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="UserID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Visible" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+        </EntityType>
+        <EntityType Name="View_GroupActions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="PermissionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="GroupID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="TemplateID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ActionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Per_Type" Type="Int32" />
+          <Property Name="ButtonName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ButtonText" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ButtonIcon" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ButtonGroup" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ButtonSize" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ButtonOrder" Type="Int32" />
+          <Property Name="GroupOrder" Type="Int32" />
+          <Property Name="StopOnError" Type="Boolean" />
+          <Property Name="ProcessID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="MacroName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="ProcessMacroOrder" Type="Int32" />
+          <Property Name="Type" Type="Int32" />
+          <Property Name="Reference" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="View_GroupPermissions">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="PermissionName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="TemplateID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ActionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Per_Type" Type="Int32" />
+          <Property Name="remark" Type="String" MaxLength="3000" Unicode="true" FixedLength="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="GroupID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="PermissionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="PermissionGroupName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Type="String" Name="Folder" MaxLength="500" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="View_TemplatesPermissions">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="PerType" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="PermissionName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="TemplateID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="ActionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+          <Property Name="Per_Type" Type="Int32" />
+          <Property Name="remark" Type="String" MaxLength="3000" Unicode="true" FixedLength="false" />
+          <Property Name="TemplateData" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="TemplateName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="OriginTemplatePath" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="FileType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="PerType" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="Folder" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="rsTemplateContainer">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Type="Guid" Name="ft_id" Nullable="false" />
+          <Property Type="String" Name="TemplateID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ft_relatefilepath" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="column" MaxLength="5" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="FromDB" />
+          <Property Type="Boolean" Name="IsWebBrowser" />
+          <Property Type="Boolean" Name="IsDataBaseQuery" />
+          <Property Type="String" Name="ConnectionString" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UserID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Password" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="SQLString" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="rsGlobalDocumentView">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Guid" Name="id" Nullable="false" />
+          <Property Type="String" Name="type" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="prefix" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="folder" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="useRefAsName" Nullable="false" />
+          <Property Type="String" Name="file" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="filetype" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="macro01" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pdfRelatedFilePath" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Boolean" Name="pdfIsWebBrowser" />
+          <Property Type="Boolean" Name="pdfIsDataBaseQuery" />
+          <Property Type="String" Name="pdfConnectionString" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pdfUserID" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pdfPassword" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="pdfSQLString" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="populateCell" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="rsTemplateJournal">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Type="Int32" Name="ft_id" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+          <Property Type="String" Name="Ledger" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ft_Account" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Period" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TransDate" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="DueDate" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JrnlType" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JrnlSource" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TransRef" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AlloctnMarker" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LA1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LA2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LA3" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LA4" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LA5" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LA6" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LA7" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LA8" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LA9" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LA10" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc3" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc4" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc5" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc6" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc7" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc8" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc9" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc10" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc11" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc12" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc13" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc14" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc15" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc16" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc17" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc18" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc19" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc20" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc21" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc22" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc23" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc24" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="GenDesc25" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TransAmount" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Currency" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BaseAmount" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="C2ndBase" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="C4thAmount" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="TemplateID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="LineIndicator" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="StartinginCell" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="BalanceBy" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PopWithJNNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Reference" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="SaveReference" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JournalNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="JournalLineNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="InputFields" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="UpdateFields" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConsolidateBy1" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConsolidateBy2" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConsolidateBy3" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="ConsolidateBy4" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Type" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="AllowBalTrans" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="AllowPostSuspAcco" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="PostProvisional" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="RSDataV2ModelStoreContainer" CdmEntityContainer="RSFinanceToolsEntities">
+          <EntitySetMapping Name="rsGlobalFields">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsGlobalField">
+              <MappingFragment StoreEntitySet="rsGlobalFields">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="FieldGroup" ColumnName="FieldGroup" />
+                <ScalarProperty Name="SunField" ColumnName="SunField" />
+                <ScalarProperty Name="UserFriendlyName" ColumnName="UserFriendlyName" />
+                <ScalarProperty Name="Output" ColumnName="Output" />
+                <ScalarProperty Name="Input" ColumnName="Input" />
+                <ScalarProperty Name="XML_Query" ColumnName="XML_Query" />
+                <ScalarProperty Name="version" ColumnName="version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsGroupPermissions">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsGroupPermission">
+              <MappingFragment StoreEntitySet="rsGroupPermissions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+                <ScalarProperty Name="PermissionGroupName" ColumnName="PermissionGroupName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsGroups">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsGroup">
+              <MappingFragment StoreEntitySet="rsGroups">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GroupName" ColumnName="GroupName" />
+                <ScalarProperty Name="GroupDisable" ColumnName="GroupDisable" />
+                <ScalarProperty Name="Remark" ColumnName="Remark" />
+                <ScalarProperty Name="AddInTabName" ColumnName="AddInTabName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsPermissions">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsPermission">
+              <MappingFragment StoreEntitySet="rsPermissions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PermissionName" ColumnName="PermissionName" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+                <ScalarProperty Name="Per_Type" ColumnName="Per_Type" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="Folder" ColumnName="Folder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsSystemProcesses">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsSystemProcess">
+              <MappingFragment StoreEntitySet="rsSystemProcesses">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ProcessName" ColumnName="ProcessName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplateActions">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateAction">
+              <MappingFragment StoreEntitySet="rsTemplateActions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ButtonName" ColumnName="ButtonName" />
+                <ScalarProperty Name="ButtonText" ColumnName="ButtonText" />
+                <ScalarProperty Name="ButtonIcon" ColumnName="ButtonIcon" />
+                <ScalarProperty Name="ButtonGroup" ColumnName="ButtonGroup" />
+                <ScalarProperty Name="ButtonSize" ColumnName="ButtonSize" />
+                <ScalarProperty Name="ButtonOrder" ColumnName="ButtonOrder" />
+                <ScalarProperty Name="GroupOrder" ColumnName="GroupOrder" />
+                <ScalarProperty Name="StopOnError" ColumnName="StopOnError" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+                <ScalarProperty Name="MacroName" ColumnName="MacroName" />
+                <ScalarProperty Name="ProcessMacroOrder" ColumnName="ProcessMacroOrder" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="ShowMsg" ColumnName="ShowMsg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplateCreateXMLTextProfiles">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateCreateXMLTextProfile">
+              <MappingFragment StoreEntitySet="rsTemplateCreateXMLTextProfile">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Field" ColumnName="Field" />
+                <ScalarProperty Name="FriendlyName" ColumnName="FriendlyName" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+                <ScalarProperty Name="DefaultValue" ColumnName="DefaultValue" />
+                <ScalarProperty Name="SunComponentName" ColumnName="SunComponentName" />
+                <ScalarProperty Name="SunMethod" ColumnName="SunMethod" />
+                <ScalarProperty Name="Mandatory" ColumnName="Mandatory" />
+                <ScalarProperty Name="Separator" ColumnName="Separator" />
+                <ScalarProperty Name="TextLength" ColumnName="TextLength" />
+                <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+                <ScalarProperty Name="Suffix" ColumnName="Suffix" />
+                <ScalarProperty Name="RemoveCharacters" ColumnName="RemoveCharacters" />
+                <ScalarProperty Name="TextFileName" ColumnName="TextFileName" />
+                <ScalarProperty Name="Parent" ColumnName="Parent" />
+                <ScalarProperty Name="trimText" ColumnName="trimText" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplateGenDescFields">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateGenDescField">
+              <MappingFragment StoreEntitySet="rsTemplateGenDescFields">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="FieldGroup" ColumnName="FieldGroup" />
+                <ScalarProperty Name="SunField" ColumnName="SunField" />
+                <ScalarProperty Name="UserFriendlyName" ColumnName="UserFriendlyName" />
+                <ScalarProperty Name="Output" ColumnName="Output" />
+                <ScalarProperty Name="Input" ColumnName="Input" />
+                <ScalarProperty Name="XML_Query" ColumnName="XML_Query" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="version" ColumnName="version" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplateHelps">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateHelp">
+              <MappingFragment StoreEntitySet="rsTemplateHelp">
+                <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="helpFileData" ColumnName="helpFileData" />
+                <ScalarProperty Name="helpFileType" ColumnName="helpFileType" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplates">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplate">
+              <MappingFragment StoreEntitySet="rsTemplates">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TemplateData" ColumnName="TemplateData" />
+                <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+                <ScalarProperty Name="OriginTemplatePath" ColumnName="OriginTemplatePath" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplateSettings">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateSetting">
+              <MappingFragment StoreEntitySet="rsTemplateSetting">
+                <ScalarProperty Name="PDFName" ColumnName="PDFName" />
+                <ScalarProperty Name="PDFFolder" ColumnName="PDFFolder" />
+                <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+                <ScalarProperty Name="CriteriaName1" ColumnName="CriteriaName1" />
+                <ScalarProperty Name="CellReference1" ColumnName="CellReference1" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="OpenTransUponSave" ColumnName="OpenTransUponSave" />
+                <ScalarProperty Name="CriteriaName2" ColumnName="CriteriaName2" />
+                <ScalarProperty Name="CellReference2" ColumnName="CellReference2" />
+                <ScalarProperty Name="CriteriaName3" ColumnName="CriteriaName3" />
+                <ScalarProperty Name="CellReference3" ColumnName="CellReference3" />
+                <ScalarProperty Name="CriteriaName4" ColumnName="CriteriaName4" />
+                <ScalarProperty Name="CellReference4" ColumnName="CellReference4" />
+                <ScalarProperty Name="CriteriaName5" ColumnName="CriteriaName5" />
+                <ScalarProperty Name="CellReference5" ColumnName="CellReference5" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="SequencePrefix" ColumnName="SequencePrefix" />
+                <ScalarProperty Name="PopulateCell" ColumnName="PopulateCell" />
+                <ScalarProperty Name="UseSequenceNumbering" ColumnName="UseSequenceNumbering" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplateTransactions">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateTransaction">
+              <MappingFragment StoreEntitySet="rsTemplateTransactions">
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+                <ScalarProperty Name="Criteria1" ColumnName="Criteria1" />
+                <ScalarProperty Name="Criteria2" ColumnName="Criteria2" />
+                <ScalarProperty Name="Criteria3" ColumnName="Criteria3" />
+                <ScalarProperty Name="Criteria4" ColumnName="Criteria4" />
+                <ScalarProperty Name="Criteria5" ColumnName="Criteria5" />
+                <ScalarProperty Name="Value1" ColumnName="Value1" />
+                <ScalarProperty Name="Value2" ColumnName="Value2" />
+                <ScalarProperty Name="Value3" ColumnName="Value3" />
+                <ScalarProperty Name="Value4" ColumnName="Value4" />
+                <ScalarProperty Name="Value5" ColumnName="Value5" />
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="DataType" ColumnName="DataType" />
+                <ScalarProperty Name="PDFData" ColumnName="PDFData" />
+                <ScalarProperty Name="XMLData" ColumnName="XMLData" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="maxNum" ColumnName="maxNum" />
+                <ScalarProperty Name="TransactionName" ColumnName="TransactionName" />
+                <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+                <ScalarProperty Name="SunJournalNumber" ColumnName="SunJournalNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplateVisibles">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateVisible">
+              <MappingFragment StoreEntitySet="rsTemplateVisible">
+                <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="OutputPaneVisiable" ColumnName="OutputPaneVisiable" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplateXMLTextFileDGVs">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateXMLTextFileDGV">
+              <MappingFragment StoreEntitySet="rsTemplateXMLTextFileDGV">
+                <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+                <ScalarProperty Name="Column1" ColumnName="Column1" />
+                <ScalarProperty Name="Column2" ColumnName="Column2" />
+                <ScalarProperty Name="Column3" ColumnName="Column3" />
+                <ScalarProperty Name="Column4" ColumnName="Column4" />
+                <ScalarProperty Name="Column5" ColumnName="Column5" />
+                <ScalarProperty Name="Column6" ColumnName="Column6" />
+                <ScalarProperty Name="Column7" ColumnName="Column7" />
+                <ScalarProperty Name="Column8" ColumnName="Column8" />
+                <ScalarProperty Name="Column9" ColumnName="Column9" />
+                <ScalarProperty Name="Column10" ColumnName="Column10" />
+                <ScalarProperty Name="Column11" ColumnName="Column11" />
+                <ScalarProperty Name="Column12" ColumnName="Column12" />
+                <ScalarProperty Name="Column13" ColumnName="Column13" />
+                <ScalarProperty Name="Column14" ColumnName="Column14" />
+                <ScalarProperty Name="Column15" ColumnName="Column15" />
+                <ScalarProperty Name="Column16" ColumnName="Column16" />
+                <ScalarProperty Name="Column17" ColumnName="Column17" />
+                <ScalarProperty Name="Column18" ColumnName="Column18" />
+                <ScalarProperty Name="Column19" ColumnName="Column19" />
+                <ScalarProperty Name="Column20" ColumnName="Column20" />
+                <ScalarProperty Name="Column21" ColumnName="Column21" />
+                <ScalarProperty Name="Column22" ColumnName="Column22" />
+                <ScalarProperty Name="Column23" ColumnName="Column23" />
+                <ScalarProperty Name="Column24" ColumnName="Column24" />
+                <ScalarProperty Name="Column25" ColumnName="Column25" />
+                <ScalarProperty Name="Column26" ColumnName="Column26" />
+                <ScalarProperty Name="Column27" ColumnName="Column27" />
+                <ScalarProperty Name="Column28" ColumnName="Column28" />
+                <ScalarProperty Name="Column29" ColumnName="Column29" />
+                <ScalarProperty Name="Column30" ColumnName="Column30" />
+                <ScalarProperty Name="Column31" ColumnName="Column31" />
+                <ScalarProperty Name="Column32" ColumnName="Column32" />
+                <ScalarProperty Name="Column33" ColumnName="Column33" />
+                <ScalarProperty Name="Column34" ColumnName="Column34" />
+                <ScalarProperty Name="Column35" ColumnName="Column35" />
+                <ScalarProperty Name="Column36" ColumnName="Column36" />
+                <ScalarProperty Name="Column37" ColumnName="Column37" />
+                <ScalarProperty Name="Column38" ColumnName="Column38" />
+                <ScalarProperty Name="Column39" ColumnName="Column39" />
+                <ScalarProperty Name="Column40" ColumnName="Column40" />
+                <ScalarProperty Name="Column41" ColumnName="Column41" />
+                <ScalarProperty Name="Column42" ColumnName="Column42" />
+                <ScalarProperty Name="Column43" ColumnName="Column43" />
+                <ScalarProperty Name="Column44" ColumnName="Column44" />
+                <ScalarProperty Name="Column45" ColumnName="Column45" />
+                <ScalarProperty Name="Column46" ColumnName="Column46" />
+                <ScalarProperty Name="Column47" ColumnName="Column47" />
+                <ScalarProperty Name="Column48" ColumnName="Column48" />
+                <ScalarProperty Name="Column49" ColumnName="Column49" />
+                <ScalarProperty Name="Column50" ColumnName="Column50" />
+                <ScalarProperty Name="HeaderTextes" ColumnName="HeaderTextes" />
+                <ScalarProperty Name="StartinginCell" ColumnName="StartinginCell" />
+                <ScalarProperty Name="LineIndicator" ColumnName="LineIndicator" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="IncludeHeaderRow" ColumnName="IncludeHeaderRow" />
+                <ScalarProperty Name="SavePath" ColumnName="SavePath" />
+                <ScalarProperty Name="SaveName" ColumnName="SaveName" />
+                <ScalarProperty Name="ReferenceNumber" ColumnName="ReferenceNumber" />
+                <ScalarProperty Name="SunComponent" ColumnName="SunComponent" />
+                <ScalarProperty Name="SunMethod" ColumnName="SunMethod" />
+                <ScalarProperty Name="HeaderValue" ColumnName="HeaderValue" />
+                <ScalarProperty Name="ProcessName" ColumnName="ProcessName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplateXMLTEXTFiles">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateXMLTEXTFile">
+              <MappingFragment StoreEntitySet="rsTemplateXMLTEXTFiles">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="FileContent" ColumnName="FileContent" />
+                <ScalarProperty Name="RelatedName" ColumnName="RelatedName" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="XMLTemplate" ColumnName="XMLTemplate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsUpgrades">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsUpgrade">
+              <MappingFragment StoreEntitySet="rsUpgrade">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="RootPath" ColumnName="RootPath" />
+                <ScalarProperty Name="V1IP" ColumnName="V1IP" />
+                <ScalarProperty Name="V1UserID" ColumnName="V1UserID" />
+                <ScalarProperty Name="V1Password" ColumnName="V1Password" />
+                <ScalarProperty Name="V2IP" ColumnName="V2IP" />
+                <ScalarProperty Name="V2UserID" ColumnName="V2UserID" />
+                <ScalarProperty Name="V2Password" ColumnName="V2Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsUserGroups">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsUserGroup">
+              <MappingFragment StoreEntitySet="rsUserGroup">
+                <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsUsers">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsUser">
+              <MappingFragment StoreEntitySet="rsUsers">
+                <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+                <ScalarProperty Name="FormUserID" ColumnName="FormUserID" />
+                <ScalarProperty Name="FormUserPassword" ColumnName="FormUserPassword" />
+                <ScalarProperty Name="WindowsUserID" ColumnName="WindowsUserID" />
+                <ScalarProperty Name="MachineName" ColumnName="MachineName" />
+                <ScalarProperty Name="LoginType" ColumnName="LoginType" />
+                <ScalarProperty Name="SUNUserIP" ColumnName="SUNUserIP" />
+                <ScalarProperty Name="SUNUserID" ColumnName="SUNUserID" />
+                <ScalarProperty Name="SUNUserPass" ColumnName="SUNUserPass" />
+                <ScalarProperty Name="AddInTabName" ColumnName="AddInTabName" />
+                <ScalarProperty Name="TemplateUpdateFlag" ColumnName="TemplateUpdateFlag" />
+                <ScalarProperty Name="FileIds" ColumnName="FileIds" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsUsersTemplatesVisibles">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsUsersTemplatesVisible">
+              <MappingFragment StoreEntitySet="rsUsersTemplatesVisible">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Visible" ColumnName="Visible" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_GroupActions">
+            <EntityTypeMapping TypeName="RSDataV2Model.View_GroupActions">
+              <MappingFragment StoreEntitySet="View_GroupActions">
+                <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+                <ScalarProperty Name="Per_Type" ColumnName="Per_Type" />
+                <ScalarProperty Name="ButtonName" ColumnName="ButtonName" />
+                <ScalarProperty Name="ButtonText" ColumnName="ButtonText" />
+                <ScalarProperty Name="ButtonIcon" ColumnName="ButtonIcon" />
+                <ScalarProperty Name="ButtonGroup" ColumnName="ButtonGroup" />
+                <ScalarProperty Name="ButtonSize" ColumnName="ButtonSize" />
+                <ScalarProperty Name="ButtonOrder" ColumnName="ButtonOrder" />
+                <ScalarProperty Name="GroupOrder" ColumnName="GroupOrder" />
+                <ScalarProperty Name="StopOnError" ColumnName="StopOnError" />
+                <ScalarProperty Name="ProcessID" ColumnName="ProcessID" />
+                <ScalarProperty Name="MacroName" ColumnName="MacroName" />
+                <ScalarProperty Name="ProcessMacroOrder" ColumnName="ProcessMacroOrder" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_GroupPermissions">
+            <EntityTypeMapping TypeName="RSDataV2Model.View_GroupPermissions">
+              <MappingFragment StoreEntitySet="View_GroupPermissions">
+                <ScalarProperty Name="Folder" ColumnName="Folder" />
+                <ScalarProperty Name="PermissionName" ColumnName="PermissionName" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+                <ScalarProperty Name="Per_Type" ColumnName="Per_Type" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+                <ScalarProperty Name="PermissionID" ColumnName="PermissionID" />
+                <ScalarProperty Name="PermissionGroupName" ColumnName="PermissionGroupName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_TemplatesPermissions">
+            <EntityTypeMapping TypeName="RSDataV2Model.View_TemplatesPermissions">
+              <MappingFragment StoreEntitySet="View_TemplatesPermissions">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="PermissionName" ColumnName="PermissionName" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="ActionID" ColumnName="ActionID" />
+                <ScalarProperty Name="Per_Type" ColumnName="Per_Type" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+                <ScalarProperty Name="TemplateData" ColumnName="TemplateData" />
+                <ScalarProperty Name="TemplateName" ColumnName="TemplateName" />
+                <ScalarProperty Name="OriginTemplatePath" ColumnName="OriginTemplatePath" />
+                <ScalarProperty Name="FileType" ColumnName="FileType" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="PerType" ColumnName="PerType" />
+                <ScalarProperty Name="Folder" ColumnName="Folder" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplateContainers">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateContainer">
+              <MappingFragment StoreEntitySet="rsTemplateContainer">
+                <ScalarProperty Name="SQLString" ColumnName="SQLString" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="ConnectionString" ColumnName="ConnectionString" />
+                <ScalarProperty Name="IsDataBaseQuery" ColumnName="IsDataBaseQuery" />
+                <ScalarProperty Name="IsWebBrowser" ColumnName="IsWebBrowser" />
+                <ScalarProperty Name="FromDB" ColumnName="FromDB" />
+                <ScalarProperty Name="column" ColumnName="column" />
+                <ScalarProperty Name="ft_relatefilepath" ColumnName="ft_relatefilepath" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsGlobalDocumentViews">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsGlobalDocumentView">
+              <MappingFragment StoreEntitySet="rsGlobalDocumentViews">
+                <ScalarProperty Name="populateCell" ColumnName="populateCell" />
+                <ScalarProperty Name="pdfSQLString" ColumnName="pdfSQLString" />
+                <ScalarProperty Name="pdfPassword" ColumnName="pdfPassword" />
+                <ScalarProperty Name="pdfUserID" ColumnName="pdfUserID" />
+                <ScalarProperty Name="pdfConnectionString" ColumnName="pdfConnectionString" />
+                <ScalarProperty Name="pdfIsDataBaseQuery" ColumnName="pdfIsDataBaseQuery" />
+                <ScalarProperty Name="pdfIsWebBrowser" ColumnName="pdfIsWebBrowser" />
+                <ScalarProperty Name="pdfRelatedFilePath" ColumnName="pdfRelatedFilePath" />
+                <ScalarProperty Name="macro01" ColumnName="macro01" />
+                <ScalarProperty Name="filetype" ColumnName="filetype" />
+                <ScalarProperty Name="file" ColumnName="file" />
+                <ScalarProperty Name="useRefAsName" ColumnName="useRefAsName" />
+                <ScalarProperty Name="folder" ColumnName="folder" />
+                <ScalarProperty Name="prefix" ColumnName="prefix" />
+                <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rsTemplateJournals">
+            <EntityTypeMapping TypeName="RSDataV2Model.rsTemplateJournal">
+              <MappingFragment StoreEntitySet="rsTemplateJournal">
+                <ScalarProperty Name="PostProvisional" ColumnName="PostProvisional" />
+                <ScalarProperty Name="AllowPostSuspAcco" ColumnName="AllowPostSuspAcco" />
+                <ScalarProperty Name="AllowBalTrans" ColumnName="AllowBalTrans" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="ConsolidateBy4" ColumnName="ConsolidateBy4" />
+                <ScalarProperty Name="ConsolidateBy3" ColumnName="ConsolidateBy3" />
+                <ScalarProperty Name="ConsolidateBy2" ColumnName="ConsolidateBy2" />
+                <ScalarProperty Name="ConsolidateBy1" ColumnName="ConsolidateBy1" />
+                <ScalarProperty Name="UpdateFields" ColumnName="UpdateFields" />
+                <ScalarProperty Name="InputFields" ColumnName="InputFields" />
+                <ScalarProperty Name="JournalLineNumber" ColumnName="JournalLineNumber" />
+                <ScalarProperty Name="JournalNumber" ColumnName="JournalNumber" />
+                <ScalarProperty Name="SaveReference" ColumnName="SaveReference" />
+                <ScalarProperty Name="Reference" ColumnName="Reference" />
+                <ScalarProperty Name="PopWithJNNumber" ColumnName="PopWithJNNumber" />
+                <ScalarProperty Name="BalanceBy" ColumnName="BalanceBy" />
+                <ScalarProperty Name="StartinginCell" ColumnName="StartinginCell" />
+                <ScalarProperty Name="LineIndicator" ColumnName="LineIndicator" />
+                <ScalarProperty Name="TemplateID" ColumnName="TemplateID" />
+                <ScalarProperty Name="C4thAmount" ColumnName="4thAmount" />
+                <ScalarProperty Name="C2ndBase" ColumnName="2ndBase" />
+                <ScalarProperty Name="BaseAmount" ColumnName="BaseAmount" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="TransAmount" ColumnName="TransAmount" />
+                <ScalarProperty Name="GenDesc25" ColumnName="GenDesc25" />
+                <ScalarProperty Name="GenDesc24" ColumnName="GenDesc24" />
+                <ScalarProperty Name="GenDesc23" ColumnName="GenDesc23" />
+                <ScalarProperty Name="GenDesc22" ColumnName="GenDesc22" />
+                <ScalarProperty Name="GenDesc21" ColumnName="GenDesc21" />
+                <ScalarProperty Name="GenDesc20" ColumnName="GenDesc20" />
+                <ScalarProperty Name="GenDesc19" ColumnName="GenDesc19" />
+                <ScalarProperty Name="GenDesc18" ColumnName="GenDesc18" />
+                <ScalarProperty Name="GenDesc17" ColumnName="GenDesc17" />
+                <ScalarProperty Name="GenDesc16" ColumnName="GenDesc16" />
+                <ScalarProperty Name="GenDesc15" ColumnName="GenDesc15" />
+                <ScalarProperty Name="GenDesc14" ColumnName="GenDesc14" />
+                <ScalarProperty Name="GenDesc13" ColumnName="GenDesc13" />
+                <ScalarProperty Name="GenDesc12" ColumnName="GenDesc12" />
+                <ScalarProperty Name="GenDesc11" ColumnName="GenDesc11" />
+                <ScalarProperty Name="GenDesc10" ColumnName="GenDesc10" />
+                <ScalarProperty Name="GenDesc9" ColumnName="GenDesc9" />
+                <ScalarProperty Name="GenDesc8" ColumnName="GenDesc8" />
+                <ScalarProperty Name="GenDesc7" ColumnName="GenDesc7" />
+                <ScalarProperty Name="GenDesc6" ColumnName="GenDesc6" />
+                <ScalarProperty Name="GenDesc5" ColumnName="GenDesc5" />
+                <ScalarProperty Name="GenDesc4" ColumnName="GenDesc4" />
+                <ScalarProperty Name="GenDesc3" ColumnName="GenDesc3" />
+                <ScalarProperty Name="GenDesc2" ColumnName="GenDesc2" />
+                <ScalarProperty Name="GenDesc1" ColumnName="GenDesc1" />
+                <ScalarProperty Name="LA10" ColumnName="LA10" />
+                <ScalarProperty Name="LA9" ColumnName="LA9" />
+                <ScalarProperty Name="LA8" ColumnName="LA8" />
+                <ScalarProperty Name="LA7" ColumnName="LA7" />
+                <ScalarProperty Name="LA6" ColumnName="LA6" />
+                <ScalarProperty Name="LA5" ColumnName="LA5" />
+                <ScalarProperty Name="LA4" ColumnName="LA4" />
+                <ScalarProperty Name="LA3" ColumnName="LA3" />
+                <ScalarProperty Name="LA2" ColumnName="LA2" />
+                <ScalarProperty Name="LA1" ColumnName="LA1" />
+                <ScalarProperty Name="AlloctnMarker" ColumnName="AlloctnMarker" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="TransRef" ColumnName="TransRef" />
+                <ScalarProperty Name="JrnlSource" ColumnName="JrnlSource" />
+                <ScalarProperty Name="JrnlType" ColumnName="JrnlType" />
+                <ScalarProperty Name="DueDate" ColumnName="DueDate" />
+                <ScalarProperty Name="TransDate" ColumnName="TransDate" />
+                <ScalarProperty Name="Period" ColumnName="Period" />
+                <ScalarProperty Name="ft_Account" ColumnName="ft_Account" />
+                <ScalarProperty Name="Ledger" ColumnName="Ledger" />
+                <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="False" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model2" ZoomLevel="59">
+        <EntityTypeShape EntityType="RSDataV2Model.rsGlobalField" Width="1.5" PointX="2.75" PointY="0.75" Height="2.5571907552083326" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsGroupPermission" Width="1.5" PointX="4.75" PointY="0.75" Height="1.7879850260416665" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsGroup" Width="1.5" PointX="0.625" PointY="6.625" Height="1.9802864583333335" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsPermission" Width="1.5" PointX="2.75" PointY="4.75" Height="2.3648893229166656" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsSystemProcess" Width="1.5" PointX="4.75" PointY="3.75" Height="1.4033821614583322" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplateAction" Width="1.5" PointX="6.75" PointY="0.75" Height="4.0956022135416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplateCreateXMLTextProfile" Width="1.5" PointX="6.75" PointY="5.75" Height="4.2879036458333353" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplateGenDescField" Width="1.5" PointX="8.75" PointY="0.75" Height="2.7494921875000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplateHelp" Width="1.5" PointX="0.75" PointY="8.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplate" Width="1.5" PointX="10.75" PointY="0.75" Height="2.1725878906250031" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplateSetting" Width="1.5" PointX="2.75" PointY="10.75" Height="4.2879036458333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplateTransaction" Width="1.5" PointX="10.75" PointY="3.75" Height="5.0571093750000031" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplateVisible" Width="1.5" PointX="10.75" PointY="9.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplateXMLTextFileDGV" Width="1.5" PointX="4.75" PointY="11.75" Height="13.133769531250003" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplateXMLTEXTFile" Width="1.5" PointX="12.75" PointY="0.75" Height="1.9802864583333388" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsUpgrade" Width="1.5" PointX="12.75" PointY="3.75" Height="2.5571907552083388" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsUserGroup" Width="1.5" PointX="12.75" PointY="7.75" Height="1.5956835937500031" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsUser" Width="1.5" PointX="12.75" PointY="10.75" Height="3.3263964843750031" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsUsersTemplatesVisible" Width="1.5" PointX="14.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.View_GroupActions" Width="1.5" PointX="14.75" PointY="3.75" Height="4.6725065104166674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.View_GroupPermissions" Width="1.5" PointX="14.75" PointY="9.75" Height="2.7494921875000102" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.View_TemplatesPermissions" Width="1.5" PointX="14.75" PointY="13.75" Height="3.5186979166666674" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplateContainer" Width="1.5" PointX="11.375" PointY="15.75" Height="3.1340950520833246" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsGlobalDocumentView" Width="1.5" PointX="0.75" PointY="16.75" Height="4.0956022135416674" />
+        <EntityTypeShape EntityType="RSDataV2Model.rsTemplateJournal" Width="1.5" PointX="7.375" PointY="11.75" Height="14.479879557291667" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

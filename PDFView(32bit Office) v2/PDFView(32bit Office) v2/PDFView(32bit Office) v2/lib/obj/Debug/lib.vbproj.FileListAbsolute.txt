@@ -1,0 +1,31 @@
+C:\Users\Administrator\Downloads\FormulaEngine-0.9.2.0-src\FormulaEngine-0.9.2.0\src\lib\bin\ciloci.FormulaEngine.dll
+C:\Users\Administrator\Downloads\FormulaEngine-0.9.2.0-src\FormulaEngine-0.9.2.0\src\lib\bin\ciloci.FormulaEngine.pdb
+C:\Users\Administrator\Downloads\FormulaEngine-0.9.2.0-src\FormulaEngine-0.9.2.0\src\lib\bin\ciloci.FormulaEngine.xml
+C:\Users\Administrator\Downloads\FormulaEngine-0.9.2.0-src\FormulaEngine-0.9.2.0\src\lib\bin\grammatica-1.5.alpha2.dll
+C:\Users\Administrator\Downloads\FormulaEngine-0.9.2.0-src\FormulaEngine-0.9.2.0\src\lib\obj\Debug\lib.vbprojResolveAssemblyReference.cache
+C:\Users\Administrator\Downloads\FormulaEngine-0.9.2.0-src\FormulaEngine-0.9.2.0\src\lib\obj\Debug\ciloci.FormulaEngine.dll
+C:\Users\Administrator\Downloads\FormulaEngine-0.9.2.0-src\FormulaEngine-0.9.2.0\src\lib\obj\Debug\ciloci.FormulaEngine.xml
+C:\Users\Administrator\Downloads\FormulaEngine-0.9.2.0-src\FormulaEngine-0.9.2.0\src\lib\obj\Debug\ciloci.FormulaEngine.pdb
+C:\PDFView(32bit Office)150529-issue - journalnumber saved incorrectlly\PDFView(32bit Office)150119\PDFView(32bit Office)\PDFView(32bit Office)\lib\bin\ciloci.FormulaEngine.dll
+C:\PDFView(32bit Office)150529-issue - journalnumber saved incorrectlly\PDFView(32bit Office)150119\PDFView(32bit Office)\PDFView(32bit Office)\lib\bin\ciloci.FormulaEngine.pdb
+C:\PDFView(32bit Office)150529-issue - journalnumber saved incorrectlly\PDFView(32bit Office)150119\PDFView(32bit Office)\PDFView(32bit Office)\lib\bin\ciloci.FormulaEngine.xml
+C:\PDFView(32bit Office)150529-issue - journalnumber saved incorrectlly\PDFView(32bit Office)150119\PDFView(32bit Office)\PDFView(32bit Office)\lib\bin\grammatica-1.5.alpha2.dll
+C:\PDFView(32bit Office)150529-issue - journalnumber saved incorrectlly\PDFView(32bit Office)150119\PDFView(32bit Office)\PDFView(32bit Office)\lib\obj\Debug\lib.vbprojResolveAssemblyReference.cache
+C:\PDFView(32bit Office)150529-issue - journalnumber saved incorrectlly\PDFView(32bit Office)150119\PDFView(32bit Office)\PDFView(32bit Office)\lib\obj\Debug\ciloci.FormulaEngine.dll
+C:\PDFView(32bit Office)150529-issue - journalnumber saved incorrectlly\PDFView(32bit Office)150119\PDFView(32bit Office)\PDFView(32bit Office)\lib\obj\Debug\ciloci.FormulaEngine.xml
+C:\PDFView(32bit Office)150529-issue - journalnumber saved incorrectlly\PDFView(32bit Office)150119\PDFView(32bit Office)\PDFView(32bit Office)\lib\obj\Debug\ciloci.FormulaEngine.pdb
+C:\360\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\bin\ciloci.FormulaEngine.dll
+C:\360\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\bin\ciloci.FormulaEngine.pdb
+C:\360\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\bin\ciloci.FormulaEngine.xml
+C:\360\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\bin\grammatica-1.5.alpha2.dll
+C:\360\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\obj\Debug\ciloci.FormulaEngine.dll
+C:\360\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\obj\Debug\ciloci.FormulaEngine.xml
+C:\360\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\obj\Debug\ciloci.FormulaEngine.pdb
+C:\360\Version 2 (1)\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\bin\ciloci.FormulaEngine.dll
+C:\360\Version 2 (1)\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\bin\ciloci.FormulaEngine.pdb
+C:\360\Version 2 (1)\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\bin\ciloci.FormulaEngine.xml
+C:\360\Version 2 (1)\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\bin\grammatica-1.5.alpha2.dll
+C:\360\Version 2 (1)\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\obj\Debug\ciloci.FormulaEngine.dll
+C:\360\Version 2 (1)\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\obj\Debug\ciloci.FormulaEngine.xml
+C:\360\Version 2 (1)\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\obj\Debug\ciloci.FormulaEngine.pdb
+C:\360\Version 2 (1)\Version 2 (1)\Version 2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\PDFView(32bit Office) v2\lib\obj\Debug\lib.vbprojResolveAssemblyReference.cache

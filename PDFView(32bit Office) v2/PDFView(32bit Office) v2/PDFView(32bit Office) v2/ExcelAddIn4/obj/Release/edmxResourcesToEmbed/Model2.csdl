@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RSDataV2Model" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm">
+  <EntityContainer Name="RSFinanceToolsEntities">
+    <EntitySet Name="rsGlobalFields" EntityType="RSDataV2Model.rsGlobalField" />
+    <EntitySet Name="rsGroupPermissions" EntityType="RSDataV2Model.rsGroupPermission" />
+    <EntitySet Name="rsGroups" EntityType="RSDataV2Model.rsGroup" />
+    <EntitySet Name="rsPermissions" EntityType="RSDataV2Model.rsPermission" />
+    <EntitySet Name="rsSystemProcesses" EntityType="RSDataV2Model.rsSystemProcess" />
+    <EntitySet Name="rsTemplateActions" EntityType="RSDataV2Model.rsTemplateAction" />
+    <EntitySet Name="rsTemplateCreateXMLTextProfiles" EntityType="RSDataV2Model.rsTemplateCreateXMLTextProfile" />
+    <EntitySet Name="rsTemplateGenDescFields" EntityType="RSDataV2Model.rsTemplateGenDescField" />
+    <EntitySet Name="rsTemplateHelps" EntityType="RSDataV2Model.rsTemplateHelp" />
+    <EntitySet Name="rsTemplates" EntityType="RSDataV2Model.rsTemplate" />
+    <EntitySet Name="rsTemplateSettings" EntityType="RSDataV2Model.rsTemplateSetting" />
+    <EntitySet Name="rsTemplateTransactions" EntityType="RSDataV2Model.rsTemplateTransaction" />
+    <EntitySet Name="rsTemplateVisibles" EntityType="RSDataV2Model.rsTemplateVisible" />
+    <EntitySet Name="rsTemplateXMLTextFileDGVs" EntityType="RSDataV2Model.rsTemplateXMLTextFileDGV" />
+    <EntitySet Name="rsTemplateXMLTEXTFiles" EntityType="RSDataV2Model.rsTemplateXMLTEXTFile" />
+    <EntitySet Name="rsUpgrades" EntityType="RSDataV2Model.rsUpgrade" />
+    <EntitySet Name="rsUserGroups" EntityType="RSDataV2Model.rsUserGroup" />
+    <EntitySet Name="rsUsers" EntityType="RSDataV2Model.rsUser" />
+    <EntitySet Name="rsUsersTemplatesVisibles" EntityType="RSDataV2Model.rsUsersTemplatesVisible" />
+    <EntitySet Name="View_GroupActions" EntityType="RSDataV2Model.View_GroupActions" />
+    <EntitySet Name="View_GroupPermissions" EntityType="RSDataV2Model.View_GroupPermissions" />
+    <EntitySet Name="View_TemplatesPermissions" EntityType="RSDataV2Model.View_TemplatesPermissions" />
+    <EntitySet Name="rsTemplateContainers" EntityType="RSDataV2Model.rsTemplateContainer" />
+    <EntitySet Name="rsGlobalDocumentViews" EntityType="RSDataV2Model.rsGlobalDocumentView" />
+    <EntitySet Name="rsTemplateJournals" EntityType="RSDataV2Model.rsTemplateJournal" />
+  </EntityContainer>
+  <EntityType Name="rsGlobalField">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="Guid" Nullable="false" />
+    <Property Name="FieldGroup" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SunField" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UserFriendlyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Output" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Input" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="XML_Query" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="version" Type="Int32" />
+  </EntityType>
+  <EntityType Name="rsGroupPermission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="GroupID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="PermissionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="PermissionGroupName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsGroup">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="GroupName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="GroupDisable" Type="Boolean" />
+    <Property Name="Remark" Type="String" MaxLength="4000" Unicode="true" FixedLength="false" />
+    <Property Name="AddInTabName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsPermission">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="PermissionName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="TemplateID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ActionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Per_Type" Type="Int32" />
+    <Property Name="remark" Type="String" MaxLength="3000" Unicode="true" FixedLength="false" />
+    <Property Name="Folder" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsSystemProcess">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="ProcessName" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsTemplateAction">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="ButtonName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ButtonText" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ButtonIcon" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ButtonGroup" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ButtonSize" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ButtonOrder" Type="Int32" />
+    <Property Name="GroupOrder" Type="Int32" />
+    <Property Name="StopOnError" Type="Boolean" />
+    <Property Name="TemplateID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ProcessID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="MacroName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProcessMacroOrder" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Reference" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="ShowMsg" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="rsTemplateCreateXMLTextProfile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="Field" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FriendlyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Visible" Type="Boolean" />
+    <Property Name="DefaultValue" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="SunComponentName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="SunMethod" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Mandatory" Type="Boolean" />
+    <Property Name="Separator" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TextLength" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prefix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Suffix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="RemoveCharacters" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TextFileName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Parent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="trimText" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Section" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsTemplateGenDescField">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="Guid" Nullable="false" />
+    <Property Name="FieldGroup" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SunField" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UserFriendlyName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Output" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Input" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="XML_Query" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TemplateID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="version" Type="Int32" />
+  </EntityType>
+  <EntityType Name="rsTemplateHelp">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="TemplateID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="helpFileData" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="helpFileType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsTemplate">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="TemplateData" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="TemplateName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="OriginTemplatePath" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FileType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsTemplateSetting">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="CriteriaName1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CellReference1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TemplateID" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="OpenTransUponSave" Type="Boolean" />
+    <Property Name="CriteriaName2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CellReference2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CriteriaName3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CellReference3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CriteriaName4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CellReference4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CriteriaName5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="CellReference5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Reference" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SequencePrefix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PopulateCell" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UseSequenceNumbering" Type="Boolean" />
+    <Property Type="String" Name="PDFFolder" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PDFName" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rsTemplateTransaction">
+    <Key>
+      <PropertyRef Name="GUID" />
+    </Key>
+    <Property Name="GUID" Type="Guid" Nullable="false" />
+    <Property Name="TemplateName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Criteria1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Criteria2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Criteria3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Criteria4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Criteria5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Value1" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Value2" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Value3" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Value4" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Value5" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Data" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DataType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PDFData" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="XMLData" Type="String" MaxLength="Max" Unicode="false" FixedLength="false" />
+    <Property Name="TemplateID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="maxNum" Type="Int32" />
+    <Property Name="TransactionName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Prefix" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SunJournalNumber" Type="String" MaxLength="100" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsTemplateVisible">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="Guid" Nullable="false" />
+    <Property Name="TemplateID" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+    <Property Name="OutputPaneVisiable" Type="String" MaxLength="5" Unicode="true" FixedLength="false" />
+    <Property Name="UserID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsTemplateXMLTextFileDGV">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="Column1" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column2" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column3" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column4" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column5" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column6" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column7" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column8" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column9" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column10" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column11" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column12" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column13" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column14" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column15" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column16" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column17" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column18" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column19" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column20" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column21" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column22" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column23" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column24" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column25" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column26" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column27" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column28" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column29" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column30" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column31" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column32" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column33" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column34" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column35" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column36" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column37" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column38" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column39" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column40" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column41" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column42" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column43" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column44" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column45" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column46" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column47" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column48" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column49" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Column50" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="HeaderTextes" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="StartinginCell" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LineIndicator" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="TemplateID" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="IncludeHeaderRow" Type="Boolean" />
+    <Property Name="SavePath" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="SaveName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ReferenceNumber" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="SunComponent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="SunMethod" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="HeaderValue" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="ProcessName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsTemplateXMLTEXTFile">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="FileContent" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="RelatedName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FileType" Type="Int32" />
+    <Property Name="XMLTemplate" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsUpgrade">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="RootPath" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="V1IP" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="V1UserID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="V1Password" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="V2IP" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="V2UserID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="V2Password" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsUserGroup">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="UserID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="GroupID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsUser">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Name="ft_id" Type="Guid" Nullable="false" />
+    <Property Name="FormUserID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="FormUserPassword" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="WindowsUserID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="MachineName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="LoginType" Type="Int32" />
+    <Property Name="SUNUserIP" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SUNUserID" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="SUNUserPass" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="AddInTabName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="TemplateUpdateFlag" Type="Boolean" />
+    <Property Name="FileIds" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsUsersTemplatesVisible">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Name="TemplateID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="UserID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="Visible" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="View_GroupActions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PermissionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="GroupID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="TemplateID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ActionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Per_Type" Type="Int32" />
+    <Property Name="ButtonName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ButtonText" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ButtonIcon" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ButtonGroup" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ButtonSize" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ButtonOrder" Type="Int32" />
+    <Property Name="GroupOrder" Type="Int32" />
+    <Property Name="StopOnError" Type="Boolean" />
+    <Property Name="ProcessID" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="MacroName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ProcessMacroOrder" Type="Int32" />
+    <Property Name="Type" Type="Int32" />
+    <Property Name="Reference" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="View_GroupPermissions">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="PermissionName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="TemplateID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ActionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Per_Type" Type="Int32" />
+    <Property Name="remark" Type="String" MaxLength="3000" Unicode="true" FixedLength="false" />
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="GroupID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="PermissionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="PermissionGroupName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Type="String" Name="Folder" MaxLength="500" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="View_TemplatesPermissions">
+    <Key>
+      <PropertyRef Name="ID" />
+      <PropertyRef Name="PerType" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="PermissionName" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="TemplateID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="ActionID" Type="String" MaxLength="150" Unicode="true" FixedLength="false" />
+    <Property Name="Per_Type" Type="Int32" />
+    <Property Name="remark" Type="String" MaxLength="3000" Unicode="true" FixedLength="false" />
+    <Property Name="TemplateData" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="TemplateName" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="OriginTemplatePath" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="FileType" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="PerType" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+    <Property Name="Folder" Type="String" MaxLength="500" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="rsTemplateContainer">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Type="Guid" Name="ft_id" Nullable="false" />
+    <Property Type="String" Name="TemplateID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ft_relatefilepath" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="column" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="FromDB" />
+    <Property Type="Boolean" Name="IsWebBrowser" />
+    <Property Type="Boolean" Name="IsDataBaseQuery" />
+    <Property Type="String" Name="ConnectionString" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UserID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Password" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="SQLString" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rsGlobalDocumentView">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Type="Guid" Name="id" Nullable="false" />
+    <Property Type="String" Name="type" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="prefix" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="folder" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="useRefAsName" Nullable="false" />
+    <Property Type="String" Name="file" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="filetype" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Type="String" Name="macro01" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pdfRelatedFilePath" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="Boolean" Name="pdfIsWebBrowser" />
+    <Property Type="Boolean" Name="pdfIsDataBaseQuery" />
+    <Property Type="String" Name="pdfConnectionString" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pdfUserID" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pdfPassword" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="pdfSQLString" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="populateCell" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="rsTemplateJournal">
+    <Key>
+      <PropertyRef Name="ft_id" />
+    </Key>
+    <Property Type="Int32" Name="ft_id" Nullable="false" a:StoreGeneratedPattern="Identity" xmlns:a="http://schemas.microsoft.com/ado/2009/02/edm/annotation" />
+    <Property Type="String" Name="Ledger" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ft_Account" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Period" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TransDate" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DueDate" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JrnlType" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JrnlSource" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TransRef" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Description" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AlloctnMarker" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LA1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LA2" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LA3" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LA4" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LA5" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LA6" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LA7" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LA8" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LA9" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LA10" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc2" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc3" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc4" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc5" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc6" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc7" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc8" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc9" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc10" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc11" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc12" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc13" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc14" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc15" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc16" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc17" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc18" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc19" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc20" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc21" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc22" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc23" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc24" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="GenDesc25" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TransAmount" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Currency" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BaseAmount" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="C2ndBase" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="C4thAmount" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="TemplateID" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="LineIndicator" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="StartinginCell" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="BalanceBy" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PopWithJNNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Reference" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="SaveReference" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JournalNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="JournalLineNumber" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="InputFields" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="UpdateFields" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConsolidateBy1" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConsolidateBy2" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConsolidateBy3" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="ConsolidateBy4" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="Type" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Type="String" Name="AllowBalTrans" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="AllowPostSuspAcco" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PostProvisional" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Nodes>
+    <Ledger FieldGroup ="Payload" SunField="Ledger" FriendlyName="Ledger" Output="True" XML_Query=""></Ledger>
+    <AccountCode FieldGroup ="Payload" SunField="AccountCode" FriendlyName="Account" Output="True" XML_Query=""></AccountCode>
+    <AccountingPeriod FieldGroup ="Payload" SunField="AccountingPeriod" FriendlyName="Period" Output="True" XML_Query=""></AccountingPeriod>
+    <TransactionDate FieldGroup ="Payload" SunField="TransactionDate" FriendlyName="Trans Date" Output="True" XML_Query=""></TransactionDate>
+    <DueDate FieldGroup ="Payload" SunField="DueDate" FriendlyName="Due Date" Output="True" XML_Query=""></DueDate>
+    <JournalType FieldGroup ="Payload" SunField="JournalType" FriendlyName="Jrnl Type" Output="True" XML_Query=""></JournalType>
+    <JournalSource FieldGroup ="Payload" SunField="JournalSource" FriendlyName="Jrnl Source" Output="True" XML_Query=""></JournalSource>
+    <TransactionReference FieldGroup ="Payload" SunField="TransactionReference" FriendlyName="Trans Ref" Output="True" XML_Query=""></TransactionReference>
+    <Description FieldGroup ="Payload" SunField="Description" FriendlyName="Description" Output="True" XML_Query=""></Description>
+    <AllocationMarker FieldGroup ="Payload" SunField="AllocationMarker" FriendlyName="Alloctn Marker" Output="True" XML_Query=""></AllocationMarker>
+    <AnalysisCode1 FieldGroup ="Payload" SunField="AnalysisCode1" FriendlyName="LA1" Output="True" XML_Query=""></AnalysisCode1>
+    <AnalysisCode2 FieldGroup ="Payload" SunField="AnalysisCode2" FriendlyName="LA2" Output="True" XML_Query=""></AnalysisCode2>
+    <AnalysisCode3 FieldGroup ="Payload" SunField="AnalysisCode3" FriendlyName="LA3" Output="True" XML_Query=""></AnalysisCode3>
+    <AnalysisCode4 FieldGroup ="Payload" SunField="AnalysisCode4" FriendlyName="LA4" Output="True" XML_Query=""></AnalysisCode4>
+    <AnalysisCode5 FieldGroup ="Payload" SunField="AnalysisCode5" FriendlyName="LA5" Output="True" XML_Query=""></AnalysisCode5>
+    <AnalysisCode6 FieldGroup ="Payload" SunField="AnalysisCode6" FriendlyName="LA6" Output="True" XML_Query=""></AnalysisCode6>
+    <AnalysisCode7 FieldGroup ="Payload" SunField="AnalysisCode7" FriendlyName="LA7" Output="True" XML_Query=""></AnalysisCode7>
+    <AnalysisCode8 FieldGroup ="Payload" SunField="AnalysisCode8" FriendlyName="LA8" Output="True" XML_Query=""></AnalysisCode8>
+    <AnalysisCode9 FieldGroup ="Payload" SunField="AnalysisCode9" FriendlyName="LA9" Output="True" XML_Query=""></AnalysisCode9>
+    <AnalysisCode10 FieldGroup ="Payload" SunField="AnalysisCode10" FriendlyName="LA10" Output="True" XML_Query=""></AnalysisCode10>
+    <TransactionAmount FieldGroup ="Payload" SunField="TransactionAmount" FriendlyName="Trans Amount" Output="True" XML_Query=""></TransactionAmount>
+    <CurrencyCode FieldGroup ="Payload" SunField="CurrencyCode" FriendlyName="Currency" Output="True" XML_Query=""></CurrencyCode>
+    <BaseAmount FieldGroup ="Payload" SunField="BaseAmount" FriendlyName="Base Amount" Output="True" XML_Query=""></BaseAmount>
+    <Base2ReportingAmount FieldGroup ="Payload" SunField="Base2ReportingAmount" FriendlyName="2nd Base" Output="True" XML_Query=""></Base2ReportingAmount>
+    <Value4Amount FieldGroup ="Payload" SunField="Value4Amount" FriendlyName="4th Amount" Output="True" XML_Query=""></Value4Amount>
+</Nodes>
+
+
+
+
+
+
+
+
+
+
+
+
+

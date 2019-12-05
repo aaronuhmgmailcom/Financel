@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="RSFinanceToolsModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="RSFinanceToolsModelStoreContainer">
+          <EntitySet Name="FinTools_Settings" EntityType="RSFinanceToolsModel.Store.FinTools_Settings" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="VIEW_DOC" EntityType="RSFinanceToolsModel.Store.VIEW_DOC" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="FinTools_Settings">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Name="ft_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="ft_folder" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="VIEW_DOC">
+          <Key>
+            <PropertyRef Name="vd_id" />
+          </Key>
+          <Property Name="vd_id" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="vd_type" Type="nvarchar" Nullable="false" MaxLength="50" />
+          <Property Name="vd_prefix" Type="nchar" Nullable="false" MaxLength="10" />
+          <Property Name="vd_folder" Type="nvarchar(max)" />
+          <Property Name="vd_use_ref_as_name" Type="bit" Nullable="false" />
+          <Property Name="vd_file" Type="nvarchar" MaxLength="50" />
+          <Property Name="vd_filetype" Type="varchar" MaxLength="4" />
+          <Property Name="vd_macro01" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RSFinanceToolsModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="RSFinanceToolsEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="VIEW_DOC" EntityType="RSFinanceToolsModel.VIEW_DOC" />
+          <EntitySet Name="FinTools_Settings" EntityType="RSFinanceToolsModel.FinTools_Settings" />
+        </EntityContainer>
+        <EntityType Name="VIEW_DOC">
+          <Key>
+            <PropertyRef Name="vd_id" />
+          </Key>
+          <Property Name="vd_id" Type="Guid" Nullable="false" />
+          <Property Name="vd_type" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="vd_prefix" Type="String" MaxLength="10" Unicode="true" FixedLength="true" Nullable="false" />
+          <Property Name="vd_folder" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="vd_use_ref_as_name" Type="Boolean" Nullable="false" />
+          <Property Name="vd_file" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+          <Property Name="vd_filetype" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="vd_macro01" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="FinTools_Settings">
+          <Key>
+            <PropertyRef Name="ft_id" />
+          </Key>
+          <Property Type="Guid" Name="ft_id" Nullable="false" />
+          <Property Type="String" Name="ft_folder" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RSFinanceToolsModelStoreContainer" CdmEntityContainer="RSFinanceToolsEntities">
+          <EntitySetMapping Name="VIEW_DOC"><EntityTypeMapping TypeName="RSFinanceToolsModel.VIEW_DOC"><MappingFragment StoreEntitySet="VIEW_DOC">
+            <ScalarProperty Name="vd_id" ColumnName="vd_id" />
+            <ScalarProperty Name="vd_type" ColumnName="vd_type" />
+            <ScalarProperty Name="vd_prefix" ColumnName="vd_prefix" />
+            <ScalarProperty Name="vd_folder" ColumnName="vd_folder" />
+            <ScalarProperty Name="vd_use_ref_as_name" ColumnName="vd_use_ref_as_name" />
+            <ScalarProperty Name="vd_file" ColumnName="vd_file" />
+            <ScalarProperty Name="vd_filetype" ColumnName="vd_filetype" />
+            <ScalarProperty Name="vd_macro01" ColumnName="vd_macro01" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="FinTools_Settings">
+            <EntityTypeMapping TypeName="RSFinanceToolsModel.FinTools_Settings">
+              <MappingFragment StoreEntitySet="FinTools_Settings">
+                <ScalarProperty Name="ft_folder" ColumnName="ft_folder" />
+                <ScalarProperty Name="ft_id" ColumnName="ft_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Model1">
+        <EntityTypeShape EntityType="RSFinanceToolsModel.VIEW_DOC" Width="2.125" PointX="0.75" PointY="0.75" Height="2.5571907552083335" IsExpanded="true" />
+        <EntityTypeShape EntityType="RSFinanceToolsModel.FinTools_Settings" Width="2.375" PointX="3.375" PointY="0.75" Height="1.4033821614583335" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

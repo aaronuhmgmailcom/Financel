@@ -1,0 +1,586 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--
+    This section defines project-level properties.
+
+    AssemblyName
+      Name of the output assembly.
+    Configuration
+      Specifies a default value for debug.
+    OutputType
+      Must be "Library" for VSTO.
+    Platform
+      Specifies what CPU the output of this project can run on.
+    NoStandardLibraries
+      Set to "false" for VSTO.
+    RootNamespace
+      In C#, this specifies the namespace given to new files. In VB, all objects are
+      wrapped in this namespace at runtime.
+  -->
+  <PropertyGroup>
+    <ProjectTypeGuids>{BAA0C2D2-18E2-41B9-852F-F413020CAA33};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B0387324-A1CD-443D-B800-9FB499410F07}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <RootNamespace>ExcelAddIn4</RootNamespace>
+    <AssemblyName>ExcelAddIn85</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>True</IsWebBootstrapper>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <PublishUrl>http://localhost/ExcelAddIn/publish/</PublishUrl>
+    <InstallUrl>http://localhost/ExcelAddIn/publish/</InstallUrl>
+    <TargetCulture>en</TargetCulture>
+    <ApplicationVersion>2.0.0.44</ApplicationVersion>
+    <AutoIncrementApplicationRevision>true</AutoIncrementApplicationRevision>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateInterval>0</UpdateInterval>
+    <UpdateIntervalUnits>days</UpdateIntervalUnits>
+    <ProductName>RSFinanceTools ExcelAddIn V2</ProductName>
+    <PublisherName>RSystems</PublisherName>
+    <SupportUrl>http://95.138.176.41/ExcelAddIn/publish/ExcelAddIn64.vsto</SupportUrl>
+    <FriendlyName>RSFinanceTools V2.0</FriendlyName>
+    <OfficeApplicationDescription>RSystems All Rights Reserved.</OfficeApplicationDescription>
+    <LoadBehavior>3</LoadBehavior>
+  </PropertyGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <PropertyGroup>
+    <!--
+      OfficeApplication
+        Add-in host application
+    -->
+    <OfficeApplication>Excel</OfficeApplication>
+  </PropertyGroup>
+  <!--
+    This section defines properties that are set when the "Debug" configuration is selected.
+
+    DebugSymbols
+      If "true", create symbols (.pdb). If "false", do not create symbols.
+    DefineConstants
+      Constants defined for the preprocessor.
+    EnableUnmanagedDebugging
+      If "true", starting the debugger will attach both managed and unmanaged debuggers.
+    Optimize
+      If "true", optimize the build output. If "false", do not optimize.
+    OutputPath
+      Output path of project relative to the project file.
+    WarningLevel
+      Warning level for the compiler.
+  -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);DEBUG;TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <!--
+    This section defines properties that are set when the "Release" configuration is selected.
+
+    DebugSymbols
+      If "true", create symbols (.pdb). If "false", do not create symbols.
+    DefineConstants
+      Constants defined for the preprocessor.
+    EnableUnmanagedDebugging
+      If "true", starting the debugger will attach both managed and unmanaged debuggers.
+    Optimize
+      If "true", optimize the build output. If "false", do not optimize.
+    OutputPath
+      Output path of project relative to the project file.
+    WarningLevel
+      Warning level for the compiler.
+  -->
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <DefineConstants>$(DefineConstants);TRACE</DefineConstants>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <!--
+    This section enables pre- and post-build steps. However, in VSTO use
+    MSBuild tasks instead of these properties.       
+  -->
+  <PropertyGroup>
+    <PreBuildEvent>@set/p a1=SQL Server:
+@set/p a2=Login Name:
+@set/p a3=Password:
+@del "%25cd%25\log.txt"
+@echo Delete RSData database...
+@sqlcmd -S %25a1%25 -U %25a2%25 -P %25a3%25 -i DeleteDatabase.sql -d master -o Temp.log 
+@type Temp.log&gt;&gt;log.txt
+ @echo Create RSData database...
+@sqlcmd -S %25a1%25 -U %25a2%25 -P %25a3%25 -i RSData-CreateDatabase.sql -d RSData -o Temp.log 
+@type Temp.log&gt;&gt;log.txt 
+@echo Import RSData BaseData...
+@sqlcmd -S %25a1%25 -U %25a2%25 -P %25a3%25 -i BaseData.sql -d RSData -o Temp.log 
+@type Temp.log&gt;&gt;log.txt
+@del Temp.log
+@echo Finished!
+Pause
+	</PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>876C47AF320CD45E5946F79700890D5AEF783D27</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
+  <!--
+    This section specifies references for the project.
+  -->
+  <ItemGroup>
+    <Reference Include="Accessibility" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\Peter\Desktop\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Tools.Excel.v4.0.Utilities">
+      <HintPath>C:\Users\Yangb\Desktop\Microsoft.Office.Tools.Excel.v4.0.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Tools.Applications.Runtime.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="SunSystemsConnectClient, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\PDFView\ExcelAddIn4\bin\Debug\SunSystemsConnectClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AddIn" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Tools.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Common.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Tools.Excel.v9.0, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Office, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <!--
+    This section defines the user source files that are part of the project.
+     
+    A "Compile" element specifies a source file to compile.
+    An "EmbeddedResource" element specifies an .resx file for embedded resources.
+    A "None" element specifies a file that is not to be passed to the compiler (for instance, 
+    a text file or XML file).
+    The "AppDesigner" element specifies the directory where the application properties files
+    can be found.
+  -->
+  <ItemGroup>
+    <Compile Include="Common\BasePage.cs" />
+    <Compile Include="Common\BigDataCalculate.cs" />
+    <Compile Include="Common\BigDataCalculateCTF.cs" />
+    <Compile Include="Common\BigDataCalculateTransUpd.cs" />
+    <Compile Include="Common\Criterias.cs" />
+    <Compile Include="Common\DataEntity.cs" />
+    <Compile Include="Common\DataEntityForQuery.cs" />
+    <Compile Include="Common\DataEntityTransUpd.cs" />
+    <Compile Include="Common\DEncrypt.cs" />
+    <Compile Include="Common\EventLogLib.cs" />
+    <Compile Include="Common\FolderFileXMLHelper.cs" />
+    <Compile Include="Common\PictureConvert.cs" />
+    <Compile Include="Common\RowCreateTextFile.cs" />
+    <Compile Include="Common\RowEntityTransUpd.cs" />
+    <Compile Include="Common\SessionFileDictionary.cs" />
+    <Compile Include="Common\SessionInfo.cs" />
+    <Compile Include="Common\SpecialListForTransUpd.cs" />
+    <Compile Include="Common\UserInfo.cs" />
+    <Compile Include="Common\XMLRWrite.cs" />
+    <Compile Include="Component\DatagridViewCheckBoxHeaderCell.cs" />
+    <Compile Include="Component\DatagridViewCheckBoxHeaderCell.Designer.cs">
+      <DependentUpon>DatagridViewCheckBoxHeaderCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\DataGridViewColumnHeaderEditor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component\DataGridViewColumnHeaderEditor.Designer.cs">
+      <DependentUpon>DataGridViewColumnHeaderEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Component\MyDataGridViewTextBoxCell.cs" />
+    <Compile Include="Component\MyDataGridViewTextBoxCell.Designer.cs">
+      <DependentUpon>MyDataGridViewTextBoxCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConnectToServer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ConnectToServer.Designer.cs">
+      <DependentUpon>ConnectToServer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateTextFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateTextFileForm.Designer.cs">
+      <DependentUpon>CreateTextFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateXMLTextProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateXMLTextProfile.Designer.cs">
+      <DependentUpon>CreateXMLTextProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataFieldsSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataFieldsSetting.Designer.cs">
+      <DependentUpon>DataFieldsSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileNameForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileNameForm.designer.cs">
+      <DependentUpon>FileNameForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\Finance_Tools.cs" />
+    <Compile Include="frmAd_Doc_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAd_Doc_View.Designer.cs">
+      <DependentUpon>frmAd_Doc_View.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAd_NewButton.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAd_NewButton.Designer.cs">
+      <DependentUpon>frmAd_NewButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAd_NewButton_Group.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAd_NewButton_Group.Designer.cs">
+      <DependentUpon>FrmAd_NewButton_Group.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAd_NewButton_Icon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAd_NewButton_Icon.Designer.cs">
+      <DependentUpon>FrmAd_NewButton_Icon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HelpContainer.Designer.cs">
+      <DependentUpon>HelpContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InstallHelper.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="InstallHelper.Designer.cs">
+      <DependentUpon>InstallHelper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model2.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="OutputContainer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="OutputContainer.Designer.cs">
+      <DependentUpon>OutputContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PostErrorFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PostErrorFrm.Designer.cs">
+      <DependentUpon>PostErrorFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Preferences.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Preferences.Designer.cs">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Common\RowEntity.cs" />
+    <Compile Include="Common\SpecialList.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="RunReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RunReport.Designer.cs">
+      <DependentUpon>RunReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security.Designer.cs">
+      <DependentUpon>Security.cs</DependentUpon>
+    </Compile>
+    <Compile Include="setMax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="setMax.Designer.cs">
+      <DependentUpon>setMax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransUpdPostFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransUpdPostFrm.Designer.cs">
+      <DependentUpon>TransUpdPostFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UCForTaskPane.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UCForTaskPane.Designer.cs">
+      <DependentUpon>UCForTaskPane.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Upgrade.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Upgrade.Designer.cs">
+      <DependentUpon>Upgrade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewReport.Designer.cs">
+      <DependentUpon>ViewReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="XMLPostFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="XMLPostFrm.Designer.cs">
+      <DependentUpon>XMLPostFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Common\XmlSerialization.cs" />
+    <EmbeddedResource Include="Component\DataGridViewColumnHeaderEditor.resx">
+      <DependentUpon>DataGridViewColumnHeaderEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConnectToServer.resx">
+      <DependentUpon>ConnectToServer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateTextFileForm.resx">
+      <DependentUpon>CreateTextFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateXMLTextProfile.resx">
+      <DependentUpon>CreateXMLTextProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataFieldsSetting.resx">
+      <DependentUpon>DataFieldsSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileNameForm.resx">
+      <DependentUpon>FileNameForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAd_Doc_View.resx">
+      <DependentUpon>frmAd_Doc_View.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAd_NewButton.resx">
+      <DependentUpon>frmAd_NewButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAd_NewButton_Group.resx">
+      <DependentUpon>FrmAd_NewButton_Group.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAd_NewButton_Icon.resx">
+      <DependentUpon>FrmAd_NewButton_Icon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpContainer.resx">
+      <DependentUpon>HelpContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OutputContainer.resx">
+      <DependentUpon>OutputContainer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostErrorFrm.resx">
+      <DependentUpon>PostErrorFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Preferences.resx">
+      <DependentUpon>Preferences.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="Ribbon1.resx">
+      <DependentUpon>Ribbon1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RunReport.resx">
+      <DependentUpon>RunReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security.resx">
+      <DependentUpon>Security.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="setMax.resx">
+      <DependentUpon>setMax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransUpdPostFrm.resx">
+      <DependentUpon>TransUpdPostFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCForTaskPane.resx">
+      <DependentUpon>UCForTaskPane.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Upgrade.resx">
+      <DependentUpon>Upgrade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewReport.resx">
+      <DependentUpon>ViewReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="XMLPostFrm.resx">
+      <DependentUpon>XMLPostFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ExcelAddIn3_1_TemporaryKey.pfx" />
+    <None Include="ExcelAddIn3_2_TemporaryKey.pfx" />
+    <None Include="ExcelAddIn3_3_TemporaryKey.pfx" />
+    <None Include="ExcelAddIn3_4_TemporaryKey.pfx" />
+    <None Include="ExcelAddIn3_5_TemporaryKey.pfx" />
+    <None Include="ExcelAddIn3_6_TemporaryKey.pfx" />
+    <None Include="ExcelAddIn3_TemporaryKey.pfx" />
+    <None Include="ExcelAddIn4_1_TemporaryKey.pfx" />
+    <None Include="ExcelAddIn4_2_TemporaryKey.pfx" />
+    <None Include="ExcelAddIn4_TemporaryKey.pfx" />
+    <None Include="Finance_Tools_TemporaryKey.pfx" />
+    <EntityDeploy Include="Model2.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model2.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Ribbon1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ribbon1.Designer.cs">
+      <DependentUpon>Ribbon1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThisAddIn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="Rsystems.cer" />
+    <None Include="ThisAddIn.Designer.xml">
+      <DependentUpon>ThisAddIn.cs</DependentUpon>
+    </None>
+    <Compile Include="ThisAddIn.Designer.cs">
+      <DependentUpon>ThisAddIn.Designer.xml</DependentUpon>
+    </Compile>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\lib\lib.vbproj">
+      <Project>{E4DB247F-D213-4CA3-84D3-89F858D88C4D}</Project>
+      <Name>lib</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PDFView\PDFView.vbproj">
+      <Project>{170D7D1B-61B9-4E8B-9CD3-88350725379F}</Project>
+      <Name>PDFView</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ShellLib\ShellLib.csproj">
+      <Project>{F695D479-142B-4EAD-AE99-171E8AB7180A}</Project>
+      <Name>ShellLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataFieldsSetting.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CustomToolNamespace>ExcelAddIn4</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="GenDescFieldsSetting.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="GeneralFileStructure.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\resizeApi.png" />
+    <None Include="Resources\x_office_spreadsheet.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <!-- Include the build rules for a C# project. -->
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- Include additional build rules for an Office application add-in. -->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\OfficeTools\Microsoft.VisualStudio.Tools.Office.targets" />
+  <!-- This section defines VSTO properties that describe the host-changeable project properties. -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{BAA0C2D2-18E2-41B9-852F-F413020CAA33}">
+        <ProjectProperties HostName="Excel" HostPackage="{20A848B8-E01F-4801-962E-25DB0FF57389}" OfficeVersion="14.0" VstxVersion="4.0" ApplicationType="Excel" Language="cs" TemplatesPath="" DebugInfoExeName="#Software\Microsoft\Office\14.0\Excel\InstallRoot\Path#excel.exe" AddItemTemplatesGuid="{147FB6A7-F239-4523-AE65-B6A4E49B361F}" />
+        <Host Name="Excel" GeneratedCodeNamespace="ExcelAddIn4" PublishedHash="69C324AB27932AA2FBF2B7EA72250886FF164DE6" IconIndex="0">
+          <HostItem Name="ThisAddIn" Code="ThisAddIn.cs" CanonicalName="AddIn" PublishedHash="CF0C90CAB09F246E48878DB9F19D15E916881FB6" CanActivate="false" IconIndex="1" Blueprint="ThisAddIn.Designer.xml" GeneratedCode="ThisAddIn.Designer.cs" />
+        </Host>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

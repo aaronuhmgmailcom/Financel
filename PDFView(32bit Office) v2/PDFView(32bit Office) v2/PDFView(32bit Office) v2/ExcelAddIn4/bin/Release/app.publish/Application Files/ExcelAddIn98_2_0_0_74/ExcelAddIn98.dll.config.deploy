@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<configuration>
+	<configSections>
+		<section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler, log4net"/>
+	</configSections>
+	<log4net>
+		<appender name="RollingLogFileAppender" type="log4net.Appender.RollingFileAppender">
+			<file value="log\\"/>
+			<appendToFile value="true"/>
+			<rollingStyle value="Date"/>
+			<datePattern value="yyyy\\yyyyMM\\yyyyMMdd'.txt'"/>
+			<staticLogFileName value="false"/>
+			<param name="MaxSizeRollBackups" value="100"/>
+			<layout type="log4net.Layout.PatternLayout">
+				<conversionPattern value="%newline %n record time：%date %n Thread ID:[%thread] %n Log level：  %-5level %n error class：%logger property: [%property{NDC}] - %n error desc：%message%newline %n"/>
+			</layout>
+		</appender>
+		<root>
+			<level value="ERROR"/>
+			<appender-ref ref="RollingLogFileAppender"/>
+			<level value="INFO"/>
+			<appender-ref ref="RollingLogFileAppender"/>
+		</root>
+	</log4net>
+	<connectionStrings>
+		<add name="conRsTool" connectionString="Data Source=(local);Initial Catalog=RSDataV2;User ID=sa;Password=as" providerName="System.Data.SqlClient" />
+		<add name="RSFinanceToolsEntities" connectionString="metadata=res://*/Model2.csdl|res://*/Model2.ssdl|res://*/Model2.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=127.0.0.1;initial catalog=RSDataV2;persist security info=True;user id=sa;password=as;multipleactiveresultsets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />
+		<!--<add name="conRsTool" connectionString=" Data Source=(local);Initial Catalog=RSData;Integrated Security=True;MultipleActiveResultSets=True" providerName="System.Data.SqlClient" />
+    <add name="RSFinanceToolsEntities" connectionString="metadata=res://*/Model2.csdl|res://*/Model2.ssdl|res://*/Model2.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=127.0.0.1;initial catalog=RSData;integrated security=True;multipleactiveresultsets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient" />-->
+		<!--<add name="conRsTool" connectionString=" Data Source=(local);Initial Catalog=RSDataV2;Integrated Security=True;MultipleActiveResultSets=True" providerName="System.Data.SqlClient"/>-->
+		<!--<add name="RSFinanceToolsEntities" connectionString="metadata=res://*/Model2.csdl|res://*/Model2.ssdl|res://*/Model2.msl;provider=System.Data.SqlClient;provider connection string=&quot;data source=127.0.0.1;initial catalog=RSDataV2;integrated security=True;multipleactiveresultsets=True;App=EntityFramework&quot;" providerName="System.Data.EntityClient"/>-->
+	</connectionStrings>
+	<startup useLegacyV2RuntimeActivationPolicy="true">
+	<supportedRuntime version="v2.0.50727"/></startup>
+	<appSettings>
+		<add key="isSqlInitialize" value="false"/>
+		<add key="TotalRunTimes" value="0"/>
+		<add key="TemplateCount" value="0"/>
+		<add key="FolderFileXmlPath" value="C:\\ProgramData\\RSDataV2\\RSDataConfig\\GeneralFileStructure"/>
+		<add key="IntermediateConfig" value=""/>
+		<add key="isUseFriendlyName" value="false"/>
+		<add key="SuspenseAccount" value=""/>
+		<add key="BusinessUnit" value=""/>
+		<add key="IP" value=""/>
+		<add key="UserID" value=""/>
+		<add key="Password" value=""/>
+		<add key="ClientSettingsProvider.ServiceUri" value=""/>
+		<add key="ClientSettingsProvider.ConnectionStringName" value="DefaultConnection"/>
+	</appSettings>
+	<system.web>
+		<membership defaultProvider="ClientAuthenticationMembershipProvider">
+			<providers>
+				<add name="ClientAuthenticationMembershipProvider" type="System.Web.ClientServices.Providers.ClientFormsAuthenticationMembershipProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" connectionStringName="DefaultConnection" credentialsProvider=""/>
+			</providers>
+		</membership>
+		<roleManager defaultProvider="ClientRoleProvider" enabled="true">
+			<providers>
+				<add name="ClientRoleProvider" type="System.Web.ClientServices.Providers.ClientRoleProvider, System.Web.Extensions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" serviceUri="" cacheTimeout="86400" connectionStringName="DefaultConnection"/>
+			</providers>
+		</roleManager>
+		<httpRuntime maxRequestLength="2147483647" executionTimeout="24000000"/>
+	</system.web>
+	<system.serviceModel>
+		<bindings/>
+		<client/>
+	</system.serviceModel>
+</configuration>

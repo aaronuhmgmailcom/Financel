@@ -1,0 +1,149 @@
+<SSC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SequenceID="SequenceID1">
+  <ErrorContext>
+    <CompatibilityMode>0</CompatibilityMode>
+    <ErrorOutput>0</ErrorOutput>
+    <ErrorThreshold>0</ErrorThreshold>
+  </ErrorContext>
+  <User>
+    <Name>Name1</Name>
+  </User>
+  <SunSystemsContext>
+    <BusinessUnit>BusinessUnit1</BusinessUnit>
+  </SunSystemsContext>
+  <Payload>
+    <AccountAllocations rejected="true" status="success" Reference="0">
+      <ActionAllSettings rejected="true" status="success" Reference="0">
+        <AllocationMarkerFrom rejected="true" status="success" Reference="0">AllocationMarkerFrom1</AllocationMarkerFrom>
+        <AllocationMarkerTo rejected="true" status="success" Reference="0">AllocationMarkerTo1</AllocationMarkerTo>
+      </ActionAllSettings>
+      <FlagOptions rejected="true" status="success" Reference="0">
+        <AllowClosedOrSuspendedAccountCode rejected="true" status="success" Reference="0">AllowClosedOrSuspendedAccountCode1</AllowClosedOrSuspendedAccountCode>
+        <OverrideAllocations rejected="true" status="success" Reference="0">OverrideAllocations1</OverrideAllocations>
+      </FlagOptions>
+      <NewSettings rejected="true" status="success" Reference="0">
+        <AllocationMarker rejected="true" status="success" Reference="0">AllocationMarker1</AllocationMarker>
+        <BankCode rejected="true" status="success" Reference="0">BankCode1</BankCode>
+        <Description rejected="true" status="success" Reference="0">Description1</Description>
+        <DiscountDate1 rejected="true" status="success" Reference="0">DiscountDate11</DiscountDate1>
+        <DiscountDate2 rejected="true" status="success" Reference="0">DiscountDate21</DiscountDate2>
+        <DiscountPercent1 rejected="true" status="success" Reference="0">1</DiscountPercent1>
+        <DiscountPercent2 rejected="true" status="success" Reference="0">1</DiscountPercent2>
+        <DocumentDate1 rejected="true" status="success" Reference="0">DocumentDate11</DocumentDate1>
+        <DocumentDate2 rejected="true" status="success" Reference="0">DocumentDate21</DocumentDate2>
+        <DocumentDate3 rejected="true" status="success" Reference="0">DocumentDate31</DocumentDate3>
+        <DocumentDate4 rejected="true" status="success" Reference="0">DocumentDate41</DocumentDate4>
+        <DocumentNumber1 rejected="true" status="success" Reference="0">1</DocumentNumber1>
+        <DocumentNumber1Prefix rejected="true" status="success" Reference="0">DocumentNumber1Prefix1</DocumentNumber1Prefix>
+        <DocumentNumber2 rejected="true" status="success" Reference="0">1</DocumentNumber2>
+        <DocumentNumber2Prefix rejected="true" status="success" Reference="0">DocumentNumber2Prefix1</DocumentNumber2Prefix>
+        <DocumentNumber3 rejected="true" status="success" Reference="0">1</DocumentNumber3>
+        <DocumentNumber3Prefix rejected="true" status="success" Reference="0">DocumentNumber3Prefix1</DocumentNumber3Prefix>
+        <DocumentNumber4 rejected="true" status="success" Reference="0">1</DocumentNumber4>
+        <DocumentNumber4Prefix rejected="true" status="success" Reference="0">DocumentNumber4Prefix1</DocumentNumber4Prefix>
+        <DueDate rejected="true" status="success" Reference="0">DueDate1</DueDate>
+        <InstallmentDate rejected="true" status="success" Reference="0">InstallmentDate1</InstallmentDate>
+        <InterestDate rejected="true" status="success" Reference="0">InterestDate1</InterestDate>
+        <InterestPercent rejected="true" status="success" Reference="0">1</InterestPercent>
+        <LatePayPercent rejected="true" status="success" Reference="0">1</LatePayPercent>
+        <LatePaymentDate rejected="true" status="success" Reference="0">LatePaymentDate1</LatePaymentDate>
+        <LedgerAnalysis1 rejected="true" status="success" Reference="0">LedgerAnalysis11</LedgerAnalysis1>
+        <LedgerAnalysis10 rejected="true" status="success" Reference="0">LedgerAnalysis101</LedgerAnalysis10>
+        <LedgerAnalysis2 rejected="true" status="success" Reference="0">LedgerAnalysis21</LedgerAnalysis2>
+        <LedgerAnalysis3 rejected="true" status="success" Reference="0">LedgerAnalysis31</LedgerAnalysis3>
+        <LedgerAnalysis4 rejected="true" status="success" Reference="0">LedgerAnalysis41</LedgerAnalysis4>
+        <LedgerAnalysis5 rejected="true" status="success" Reference="0">LedgerAnalysis51</LedgerAnalysis5>
+        <LedgerAnalysis6 rejected="true" status="success" Reference="0">LedgerAnalysis61</LedgerAnalysis6>
+        <LedgerAnalysis7 rejected="true" status="success" Reference="0">LedgerAnalysis71</LedgerAnalysis7>
+        <LedgerAnalysis8 rejected="true" status="success" Reference="0">LedgerAnalysis81</LedgerAnalysis8>
+        <LedgerAnalysis9 rejected="true" status="success" Reference="0">LedgerAnalysis91</LedgerAnalysis9>
+        <PaymentReference rejected="true" status="success" Reference="0">PaymentReference1</PaymentReference>
+        <PaymentTermsCode rejected="true" status="success" Reference="0">PaymentTermsCode1</PaymentTermsCode>
+        <ValueDate rejected="true" status="success" Reference="0">ValueDate1</ValueDate>
+      </NewSettings>
+      <OutputDetails rejected="true" status="success" Reference="0">
+        <MessageText rejected="true" status="success" Reference="0">MessageText1</MessageText>
+      </OutputDetails>
+      <SelectionCriteria rejected="true" status="success" Reference="0">
+        <AccountCode rejected="true" status="success" Reference="0">AccountCode1</AccountCode>
+        <AccountingPeriodFrom rejected="true" status="success" Reference="0">AccountingPeriodFrom1</AccountingPeriodFrom>
+        <AccountingPeriodTo rejected="true" status="success" Reference="0">AccountingPeriodTo1</AccountingPeriodTo>
+        <AllocationMarker rejected="true" status="success" Reference="0">AllocationMarker1</AllocationMarker>
+        <AllocationReference rejected="true" status="success" Reference="0">1</AllocationReference>
+        <CreditDebitIndicator rejected="true" status="success" Reference="0">CreditDebitIndicator1</CreditDebitIndicator>
+        <CurrencyCodeFrom rejected="true" status="success" Reference="0">CurrencyCodeFrom1</CurrencyCodeFrom>
+        <CurrencyCodeTo rejected="true" status="success" Reference="0">CurrencyCodeTo1</CurrencyCodeTo>
+        <CurrencyIdentifier rejected="true" status="success" Reference="0">CurrencyIdentifier1</CurrencyIdentifier>
+        <EntryDateFrom rejected="true" status="success" Reference="0">EntryDateFrom1</EntryDateFrom>
+        <EntryDateTo rejected="true" status="success" Reference="0">EntryDateTo1</EntryDateTo>
+        <FourthCurrencyCodeFrom rejected="true" status="success" Reference="0">FourthCurrencyCodeFrom1</FourthCurrencyCodeFrom>
+        <FourthCurrencyCodeTo rejected="true" status="success" Reference="0">FourthCurrencyCodeTo1</FourthCurrencyCodeTo>
+        <IncludeRevaluations rejected="true" status="success" Reference="0">IncludeRevaluations1</IncludeRevaluations>
+        <IncludeRough rejected="true" status="success" Reference="0">IncludeRough1</IncludeRough>
+        <JournalNumberFrom rejected="true" status="success" Reference="0">1</JournalNumberFrom>
+        <JournalNumberTo rejected="true" status="success" Reference="0">1</JournalNumberTo>
+        <JournalSourceFrom rejected="true" status="success" Reference="0">JournalSourceFrom1</JournalSourceFrom>
+        <JournalSourceTo rejected="true" status="success" Reference="0">JournalSourceTo1</JournalSourceTo>
+        <JournalTypeFrom rejected="true" status="success" Reference="0">JournalTypeFrom1</JournalTypeFrom>
+        <JournalTypeTo rejected="true" status="success" Reference="0">JournalTypeTo1</JournalTypeTo>
+        <LinkReference1From rejected="true" status="success" Reference="0">LinkReference1From1</LinkReference1From>
+        <LinkReference1To rejected="true" status="success" Reference="0">LinkReference1To1</LinkReference1To>
+        <LinkReference3From rejected="true" status="success" Reference="0">LinkReference3From1</LinkReference3From>
+        <LinkReference3To rejected="true" status="success" Reference="0">LinkReference3To1</LinkReference3To>
+        <SecondReferenceFrom rejected="true" status="success" Reference="0">SecondReferenceFrom1</SecondReferenceFrom>
+        <SecondReferenceTo rejected="true" status="success" Reference="0">SecondReferenceTo1</SecondReferenceTo>
+        <TransactionAnalysis10From rejected="true" status="success" Reference="0">TransactionAnalysis10From1</TransactionAnalysis10From>
+        <TransactionAnalysis10To rejected="true" status="success" Reference="0">TransactionAnalysis10To1</TransactionAnalysis10To>
+        <TransactionAnalysis1From rejected="true" status="success" Reference="0">TransactionAnalysis1From1</TransactionAnalysis1From>
+        <TransactionAnalysis1To rejected="true" status="success" Reference="0">TransactionAnalysis1To1</TransactionAnalysis1To>
+        <TransactionAnalysis2From rejected="true" status="success" Reference="0">TransactionAnalysis2From1</TransactionAnalysis2From>
+        <TransactionAnalysis2To rejected="true" status="success" Reference="0">TransactionAnalysis2To1</TransactionAnalysis2To>
+        <TransactionAnalysis3From rejected="true" status="success" Reference="0">TransactionAnalysis3From1</TransactionAnalysis3From>
+        <TransactionAnalysis3To rejected="true" status="success" Reference="0">TransactionAnalysis3To1</TransactionAnalysis3To>
+        <TransactionAnalysis4From rejected="true" status="success" Reference="0">TransactionAnalysis4From1</TransactionAnalysis4From>
+        <TransactionAnalysis4To rejected="true" status="success" Reference="0">TransactionAnalysis4To1</TransactionAnalysis4To>
+        <TransactionAnalysis5From rejected="true" status="success" Reference="0">TransactionAnalysis5From1</TransactionAnalysis5From>
+        <TransactionAnalysis5To rejected="true" status="success" Reference="0">TransactionAnalysis5To1</TransactionAnalysis5To>
+        <TransactionAnalysis6From rejected="true" status="success" Reference="0">TransactionAnalysis6From1</TransactionAnalysis6From>
+        <TransactionAnalysis6To rejected="true" status="success" Reference="0">TransactionAnalysis6To1</TransactionAnalysis6To>
+        <TransactionAnalysis7From rejected="true" status="success" Reference="0">TransactionAnalysis7From1</TransactionAnalysis7From>
+        <TransactionAnalysis7To rejected="true" status="success" Reference="0">TransactionAnalysis7To1</TransactionAnalysis7To>
+        <TransactionAnalysis8From rejected="true" status="success" Reference="0">TransactionAnalysis8From1</TransactionAnalysis8From>
+        <TransactionAnalysis8To rejected="true" status="success" Reference="0">TransactionAnalysis8To1</TransactionAnalysis8To>
+        <TransactionAnalysis9From rejected="true" status="success" Reference="0">TransactionAnalysis9From1</TransactionAnalysis9From>
+        <TransactionAnalysis9To rejected="true" status="success" Reference="0">TransactionAnalysis9To1</TransactionAnalysis9To>
+        <TransactionDateFrom rejected="true" status="success" Reference="0">TransactionDateFrom1</TransactionDateFrom>
+        <TransactionDateTo rejected="true" status="success" Reference="0">TransactionDateTo1</TransactionDateTo>
+        <TransactionReferenceFrom rejected="true" status="success" Reference="0">TransactionReferenceFrom1</TransactionReferenceFrom>
+        <TransactionReferenceTo rejected="true" status="success" Reference="0">TransactionReferenceTo1</TransactionReferenceTo>
+        <ValueFrom rejected="true" status="success" Reference="0">1</ValueFrom>
+        <ValueTo rejected="true" status="success" Reference="0">1</ValueTo>
+      </SelectionCriteria>
+      <Messages>
+        <Message Level="warning" Reference="0">
+          <Exception>Exception1</Exception>
+          <UserText>UserText1</UserText>
+          <Application>
+            <Component>Component1</Component>
+            <DataItem>DataItem1</DataItem>
+            <Driver>Driver1</Driver>
+            <Item>Item1</Item>
+            <LastMethod>LastMethod1</LastMethod>
+            <Message>Message1</Message>
+            <MessageNumber>MessageNumber1</MessageNumber>
+            <Method>Method1</Method>
+            <Type>Type1</Type>
+            <Value>Value1</Value>
+            <Version>Version1</Version>
+          </Application>
+        </Message>
+      </Messages>
+    </AccountAllocations>
+  </Payload>
+  <ErrorMessages>
+    <Message>
+      <PayloadRef>0</PayloadRef>
+      <UserText>UserText1</UserText>
+      <Exception>Exception1</Exception>
+    </Message>
+  </ErrorMessages>
+</SSC>

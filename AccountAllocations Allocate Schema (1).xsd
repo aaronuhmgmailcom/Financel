@@ -1,0 +1,805 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema jaxb:version="1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jaxb="http://java.sun.com/xml/ns/jaxb">
+    <xsd:element name="SSC">
+        <xsd:annotation>
+            <xsd:documentation>SSC</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="ErrorContext" minOccurs="0">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="CompatibilityMode" type="SunSystemsCompatibilityMode" minOccurs="0">
+                                <xsd:annotation>
+                                    <xsd:documentation>Error compatibility</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element name="ErrorOutput" type="SunSystemsErrorOutput" minOccurs="0">
+                                <xsd:annotation>
+                                    <xsd:documentation>Error detail</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                            <xsd:element name="ErrorThreshold" type="SunSystemsErrorThreshold" minOccurs="0">
+                                <xsd:annotation>
+                                    <xsd:documentation>Error Threshold</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="User">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="Name" type="SunSystemsUserName">
+                                <xsd:annotation>
+                                    <xsd:documentation>User name</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="SunSystemsContext">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="BusinessUnit" type="SunSystemsBusinessUnit">
+                                <xsd:annotation>
+                                    <xsd:documentation>Business unit</xsd:documentation>
+                                </xsd:annotation>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="Payload" minOccurs="0">
+                    <xsd:annotation>
+                        <xsd:documentation>Payload</xsd:documentation>
+                    </xsd:annotation>
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="AccountAllocations" minOccurs="0" maxOccurs="unbounded">
+                                <xsd:annotation>
+                                    <xsd:documentation>Account Allocations</xsd:documentation>
+                                </xsd:annotation>
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="ActionAllSettings" minOccurs="0" maxOccurs="unbounded">
+                                            <xsd:annotation>
+                                                <xsd:documentation>From/To Allocation markers for use by Action All</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="AllocationMarkerFrom" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>From Allocation Marker</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="AllocationMarkerTo" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>To Allocation Marker</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                                <xsd:attributeGroup ref="OutputLog"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="FlagOptions" minOccurs="0" maxOccurs="unbounded">
+                                            <xsd:annotation>
+                                                <xsd:documentation>User response to messages</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="AllowClosedOrSuspendedAccountCode" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Allow allocation if Account is closed/suspended</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="OverrideAllocations" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Override Allocations Y/N</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                                <xsd:attributeGroup ref="OutputLog"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="NewSettings" minOccurs="0" maxOccurs="unbounded">
+                                            <xsd:annotation>
+                                                <xsd:documentation>Values which can be set by the user</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="AllocationMarker" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>New value for Allocation Marker</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="BankCode" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Bank Code</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="Description" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Description</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DiscountDate1" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Discount Date 1</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DiscountDate2" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Discount Date 2</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DiscountPercent1" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Discount Percent 1</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DiscountPercent2" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Discount Percent 2</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentDate1" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Date 1</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentDate2" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Date 2</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentDate3" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Date 3</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentDate4" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Date 4</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentNumber1" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Number 1</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentNumber1Prefix" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Number 1 Prefix</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentNumber2" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Number 2</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentNumber2Prefix" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Number 2 Prefix</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentNumber3" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Number 3</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentNumber3Prefix" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Number 3 Prefix</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentNumber4" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Number 4</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DocumentNumber4Prefix" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Document Number 4 Prefix</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="DueDate" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Due Date</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="InstallmentDate" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Installment Date</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="InterestDate" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Interest Date</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="InterestPercent" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Interest Percent</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LatePayPercent" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Late Pay Percent</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LatePaymentDate" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Late Payment Date</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LedgerAnalysis1" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Ledger Analysis 1</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LedgerAnalysis10" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Ledger Analysis 10</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LedgerAnalysis2" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Ledger Analysis 2</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LedgerAnalysis3" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Ledger Analysis 3</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LedgerAnalysis4" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Ledger Analysis 4</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LedgerAnalysis5" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Ledger Analysis 5</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LedgerAnalysis6" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Ledger Analysis 6</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LedgerAnalysis7" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Ledger Analysis 7</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LedgerAnalysis8" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Ledger Analysis 8</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LedgerAnalysis9" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Ledger Analysis 9</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="PaymentReference" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Payment Reference</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="PaymentTermsCode" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Payment Terms Code</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="ValueDate" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Value Date</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                                <xsd:attributeGroup ref="OutputLog"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="OutputDetails" minOccurs="0" maxOccurs="unbounded">
+                                            <xsd:annotation>
+                                                <xsd:documentation>Output Details</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="MessageText" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Message Text</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                                <xsd:attributeGroup ref="OutputLog"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="SelectionCriteria" minOccurs="0" maxOccurs="unbounded">
+                                            <xsd:annotation>
+                                                <xsd:documentation>Selection criteria for Account Allocation</xsd:documentation>
+                                            </xsd:annotation>
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="AccountCode" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Account Code</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="AccountingPeriodFrom" minOccurs="0" type="SunSystemsPeriod">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Accounting Period From (PPPYYYY)</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="AccountingPeriodTo" minOccurs="0" type="SunSystemsPeriod">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Accounting Period To (PPPYYYY)</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="AllocationMarker" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Select by Allocation Marker</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="AllocationReference" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Allocation Reference</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="CreditDebitIndicator" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Credit/Debit Indicator</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="CurrencyCodeFrom" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Currency Code From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="CurrencyCodeTo" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Currency Code To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="CurrencyIdentifier" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Currency Identifier</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="EntryDateFrom" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Entry Date From (DDMMYYYY)</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="EntryDateTo" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Entry Date To (DDMMYYYY)</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="FourthCurrencyCodeFrom" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>4th Currency Code From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="FourthCurrencyCodeTo" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>4th Currency Code To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="IncludeRevaluations" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Include Revaluations Y/N</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="IncludeRough" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Include Rough Y/N</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="JournalNumberFrom" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Journal Number From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="JournalNumberTo" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Journal Number To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="JournalSourceFrom" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Journal Source From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="JournalSourceTo" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Journal Source To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="JournalTypeFrom" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Journal Type From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="JournalTypeTo" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Journal Type To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LinkReference1From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Link Reference 1 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LinkReference1To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Link Reference 1 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LinkReference3From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Link Reference 3 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="LinkReference3To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Link Reference 3 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="SecondReferenceFrom" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Second Reference From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="SecondReferenceTo" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Second Reference To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis10From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 10 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis10To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 10 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis1From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 1 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis1To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 1 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis2From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 2 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis2To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 2 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis3From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 3 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis3To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 3 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis4From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 4 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis4To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 4 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis5From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 5 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis5To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 5 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis6From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 6 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis6To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 6 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis7From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 7 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis7To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 7 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis8From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 8 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis8To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 8 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis9From" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 9 From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionAnalysis9To" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Analysis 9 To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionDateFrom" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Date From (DDMMYYYY)</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionDateTo" minOccurs="0" type="SunSystemsDate">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Date To (DDMMYYYY)</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionReferenceFrom" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Reference From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="TransactionReferenceTo" minOccurs="0" type="SunSystemsString">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Transaction Reference To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="ValueFrom" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Value From</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                    <xsd:element name="ValueTo" minOccurs="0" type="SunSystemsDecimal">
+                                                        <xsd:annotation>
+                                                            <xsd:documentation>Value To</xsd:documentation>
+                                                        </xsd:annotation>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                                <xsd:attributeGroup ref="OutputLog"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="Messages" minOccurs="0">
+                                            <xsd:complexType>
+                                                <xsd:sequence>
+                                                    <xsd:element name="Message" minOccurs="0" maxOccurs="unbounded">
+                                                        <xsd:complexType>
+                                                            <xsd:sequence>
+                                                                <xsd:element name="Exception" type="xsd:string" minOccurs="0"/>
+                                                                <xsd:element name="UserText" type="xsd:string" minOccurs="0"/>
+                                                                <xsd:element name="Application" minOccurs="0">
+                                                                    <xsd:complexType>
+                                                                        <xsd:sequence>
+                                                                            <xsd:element name="Component" type="xsd:string" minOccurs="0"/>
+                                                                            <xsd:element name="DataItem" type="xsd:string" minOccurs="0"/>
+                                                                            <xsd:element name="Driver" type="xsd:string" minOccurs="0"/>
+                                                                            <xsd:element name="Item" type="xsd:string" minOccurs="0"/>
+                                                                            <xsd:element name="LastMethod" type="xsd:string" minOccurs="0"/>
+                                                                            <xsd:element name="Message" type="xsd:string" minOccurs="0"/>
+                                                                            <xsd:element name="MessageNumber" type="xsd:string" minOccurs="0"/>
+                                                                            <xsd:element name="Method" type="xsd:string" minOccurs="0"/>
+                                                                            <xsd:element name="Type" type="xsd:string" minOccurs="0"/>
+                                                                            <xsd:element name="Value" type="xsd:string" minOccurs="0"/>
+                                                                            <xsd:element name="Version" type="xsd:string" minOccurs="0"/>
+                                                                        </xsd:sequence>
+                                                                    </xsd:complexType>
+                                                                </xsd:element>
+                                                            </xsd:sequence>
+                                                            <xsd:attributeGroup ref="MessageAttributes"/>
+                                                        </xsd:complexType>
+                                                    </xsd:element>
+                                                </xsd:sequence>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                    <xsd:attributeGroup ref="OutputLog"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                    </xsd:complexType>
+                </xsd:element>
+                <xsd:element name="ErrorMessages" type="ErrorMessages" minOccurs="0"/>
+            </xsd:sequence>
+            <xsd:attribute name="SequenceID" type="xsd:string" use="optional"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:complexType name="ErrorMessages">
+        <xsd:sequence>
+            <xsd:element name="Message" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="PayloadRef" type="xsd:unsignedInt" minOccurs="0"/>
+                        <xsd:element name="UserText" type="xsd:string" minOccurs="0"/>
+                        <xsd:element name="Exception" type="xsd:string" minOccurs="0"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+    </xsd:complexType>
+    <xsd:simpleType name="Status">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="success"/>
+            <xsd:enumeration value="fail"/>
+            <xsd:enumeration value="partial"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:attributeGroup name="OutputLog">
+        <xsd:attribute name="rejected" type="xsd:boolean">
+            <xsd:annotation>
+                <xsd:appinfo>
+                    <jaxb:property name="internalSSCTyperejected"/>
+                </xsd:appinfo>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="status" type="Status">
+            <xsd:annotation>
+                <xsd:appinfo>
+                    <jaxb:property name="internalSSCTypestatus"/>
+                </xsd:appinfo>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="Reference" type="xsd:unsignedInt">
+            <xsd:annotation>
+                <xsd:appinfo>
+                    <jaxb:property name="internalSSCTypeReference"/>
+                </xsd:appinfo>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:attributeGroup>
+    <xsd:simpleType name="Level">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="warning"/>
+            <xsd:enumeration value="error"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:attributeGroup name="MessageAttributes">
+        <xsd:attribute name="Level" type="Level">
+            <xsd:annotation>
+                <xsd:appinfo>
+                    <jaxb:property name="internalSSCTypeLevel"/>
+                </xsd:appinfo>
+            </xsd:annotation>
+        </xsd:attribute>
+        <xsd:attribute name="Reference" type="xsd:unsignedInt">
+            <xsd:annotation>
+                <xsd:appinfo>
+                    <jaxb:property name="internalSSCTypeReference"/>
+                </xsd:appinfo>
+            </xsd:annotation>
+        </xsd:attribute>
+    </xsd:attributeGroup>
+    <xsd:simpleType name="SunSystemsUserName">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Z0-9]{1,3}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SunSystemsCompatibilityMode">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="0">
+                <xsd:annotation>
+                    <xsd:documentation>Off</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>On</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SunSystemsErrorOutput">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="0">
+                <xsd:annotation>
+                    <xsd:documentation>Limited</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Normal</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="2">
+                <xsd:annotation>
+                    <xsd:documentation>Extended</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="3">
+                <xsd:annotation>
+                    <xsd:documentation>Debug</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SunSystemsErrorThreshold">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="0">
+                <xsd:annotation>
+                    <xsd:documentation>Warning</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+            <xsd:enumeration value="1">
+                <xsd:annotation>
+                    <xsd:documentation>Error</xsd:documentation>
+                </xsd:annotation>
+            </xsd:enumeration>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SunSystemsBusinessUnit">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-Z][A-Z0-9]{0,2}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SunSystemsDataSource">
+        <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="32"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:simpleType name="SunSystemsBudgetCode">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="[A-K]{1}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    <xsd:complexType name="SunSystemsString">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:string">
+                <xsd:attributeGroup ref="OutputLog"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="SunSystemsDecimal">
+        <xsd:simpleContent>
+            <xsd:extension base="xsd:decimal">
+                <xsd:attributeGroup ref="OutputLog"/>
+            </xsd:extension>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="SunSystemsDate">
+        <xsd:simpleContent>
+            <xsd:restriction base="SunSystemsString">
+                <xsd:pattern value="(([0-2][0-9]|3[01])(0[1-9]|1[0-2])[0-9][0-9][0-9][0-9])?"/>
+            </xsd:restriction>
+        </xsd:simpleContent>
+    </xsd:complexType>
+    <xsd:complexType name="SunSystemsPeriod">
+        <xsd:simpleContent>
+            <xsd:restriction base="SunSystemsString">
+                <xsd:pattern value="([0-9]{5}([0-9]{2})?)?"/>
+            </xsd:restriction>
+        </xsd:simpleContent>
+    </xsd:complexType>
+</xsd:schema>
+
+

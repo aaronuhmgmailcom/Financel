@@ -1,0 +1,79 @@
+<SSC xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" SequenceID="SequenceID1">
+  <ErrorContext>
+    <CompatibilityMode>0</CompatibilityMode>
+    <ErrorOutput>0</ErrorOutput>
+    <ErrorThreshold>0</ErrorThreshold>
+  </ErrorContext>
+  <User>
+    <Name>Name1</Name>
+  </User>
+  <SunSystemsContext>
+    <BusinessUnit>BusinessUnit1</BusinessUnit>
+    <BudgetCode>BudgetCode1</BudgetCode>
+  </SunSystemsContext>
+  <Payload>
+    <AllocationMarkers status="success" rejected="true" Reference="0">
+      <AccountingPeriod status="success" rejected="true" Reference="0">AccountingPeriod1</AccountingPeriod>
+      <AllocationMarker status="success" rejected="true" Reference="0"> </AllocationMarker>
+      <AnalysisCode1 status="success" rejected="true" Reference="0">AnalysisCode11</AnalysisCode1>
+      <AnalysisCode10 status="success" rejected="true" Reference="0">AnalysisCode101</AnalysisCode10>
+      <AnalysisCode2 status="success" rejected="true" Reference="0">AnalysisCode21</AnalysisCode2>
+      <AnalysisCode3 status="success" rejected="true" Reference="0">AnalysisCode31</AnalysisCode3>
+      <AnalysisCode4 status="success" rejected="true" Reference="0">AnalysisCode41</AnalysisCode4>
+      <AnalysisCode5 status="success" rejected="true" Reference="0">AnalysisCode51</AnalysisCode5>
+      <AnalysisCode6 status="success" rejected="true" Reference="0">AnalysisCode61</AnalysisCode6>
+      <AnalysisCode7 status="success" rejected="true" Reference="0">AnalysisCode71</AnalysisCode7>
+      <AnalysisCode8 status="success" rejected="true" Reference="0">AnalysisCode81</AnalysisCode8>
+      <AnalysisCode9 status="success" rejected="true" Reference="0">AnalysisCode91</AnalysisCode9>
+      <BaseAmount status="success" rejected="true" Reference="0">1</BaseAmount>
+      <DebitCredit status="success" rejected="true" Reference="0">C</DebitCredit>
+      <DueDate status="success" rejected="true" Reference="0">DueDate1</DueDate>
+      <JournalLineNumber status="success" rejected="true" Reference="0">1</JournalLineNumber>
+      <JournalNumber status="success" rejected="true" Reference="0">1</JournalNumber>
+      <JournalType status="success" rejected="true" Reference="0">Jour1</JournalType>
+      <PaymentAuthorisationSetRef status="success" rejected="true" Reference="0">1</PaymentAuthorisationSetRef>
+      <TransactionAmount status="success" rejected="true" Reference="0">1</TransactionAmount>
+      <TransactionReference status="success" rejected="true" Reference="0">TransactionReference1</TransactionReference>
+      <AccountRange status="success" rejected="true" Reference="0">
+        <AccountCodeFrom status="success" rejected="true" Reference="0">AccountCodeFrom1</AccountCodeFrom>
+        <AccountCodeTo status="success" rejected="true" Reference="0">AccountCodeTo1</AccountCodeTo>
+      </AccountRange>
+      <Actions status="success" rejected="true" Reference="0">
+        <AllocationMarker status="success" rejected="true" Reference="0"> </AllocationMarker>
+        <ControlTotal status="success" rejected="true" Reference="0">1</ControlTotal>
+        <DebitCredit status="success" rejected="true" Reference="0">DebitCredit1</DebitCredit>
+        <Increment status="success" rejected="true" Reference="0">1</Increment>
+      </Actions>
+      <TransactionDateRange status="success" rejected="true" Reference="0">
+        <TransactionDateFrom status="success" rejected="true" Reference="0">TransactionDateFrom1</TransactionDateFrom>
+        <TransactionDateTo status="success" rejected="true" Reference="0">TransactionDateTo1</TransactionDateTo>
+      </TransactionDateRange>
+      <Messages>
+        <Message Level="warning" Reference="0">
+          <Exception>Exception1</Exception>
+          <UserText>UserText1</UserText>
+          <Application>
+            <Component>Component1</Component>
+            <DataItem>DataItem1</DataItem>
+            <Driver>Driver1</Driver>
+            <Item>Item1</Item>
+            <LastMethod>LastMethod1</LastMethod>
+            <Message>Message1</Message>
+            <MessageNumber>MessageNumber1</MessageNumber>
+            <Method>Method1</Method>
+            <Type>Type1</Type>
+            <Value>Value1</Value>
+            <Version>Version1</Version>
+          </Application>
+        </Message>
+      </Messages>
+    </AllocationMarkers>
+  </Payload>
+  <ErrorMessages>
+    <Message>
+      <PayloadRef>0</PayloadRef>
+      <UserText>UserText1</UserText>
+      <Exception>Exception1</Exception>
+    </Message>
+  </ErrorMessages>
+</SSC>

@@ -1,0 +1,6 @@
+1. restore database RSDataV2.bak in SQLSERVER 
+2. run Data Broker.txt in SQLSERVER
+3. install 64-32-WA-v2.1.0.99.msi and database input locahost or .     next to end.
+4. install RSFinanceTools ExcelAddin V2.1.vsto in start menu.
+5. open excel 
+6. everything is okay and you will see a new tab on the excel
